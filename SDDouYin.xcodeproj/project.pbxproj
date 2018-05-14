@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF26CF8E20A98F74004573D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CF8D20A98F74004573D5 /* AppDelegate.m */; };
+		EF26CF9120A98F74004573D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CF9020A98F74004573D5 /* ViewController.m */; };
+		EF26CF9420A98F74004573D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9220A98F74004573D5 /* Main.storyboard */; };
+		EF26CF9620A98F75004573D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9520A98F75004573D5 /* Assets.xcassets */; };
+		EF26CF9920A98F75004573D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9720A98F75004573D5 /* LaunchScreen.storyboard */; };
+		EF26CF9C20A98F75004573D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CF9B20A98F75004573D5 /* main.m */; };
+		EF26CFA620A98F77004573D5 /* SDDouYinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFA520A98F77004573D5 /* SDDouYinTests.m */; };
+		EF26CFB120A98F78004573D5 /* SDDouYinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFB020A98F78004573D5 /* SDDouYinUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF26CFA220A98F77004573D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF26CF8120A98F73004573D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF26CF8820A98F73004573D5;
+			remoteInfo = SDDouYin;
+		};
+		EF26CFAD20A98F78004573D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF26CF8120A98F73004573D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF26CF8820A98F73004573D5;
+			remoteInfo = SDDouYin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF26CF8920A98F73004573D5 /* SDDouYin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDDouYin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF26CF8C20A98F74004573D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF26CF8D20A98F74004573D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF26CF8F20A98F74004573D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF26CF9020A98F74004573D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF26CF9320A98F74004573D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF26CF9520A98F75004573D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF26CF9820A98F75004573D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF26CF9A20A98F75004573D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF26CF9B20A98F75004573D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF26CFA120A98F77004573D5 /* SDDouYinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDDouYinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF26CFA520A98F77004573D5 /* SDDouYinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDDouYinTests.m; sourceTree = "<group>"; };
+		EF26CFA720A98F77004573D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF26CFAC20A98F78004573D5 /* SDDouYinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDDouYinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF26CFB020A98F78004573D5 /* SDDouYinUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDDouYinUITests.m; sourceTree = "<group>"; };
+		EF26CFB220A98F78004573D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF26CF8620A98F73004573D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF26CF9E20A98F77004573D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF26CFA920A98F78004573D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF26CF8020A98F73004573D5 = {
+			isa = PBXGroup;
+			children = (
+				EF26CF8B20A98F73004573D5 /* SDDouYin */,
+				EF26CFA420A98F77004573D5 /* SDDouYinTests */,
+				EF26CFAF20A98F78004573D5 /* SDDouYinUITests */,
+				EF26CF8A20A98F73004573D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF26CF8A20A98F73004573D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CF8920A98F73004573D5 /* SDDouYin.app */,
+				EF26CFA120A98F77004573D5 /* SDDouYinTests.xctest */,
+				EF26CFAC20A98F78004573D5 /* SDDouYinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF26CF8B20A98F73004573D5 /* SDDouYin */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CF8C20A98F74004573D5 /* AppDelegate.h */,
+				EF26CF8D20A98F74004573D5 /* AppDelegate.m */,
+				EF26CF8F20A98F74004573D5 /* ViewController.h */,
+				EF26CF9020A98F74004573D5 /* ViewController.m */,
+				EF26CF9220A98F74004573D5 /* Main.storyboard */,
+				EF26CF9520A98F75004573D5 /* Assets.xcassets */,
+				EF26CF9720A98F75004573D5 /* LaunchScreen.storyboard */,
+				EF26CF9A20A98F75004573D5 /* Info.plist */,
+				EF26CF9B20A98F75004573D5 /* main.m */,
+			);
+			path = SDDouYin;
+			sourceTree = "<group>";
+		};
+		EF26CFA420A98F77004573D5 /* SDDouYinTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CFA520A98F77004573D5 /* SDDouYinTests.m */,
+				EF26CFA720A98F77004573D5 /* Info.plist */,
+			);
+			path = SDDouYinTests;
+			sourceTree = "<group>";
+		};
+		EF26CFAF20A98F78004573D5 /* SDDouYinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CFB020A98F78004573D5 /* SDDouYinUITests.m */,
+				EF26CFB220A98F78004573D5 /* Info.plist */,
+			);
+			path = SDDouYinUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF26CF8820A98F73004573D5 /* SDDouYin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF26CFB520A98F78004573D5 /* Build configuration list for PBXNativeTarget "SDDouYin" */;
+			buildPhases = (
+				EF26CF8520A98F73004573D5 /* Sources */,
+				EF26CF8620A98F73004573D5 /* Frameworks */,
+				EF26CF8720A98F73004573D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDDouYin;
+			productName = SDDouYin;
+			productReference = EF26CF8920A98F73004573D5 /* SDDouYin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF26CFA020A98F77004573D5 /* SDDouYinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF26CFB820A98F78004573D5 /* Build configuration list for PBXNativeTarget "SDDouYinTests" */;
+			buildPhases = (
+				EF26CF9D20A98F77004573D5 /* Sources */,
+				EF26CF9E20A98F77004573D5 /* Frameworks */,
+				EF26CF9F20A98F77004573D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF26CFA320A98F77004573D5 /* PBXTargetDependency */,
+			);
+			name = SDDouYinTests;
+			productName = SDDouYinTests;
+			productReference = EF26CFA120A98F77004573D5 /* SDDouYinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF26CFAB20A98F78004573D5 /* SDDouYinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF26CFBB20A98F78004573D5 /* Build configuration list for PBXNativeTarget "SDDouYinUITests" */;
+			buildPhases = (
+				EF26CFA820A98F78004573D5 /* Sources */,
+				EF26CFA920A98F78004573D5 /* Frameworks */,
+				EF26CFAA20A98F78004573D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF26CFAE20A98F78004573D5 /* PBXTargetDependency */,
+			);
+			name = SDDouYinUITests;
+			productName = SDDouYinUITests;
+			productReference = EF26CFAC20A98F78004573D5 /* SDDouYinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF26CF8120A98F73004573D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = slowdony;
+				TargetAttributes = {
+					EF26CF8820A98F73004573D5 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					EF26CFA020A98F77004573D5 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EF26CF8820A98F73004573D5;
+					};
+					EF26CFAB20A98F78004573D5 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EF26CF8820A98F73004573D5;
+					};
+				};
+			};
+			buildConfigurationList = EF26CF8420A98F73004573D5 /* Build configuration list for PBXProject "SDDouYin" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF26CF8020A98F73004573D5;
+			productRefGroup = EF26CF8A20A98F73004573D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF26CF8820A98F73004573D5 /* SDDouYin */,
+				EF26CFA020A98F77004573D5 /* SDDouYinTests */,
+				EF26CFAB20A98F78004573D5 /* SDDouYinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF26CF8720A98F73004573D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF26CF9920A98F75004573D5 /* LaunchScreen.storyboard in Resources */,
+				EF26CF9620A98F75004573D5 /* Assets.xcassets in Resources */,
+				EF26CF9420A98F74004573D5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF26CF9F20A98F77004573D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF26CFAA20A98F78004573D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF26CF8520A98F73004573D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF26CF9120A98F74004573D5 /* ViewController.m in Sources */,
+				EF26CF9C20A98F75004573D5 /* main.m in Sources */,
+				EF26CF8E20A98F74004573D5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF26CF9D20A98F77004573D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF26CFA620A98F77004573D5 /* SDDouYinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF26CFA820A98F78004573D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF26CFB120A98F78004573D5 /* SDDouYinUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF26CFA320A98F77004573D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF26CF8820A98F73004573D5 /* SDDouYin */;
+			targetProxy = EF26CFA220A98F77004573D5 /* PBXContainerItemProxy */;
+		};
+		EF26CFAE20A98F78004573D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF26CF8820A98F73004573D5 /* SDDouYin */;
+			targetProxy = EF26CFAD20A98F78004573D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF26CF9220A98F74004573D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF26CF9320A98F74004573D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF26CF9720A98F75004573D5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF26CF9820A98F75004573D5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF26CFB320A98F78004573D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF26CFB420A98F78004573D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF26CFB620A98F78004573D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SDDouYin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDDouYin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF26CFB720A98F78004573D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SDDouYin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDDouYin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF26CFB920A98F78004573D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SDDouYinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDDouYinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDDouYin.app/SDDouYin";
+			};
+			name = Debug;
+		};
+		EF26CFBA20A98F78004573D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SDDouYinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDDouYinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDDouYin.app/SDDouYin";
+			};
+			name = Release;
+		};
+		EF26CFBC20A98F78004573D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SDDouYinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDDouYinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SDDouYin;
+			};
+			name = Debug;
+		};
+		EF26CFBD20A98F78004573D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SDDouYinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDDouYinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SDDouYin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF26CF8420A98F73004573D5 /* Build configuration list for PBXProject "SDDouYin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF26CFB320A98F78004573D5 /* Debug */,
+				EF26CFB420A98F78004573D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF26CFB520A98F78004573D5 /* Build configuration list for PBXNativeTarget "SDDouYin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF26CFB620A98F78004573D5 /* Debug */,
+				EF26CFB720A98F78004573D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF26CFB820A98F78004573D5 /* Build configuration list for PBXNativeTarget "SDDouYinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF26CFB920A98F78004573D5 /* Debug */,
+				EF26CFBA20A98F78004573D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF26CFBB20A98F78004573D5 /* Build configuration list for PBXNativeTarget "SDDouYinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF26CFBC20A98F78004573D5 /* Debug */,
+				EF26CFBD20A98F78004573D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF26CF8120A98F73004573D5 /* Project object */;
+}
