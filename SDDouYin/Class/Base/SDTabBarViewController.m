@@ -9,7 +9,12 @@
 #import "SDTabBarViewController.h"
 #import "SDTabBar.h"
 #import "SDBaseNavigationController.h"
-#import "SDLiveViewController.h"
+#import "SDMeViewController.h"    //我
+#import "SDHomeViewController.h"  //首页
+#import "SDFocusViewController.h" //关注
+#import "SDNewsViewController.h"  //消息
+#import "SDAddViewController.h"   //上传
+
 @interface SDTabBarViewController ()
 <SDTabBarDelegate>
 
@@ -42,7 +47,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (void)setupViewControllers{
-    NSMutableArray *arr = [NSMutableArray arrayWithArray:@[@"SDShowViewController",@"SDMeViewController"]];
+    NSMutableArray *arr = [NSMutableArray arrayWithArray:@[@"SDHomeViewController",@"SDFocusViewController",@"SDNewsViewController",@"SDMeViewController"]];
     for (int i = 0 ; i<arr.count; i++) {
         NSString *vcName = arr[i];
         UIViewController *vc = [[NSClassFromString(vcName) alloc]init];
@@ -54,13 +59,12 @@
 
 #pragma mark - SDTabBarDelegate
 - (void)tabbar:(SDTabBar *)tabbar withBtn:(TabBarType)tabbarType{
-    if (tabbarType !=TabBarTypeLaunch){
-        self.selectedIndex = tabbarType-TabBarTypeMe;
+    if (tabbarType !=TabBarTypeAdd){
+        self.selectedIndex = tabbarType-TabBarTypeHome;
         return;
     }
-    
-    SDLiveViewController *liveVC = [[SDLiveViewController alloc]init];
-    [self presentViewController:liveVC animated:YES completion:nil];
+    SDAddViewController *addVC = [[SDAddViewController alloc]init];
+    [self presentViewController:addVC animated:YES completion:nil];
     
 }
 /*

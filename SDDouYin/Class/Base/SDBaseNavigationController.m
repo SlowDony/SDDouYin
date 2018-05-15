@@ -48,7 +48,7 @@
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if(self.viewControllers.count>0){
         
-        viewController.navigationItem.leftBarButtonItem= [UIBarButtonItem itemTarget:self WithAction:@selector(backItem) andImage:@"global_back" andSelectImage:@""];
+        viewController.navigationItem.leftBarButtonItem= [UIBarButtonItem itemTarget:self WithAction:@selector(backItem) andImage:@"alimember_navbar_left" andSelectImage:@""];
         //        viewController.hidesBottomBarWhenPushed=YES;
         
     }
@@ -375,17 +375,14 @@
 -(void) setBackImage:(UIImage *) image
 {
     float systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
-    
-
     UIImage *backgroundImage = nil;
-    
     if(image)
     {
         // backgroundImage =  [self scaleToSize:image size:titleSize];//设置图片的大小与Navigation Bar相同
     }
     else
     {
-        backgroundImage = [UIImage imageNamed:@"global_tittle_bg"];
+        backgroundImage = [UIImage imageNamed:@"tabbar_bg"];
         backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
     }
     

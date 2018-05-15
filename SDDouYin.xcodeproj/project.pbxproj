@@ -30,6 +30,16 @@
 		EF26D03220A992E0004573D5 /* SDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D00A20A992DF004573D5 /* SDTabBarViewController.m */; };
 		EF26D03920A99510004573D5 /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D03820A99510004573D5 /* MJExtensionConfig.m */; };
 		EF26D05120A99652004573D5 /* SDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D04520A99651004573D5 /* SDMeViewController.m */; };
+		EF26D06E20AA7024004573D5 /* SDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D06D20AA7024004573D5 /* SDLoginViewController.m */; };
+		EF26D07120AA7031004573D5 /* SDAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D07020AA7031004573D5 /* SDAddViewController.m */; };
+		EF26D07420AA7040004573D5 /* SDFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D07320AA7040004573D5 /* SDFocusViewController.m */; };
+		EF26D07720AA704B004573D5 /* SDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D07620AA704B004573D5 /* SDHomeViewController.m */; };
+		EF26D07A20AA7057004573D5 /* SDNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D07920AA7057004573D5 /* SDNewsViewController.m */; };
+		EF26D07D20AA8BB4004573D5 /* SDRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D07C20AA8BB4004573D5 /* SDRecommendViewController.m */; };
+		EF26D08020AA8BE9004573D5 /* SDNearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D07F20AA8BE9004573D5 /* SDNearbyViewController.m */; };
+		EF26D08320AA8C7C004573D5 /* SDShowTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D08120AA8C7C004573D5 /* SDShowTopView.m */; };
+		EF26D09A20AB3AA2004573D5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D09920AB3AA2004573D5 /* BaseViewController.m */; };
+		EF26D09D20AB3AB9004573D5 /* SDBaseHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D09C20AB3AB9004573D5 /* SDBaseHiddenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +109,26 @@
 		EF26D03820A99510004573D5 /* MJExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConfig.m; sourceTree = "<group>"; };
 		EF26D04420A99651004573D5 /* SDMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMeViewController.h; sourceTree = "<group>"; };
 		EF26D04520A99651004573D5 /* SDMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMeViewController.m; sourceTree = "<group>"; };
+		EF26D06C20AA7024004573D5 /* SDLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLoginViewController.h; sourceTree = "<group>"; };
+		EF26D06D20AA7024004573D5 /* SDLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLoginViewController.m; sourceTree = "<group>"; };
+		EF26D06F20AA7031004573D5 /* SDAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAddViewController.h; sourceTree = "<group>"; };
+		EF26D07020AA7031004573D5 /* SDAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAddViewController.m; sourceTree = "<group>"; };
+		EF26D07220AA7040004573D5 /* SDFocusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDFocusViewController.h; sourceTree = "<group>"; };
+		EF26D07320AA7040004573D5 /* SDFocusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDFocusViewController.m; sourceTree = "<group>"; };
+		EF26D07520AA704B004573D5 /* SDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHomeViewController.h; sourceTree = "<group>"; };
+		EF26D07620AA704B004573D5 /* SDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHomeViewController.m; sourceTree = "<group>"; };
+		EF26D07820AA7057004573D5 /* SDNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNewsViewController.h; sourceTree = "<group>"; };
+		EF26D07920AA7057004573D5 /* SDNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNewsViewController.m; sourceTree = "<group>"; };
+		EF26D07B20AA8BB4004573D5 /* SDRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDRecommendViewController.h; sourceTree = "<group>"; };
+		EF26D07C20AA8BB4004573D5 /* SDRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDRecommendViewController.m; sourceTree = "<group>"; };
+		EF26D07E20AA8BE9004573D5 /* SDNearbyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNearbyViewController.h; sourceTree = "<group>"; };
+		EF26D07F20AA8BE9004573D5 /* SDNearbyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyViewController.m; sourceTree = "<group>"; };
+		EF26D08120AA8C7C004573D5 /* SDShowTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDShowTopView.m; sourceTree = "<group>"; };
+		EF26D08220AA8C7C004573D5 /* SDShowTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDShowTopView.h; sourceTree = "<group>"; };
+		EF26D09820AB3AA2004573D5 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		EF26D09920AB3AA2004573D5 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		EF26D09B20AB3AB9004573D5 /* SDBaseHiddenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDBaseHiddenViewController.h; sourceTree = "<group>"; };
+		EF26D09C20AB3AB9004573D5 /* SDBaseHiddenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBaseHiddenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +316,10 @@
 				EF26D00420A992DF004573D5 /* SDBaseTableViewCell.m */,
 				EF26D00520A992DF004573D5 /* SDBaseViewController.h */,
 				EF26D00620A992DF004573D5 /* SDBaseViewController.m */,
+				EF26D09820AB3AA2004573D5 /* BaseViewController.h */,
+				EF26D09920AB3AA2004573D5 /* BaseViewController.m */,
+				EF26D09B20AB3AB9004573D5 /* SDBaseHiddenViewController.h */,
+				EF26D09C20AB3AB9004573D5 /* SDBaseHiddenViewController.m */,
 				EF26D00720A992DF004573D5 /* SDTabBar.h */,
 				EF26D00820A992DF004573D5 /* SDTabBar.m */,
 				EF26D00920A992DF004573D5 /* SDTabBarViewController.h */,
@@ -362,6 +396,8 @@
 		EF26D05420A99739004573D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF26D06F20AA7031004573D5 /* SDAddViewController.h */,
+				EF26D07020AA7031004573D5 /* SDAddViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -401,6 +437,8 @@
 		EF26D05920A99739004573D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF26D07820AA7057004573D5 /* SDNewsViewController.h */,
+				EF26D07920AA7057004573D5 /* SDNewsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -440,6 +478,8 @@
 		EF26D05E20A99739004573D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF26D07220AA7040004573D5 /* SDFocusViewController.h */,
+				EF26D07320AA7040004573D5 /* SDFocusViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -479,6 +519,12 @@
 		EF26D06320A99739004573D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF26D07520AA704B004573D5 /* SDHomeViewController.h */,
+				EF26D07620AA704B004573D5 /* SDHomeViewController.m */,
+				EF26D07B20AA8BB4004573D5 /* SDRecommendViewController.h */,
+				EF26D07C20AA8BB4004573D5 /* SDRecommendViewController.m */,
+				EF26D07E20AA8BE9004573D5 /* SDNearbyViewController.h */,
+				EF26D07F20AA8BE9004573D5 /* SDNearbyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -500,6 +546,8 @@
 		EF26D06620A99739004573D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF26D08220AA8C7C004573D5 /* SDShowTopView.h */,
+				EF26D08120AA8C7C004573D5 /* SDShowTopView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -518,6 +566,8 @@
 		EF26D06820A99766004573D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF26D06C20AA7024004573D5 /* SDLoginViewController.h */,
+				EF26D06D20AA7024004573D5 /* SDLoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -733,16 +783,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF26D08320AA8C7C004573D5 /* SDShowTopView.m in Sources */,
 				EF26D05120A99652004573D5 /* SDMeViewController.m in Sources */,
 				EF26D03220A992E0004573D5 /* SDTabBarViewController.m in Sources */,
 				EF26D02A20A992E0004573D5 /* UIImage+SDImage.m in Sources */,
 				EF26D02D20A992E0004573D5 /* SDBaseNavigationController.m in Sources */,
+				EF26D08020AA8BE9004573D5 /* SDNearbyViewController.m in Sources */,
 				EF26D02920A992E0004573D5 /* UIBarButtonItem+Extension.m in Sources */,
+				EF26D07420AA7040004573D5 /* SDFocusViewController.m in Sources */,
+				EF26D07A20AA7057004573D5 /* SDNewsViewController.m in Sources */,
 				EF26D01A20A992E0004573D5 /* SDHttpTool.m in Sources */,
+				EF26D07D20AA8BB4004573D5 /* SDRecommendViewController.m in Sources */,
+				EF26D09A20AB3AA2004573D5 /* BaseViewController.m in Sources */,
 				EF26D01920A992E0004573D5 /* SDHelper.m in Sources */,
+				EF26D07720AA704B004573D5 /* SDHomeViewController.m in Sources */,
 				EF26D03020A992E0004573D5 /* SDBaseViewController.m in Sources */,
+				EF26D06E20AA7024004573D5 /* SDLoginViewController.m in Sources */,
+				EF26D09D20AB3AB9004573D5 /* SDBaseHiddenViewController.m in Sources */,
 				EF26CFCB20A992BF004573D5 /* ViewController.m in Sources */,
 				EF26D03120A992E0004573D5 /* SDTabBar.m in Sources */,
+				EF26D07120AA7031004573D5 /* SDAddViewController.m in Sources */,
 				EF26D02F20A992E0004573D5 /* SDBaseTableViewCell.m in Sources */,
 				EF26D03920A99510004573D5 /* MJExtensionConfig.m in Sources */,
 				EF26D02E20A992E0004573D5 /* SDBaseTableView.m in Sources */,

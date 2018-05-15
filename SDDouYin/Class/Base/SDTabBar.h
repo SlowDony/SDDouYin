@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger ,TabBarType){
-    TabBarTypeLaunch , //拍摄直播
+    
+    TabBarTypeHome , //首页
+    TabBarTypeFocus , //关注
+    TabBarTypeNews , //消息
     TabBarTypeMe , //我的
-    TabBarTypeLive //直播
+    TabBarTypeAdd , // 上传
 };
 @class SDTabBar;
 @protocol  SDTabBarDelegate<NSObject>
