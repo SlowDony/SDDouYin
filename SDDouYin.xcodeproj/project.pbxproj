@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF26CF8E20A98F74004573D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CF8D20A98F74004573D5 /* AppDelegate.m */; };
-		EF26CF9120A98F74004573D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CF9020A98F74004573D5 /* ViewController.m */; };
+		9F3B32AEF97E6EB2EEE44FDF /* libPods-SDDouYin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C739C8C11D26CF8EAAC43F43 /* libPods-SDDouYin.a */; };
 		EF26CF9420A98F74004573D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9220A98F74004573D5 /* Main.storyboard */; };
 		EF26CF9620A98F75004573D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9520A98F75004573D5 /* Assets.xcassets */; };
 		EF26CF9920A98F75004573D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9720A98F75004573D5 /* LaunchScreen.storyboard */; };
 		EF26CF9C20A98F75004573D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CF9B20A98F75004573D5 /* main.m */; };
 		EF26CFA620A98F77004573D5 /* SDDouYinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFA520A98F77004573D5 /* SDDouYinTests.m */; };
 		EF26CFB120A98F78004573D5 /* SDDouYinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFB020A98F78004573D5 /* SDDouYinUITests.m */; };
+		EF26CFCA20A992BF004573D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFC720A992BF004573D5 /* AppDelegate.m */; };
+		EF26CFCB20A992BF004573D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFC920A992BF004573D5 /* ViewController.m */; };
+		EF26D01920A992E0004573D5 /* SDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFCE20A992DD004573D5 /* SDHelper.m */; };
+		EF26D01A20A992E0004573D5 /* SDHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFD220A992DD004573D5 /* SDHttpTool.m */; };
+		EF26D02920A992E0004573D5 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFF720A992DF004573D5 /* UIBarButtonItem+Extension.m */; };
+		EF26D02A20A992E0004573D5 /* UIImage+SDImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFF920A992DF004573D5 /* UIImage+SDImage.m */; };
+		EF26D02B20A992E0004573D5 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF26CFFB20A992DF004573D5 /* IJKMediaFramework.framework */; };
+		EF26D02C20A992E0004573D5 /* SDBaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFFE20A992DF004573D5 /* SDBaseHandler.m */; };
+		EF26D02D20A992E0004573D5 /* SDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D00020A992DF004573D5 /* SDBaseNavigationController.m */; };
+		EF26D02E20A992E0004573D5 /* SDBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D00220A992DF004573D5 /* SDBaseTableView.m */; };
+		EF26D02F20A992E0004573D5 /* SDBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D00420A992DF004573D5 /* SDBaseTableViewCell.m */; };
+		EF26D03020A992E0004573D5 /* SDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D00620A992DF004573D5 /* SDBaseViewController.m */; };
+		EF26D03120A992E0004573D5 /* SDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D00820A992DF004573D5 /* SDTabBar.m */; };
+		EF26D03220A992E0004573D5 /* SDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D00A20A992DF004573D5 /* SDTabBarViewController.m */; };
+		EF26D03920A99510004573D5 /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D03820A99510004573D5 /* MJExtensionConfig.m */; };
+		EF26D05120A99652004573D5 /* SDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D04520A99651004573D5 /* SDMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8391531588B2795116B10B7F /* Pods-SDDouYin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYin/Pods-SDDouYin.debug.xcconfig"; sourceTree = "<group>"; };
+		A3CDE64C0DC54377064539F6 /* Pods-SDDouYin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYin.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYin/Pods-SDDouYin.release.xcconfig"; sourceTree = "<group>"; };
+		C739C8C11D26CF8EAAC43F43 /* libPods-SDDouYin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDDouYin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF26CF8920A98F73004573D5 /* SDDouYin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDDouYin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF26CF8C20A98F74004573D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EF26CF8D20A98F74004573D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF26CF8F20A98F74004573D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EF26CF9020A98F74004573D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EF26CF9320A98F74004573D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF26CF9520A98F75004573D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF26CF9820A98F75004573D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +65,40 @@
 		EF26CFAC20A98F78004573D5 /* SDDouYinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDDouYinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF26CFB020A98F78004573D5 /* SDDouYinUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDDouYinUITests.m; sourceTree = "<group>"; };
 		EF26CFB220A98F78004573D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF26CFC620A992BF004573D5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF26CFC720A992BF004573D5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF26CFC820A992BF004573D5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF26CFC920A992BF004573D5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF26CFCD20A992DD004573D5 /* SDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHelper.h; sourceTree = "<group>"; };
+		EF26CFCE20A992DD004573D5 /* SDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHelper.m; sourceTree = "<group>"; };
+		EF26CFD020A992DD004573D5 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		EF26CFD120A992DD004573D5 /* SDHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHttpTool.h; sourceTree = "<group>"; };
+		EF26CFD220A992DD004573D5 /* SDHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHttpTool.m; sourceTree = "<group>"; };
+		EF26CFF620A992DF004573D5 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		EF26CFF720A992DF004573D5 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		EF26CFF820A992DF004573D5 /* UIImage+SDImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SDImage.h"; sourceTree = "<group>"; };
+		EF26CFF920A992DF004573D5 /* UIImage+SDImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SDImage.m"; sourceTree = "<group>"; };
+		EF26CFFB20A992DF004573D5 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		EF26CFFD20A992DF004573D5 /* SDBaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseHandler.h; sourceTree = "<group>"; };
+		EF26CFFE20A992DF004573D5 /* SDBaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseHandler.m; sourceTree = "<group>"; };
+		EF26CFFF20A992DF004573D5 /* SDBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseNavigationController.h; sourceTree = "<group>"; };
+		EF26D00020A992DF004573D5 /* SDBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseNavigationController.m; sourceTree = "<group>"; };
+		EF26D00120A992DF004573D5 /* SDBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseTableView.h; sourceTree = "<group>"; };
+		EF26D00220A992DF004573D5 /* SDBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseTableView.m; sourceTree = "<group>"; };
+		EF26D00320A992DF004573D5 /* SDBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseTableViewCell.h; sourceTree = "<group>"; };
+		EF26D00420A992DF004573D5 /* SDBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseTableViewCell.m; sourceTree = "<group>"; };
+		EF26D00520A992DF004573D5 /* SDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseViewController.h; sourceTree = "<group>"; };
+		EF26D00620A992DF004573D5 /* SDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseViewController.m; sourceTree = "<group>"; };
+		EF26D00720A992DF004573D5 /* SDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTabBar.h; sourceTree = "<group>"; };
+		EF26D00820A992DF004573D5 /* SDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTabBar.m; sourceTree = "<group>"; };
+		EF26D00920A992DF004573D5 /* SDTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTabBarViewController.h; sourceTree = "<group>"; };
+		EF26D00A20A992DF004573D5 /* SDTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTabBarViewController.m; sourceTree = "<group>"; };
+		EF26D03520A994DD004573D5 /* SDDouYin.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDDouYin.pch; sourceTree = "<group>"; };
+		EF26D03620A994FF004573D5 /* SDMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMacros.h; sourceTree = "<group>"; };
+		EF26D03720A99510004573D5 /* MJExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConfig.h; sourceTree = "<group>"; };
+		EF26D03820A99510004573D5 /* MJExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConfig.m; sourceTree = "<group>"; };
+		EF26D04420A99651004573D5 /* SDMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMeViewController.h; sourceTree = "<group>"; };
+		EF26D04520A99651004573D5 /* SDMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF26D02B20A992E0004573D5 /* IJKMediaFramework.framework in Frameworks */,
+				9F3B32AEF97E6EB2EEE44FDF /* libPods-SDDouYin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +128,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E9B042C8E48C49768DFB2A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C739C8C11D26CF8EAAC43F43 /* libPods-SDDouYin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3A33648DA8125AD493C4683 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8391531588B2795116B10B7F /* Pods-SDDouYin.debug.xcconfig */,
+				A3CDE64C0DC54377064539F6 /* Pods-SDDouYin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF26CF8020A98F73004573D5 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +152,8 @@
 				EF26CFA420A98F77004573D5 /* SDDouYinTests */,
 				EF26CFAF20A98F78004573D5 /* SDDouYinUITests */,
 				EF26CF8A20A98F73004573D5 /* Products */,
+				C3A33648DA8125AD493C4683 /* Pods */,
+				3E9B042C8E48C49768DFB2A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +170,7 @@
 		EF26CF8B20A98F73004573D5 /* SDDouYin */ = {
 			isa = PBXGroup;
 			children = (
-				EF26CF8C20A98F74004573D5 /* AppDelegate.h */,
-				EF26CF8D20A98F74004573D5 /* AppDelegate.m */,
-				EF26CF8F20A98F74004573D5 /* ViewController.h */,
-				EF26CF9020A98F74004573D5 /* ViewController.m */,
+				EF26CFBE20A99266004573D5 /* Class */,
 				EF26CF9220A98F74004573D5 /* Main.storyboard */,
 				EF26CF9520A98F75004573D5 /* Assets.xcassets */,
 				EF26CF9720A98F75004573D5 /* LaunchScreen.storyboard */,
@@ -132,6 +198,351 @@
 			path = SDDouYinUITests;
 			sourceTree = "<group>";
 		};
+		EF26CFBE20A99266004573D5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				EF26D03A20A99651004573D5 /* Controllers */,
+				EF26CFFC20A992DF004573D5 /* Base */,
+				EF26CFCC20A992DD004573D5 /* Helpers */,
+				EF26CFF420A992DF004573D5 /* Lib */,
+				EF26CFCF20A992DD004573D5 /* NetWork */,
+				EF26CFC520A992BF004573D5 /* Other */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		EF26CFC520A992BF004573D5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CFC620A992BF004573D5 /* AppDelegate.h */,
+				EF26CFC720A992BF004573D5 /* AppDelegate.m */,
+				EF26CFC820A992BF004573D5 /* ViewController.h */,
+				EF26CFC920A992BF004573D5 /* ViewController.m */,
+				EF26D03620A994FF004573D5 /* SDMacros.h */,
+				EF26D03520A994DD004573D5 /* SDDouYin.pch */,
+				EF26D03720A99510004573D5 /* MJExtensionConfig.h */,
+				EF26D03820A99510004573D5 /* MJExtensionConfig.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		EF26CFCC20A992DD004573D5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CFCD20A992DD004573D5 /* SDHelper.h */,
+				EF26CFCE20A992DD004573D5 /* SDHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EF26CFCF20A992DD004573D5 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CFD020A992DD004573D5 /* APIConfig.h */,
+				EF26CFD120A992DD004573D5 /* SDHttpTool.h */,
+				EF26CFD220A992DD004573D5 /* SDHttpTool.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		EF26CFF420A992DF004573D5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CFF520A992DF004573D5 /* Extension */,
+				EF26CFFA20A992DF004573D5 /* Framework */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		EF26CFF520A992DF004573D5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CFF620A992DF004573D5 /* UIBarButtonItem+Extension.h */,
+				EF26CFF720A992DF004573D5 /* UIBarButtonItem+Extension.m */,
+				EF26CFF820A992DF004573D5 /* UIImage+SDImage.h */,
+				EF26CFF920A992DF004573D5 /* UIImage+SDImage.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EF26CFFA20A992DF004573D5 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CFFB20A992DF004573D5 /* IJKMediaFramework.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		EF26CFFC20A992DF004573D5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EF26CFFD20A992DF004573D5 /* SDBaseHandler.h */,
+				EF26CFFE20A992DF004573D5 /* SDBaseHandler.m */,
+				EF26CFFF20A992DF004573D5 /* SDBaseNavigationController.h */,
+				EF26D00020A992DF004573D5 /* SDBaseNavigationController.m */,
+				EF26D00120A992DF004573D5 /* SDBaseTableView.h */,
+				EF26D00220A992DF004573D5 /* SDBaseTableView.m */,
+				EF26D00320A992DF004573D5 /* SDBaseTableViewCell.h */,
+				EF26D00420A992DF004573D5 /* SDBaseTableViewCell.m */,
+				EF26D00520A992DF004573D5 /* SDBaseViewController.h */,
+				EF26D00620A992DF004573D5 /* SDBaseViewController.m */,
+				EF26D00720A992DF004573D5 /* SDTabBar.h */,
+				EF26D00820A992DF004573D5 /* SDTabBar.m */,
+				EF26D00920A992DF004573D5 /* SDTabBarViewController.h */,
+				EF26D00A20A992DF004573D5 /* SDTabBarViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EF26D03A20A99651004573D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF26D06720A99766004573D5 /* Login */,
+				EF26D05320A99739004573D5 /* Add */,
+				EF26D05D20A99739004573D5 /* Focus */,
+				EF26D06220A99739004573D5 /* Home */,
+				EF26D05820A99739004573D5 /* News */,
+				EF26D04220A99651004573D5 /* Me */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EF26D04220A99651004573D5 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				EF26D04320A99651004573D5 /* Controller */,
+				EF26D04620A99651004573D5 /* Model */,
+				EF26D04720A99651004573D5 /* Tool */,
+				EF26D04820A99651004573D5 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		EF26D04320A99651004573D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF26D04420A99651004573D5 /* SDMeViewController.h */,
+				EF26D04520A99651004573D5 /* SDMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF26D04620A99651004573D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF26D04720A99651004573D5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		EF26D04820A99651004573D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF26D05320A99739004573D5 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				EF26D05420A99739004573D5 /* Controller */,
+				EF26D05520A99739004573D5 /* Model */,
+				EF26D05620A99739004573D5 /* Tool */,
+				EF26D05720A99739004573D5 /* View */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		EF26D05420A99739004573D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF26D05520A99739004573D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF26D05620A99739004573D5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		EF26D05720A99739004573D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF26D05820A99739004573D5 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				EF26D05920A99739004573D5 /* Controller */,
+				EF26D05A20A99739004573D5 /* Model */,
+				EF26D05B20A99739004573D5 /* Tool */,
+				EF26D05C20A99739004573D5 /* View */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		EF26D05920A99739004573D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF26D05A20A99739004573D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF26D05B20A99739004573D5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		EF26D05C20A99739004573D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF26D05D20A99739004573D5 /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				EF26D05E20A99739004573D5 /* Controller */,
+				EF26D05F20A99739004573D5 /* Model */,
+				EF26D06020A99739004573D5 /* Tool */,
+				EF26D06120A99739004573D5 /* View */,
+			);
+			path = Focus;
+			sourceTree = "<group>";
+		};
+		EF26D05E20A99739004573D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF26D05F20A99739004573D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF26D06020A99739004573D5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		EF26D06120A99739004573D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF26D06220A99739004573D5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EF26D06320A99739004573D5 /* Controller */,
+				EF26D06420A99739004573D5 /* Model */,
+				EF26D06520A99739004573D5 /* Tool */,
+				EF26D06620A99739004573D5 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EF26D06320A99739004573D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF26D06420A99739004573D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF26D06520A99739004573D5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		EF26D06620A99739004573D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF26D06720A99766004573D5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EF26D06820A99766004573D5 /* Controller */,
+				EF26D06920A99766004573D5 /* Model */,
+				EF26D06A20A99766004573D5 /* Tool */,
+				EF26D06B20A99766004573D5 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EF26D06820A99766004573D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF26D06920A99766004573D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF26D06A20A99766004573D5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		EF26D06B20A99766004573D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +550,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF26CFB520A98F78004573D5 /* Build configuration list for PBXNativeTarget "SDDouYin" */;
 			buildPhases = (
+				225C7B6C7B28772E64274039 /* [CP] Check Pods Manifest.lock */,
 				EF26CF8520A98F73004573D5 /* Sources */,
 				EF26CF8620A98F73004573D5 /* Frameworks */,
 				EF26CF8720A98F73004573D5 /* Resources */,
+				4FAC6A7FFC81403AA56C350D /* [CP] Embed Pods Frameworks */,
+				E2CDEAC419AB866E84C65E27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,14 +674,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		225C7B6C7B28772E64274039 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDDouYin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FAC6A7FFC81403AA56C350D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDDouYin/Pods-SDDouYin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2CDEAC419AB866E84C65E27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SDDouYin/Pods-SDDouYin-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDDouYin/Pods-SDDouYin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF26CF8520A98F73004573D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF26CF9120A98F74004573D5 /* ViewController.m in Sources */,
+				EF26D05120A99652004573D5 /* SDMeViewController.m in Sources */,
+				EF26D03220A992E0004573D5 /* SDTabBarViewController.m in Sources */,
+				EF26D02A20A992E0004573D5 /* UIImage+SDImage.m in Sources */,
+				EF26D02D20A992E0004573D5 /* SDBaseNavigationController.m in Sources */,
+				EF26D02920A992E0004573D5 /* UIBarButtonItem+Extension.m in Sources */,
+				EF26D01A20A992E0004573D5 /* SDHttpTool.m in Sources */,
+				EF26D01920A992E0004573D5 /* SDHelper.m in Sources */,
+				EF26D03020A992E0004573D5 /* SDBaseViewController.m in Sources */,
+				EF26CFCB20A992BF004573D5 /* ViewController.m in Sources */,
+				EF26D03120A992E0004573D5 /* SDTabBar.m in Sources */,
+				EF26D02F20A992E0004573D5 /* SDBaseTableViewCell.m in Sources */,
+				EF26D03920A99510004573D5 /* MJExtensionConfig.m in Sources */,
+				EF26D02E20A992E0004573D5 /* SDBaseTableView.m in Sources */,
+				EF26D02C20A992E0004573D5 /* SDBaseHandler.m in Sources */,
+				EF26CFCA20A992BF004573D5 /* AppDelegate.m in Sources */,
 				EF26CF9C20A98F75004573D5 /* main.m in Sources */,
-				EF26CF8E20A98F74004573D5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,9 +909,15 @@
 		};
 		EF26CFB620A98F78004573D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8391531588B2795116B10B7F /* Pods-SDDouYin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDDouYin/Class/Lib/Framework",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SDDouYin/Class/Other/SDDouYin.pch";
 				INFOPLIST_FILE = SDDouYin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDDouYin;
@@ -441,9 +928,15 @@
 		};
 		EF26CFB720A98F78004573D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3CDE64C0DC54377064539F6 /* Pods-SDDouYin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDDouYin/Class/Lib/Framework",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SDDouYin/Class/Other/SDDouYin.pch";
 				INFOPLIST_FILE = SDDouYin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDDouYin;
