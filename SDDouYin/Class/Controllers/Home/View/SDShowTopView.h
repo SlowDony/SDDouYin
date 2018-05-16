@@ -7,11 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
+@interface SDShowTitleView :UIView
+
+///标题数组
+@property (nonatomic,strong) NSMutableArray *btnsArr;
+///当前选择哪一个
+@property (nonatomic,assign) CGFloat selectIndex;
+///标题按钮点击
+@property (nonatomic,copy) void (^selectBtnBlock)(UIButton * selectBtn);
+
+@end
 
 @interface SDShowTopView : UIView
 
-@property (nonatomic,strong) NSMutableArray *btnsArr;//
-@property (nonatomic,assign) CGFloat selectIndex;//当前选择哪一个;
+///当前选择哪一个
+@property (nonatomic,assign) CGFloat selectIndex;
 
+///标题按钮点击
 @property (nonatomic,copy) void (^selectBtnBlock)(UIButton * selectBtn);
+///搜索按钮点击
+@property (nonatomic,copy) void (^searchBtnBlock)(UIButton * searchBtn);
+///头像按钮点击
+@property (nonatomic,copy) void (^headImageBtnBlock)(void);
+
+
+///设置标题
+- (void)setTopTitleArr:(NSArray *)titleArr;
 @end

@@ -40,6 +40,8 @@
 		EF26D08320AA8C7C004573D5 /* SDShowTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D08120AA8C7C004573D5 /* SDShowTopView.m */; };
 		EF26D09A20AB3AA2004573D5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D09920AB3AA2004573D5 /* BaseViewController.m */; };
 		EF26D09D20AB3AB9004573D5 /* SDBaseHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D09C20AB3AB9004573D5 /* SDBaseHiddenViewController.m */; };
+		EF58F1FB20AC8A180009DE08 /* SDNearbyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */; };
+		EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,10 @@
 		EF26D09920AB3AA2004573D5 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		EF26D09B20AB3AB9004573D5 /* SDBaseHiddenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDBaseHiddenViewController.h; sourceTree = "<group>"; };
 		EF26D09C20AB3AB9004573D5 /* SDBaseHiddenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBaseHiddenViewController.m; sourceTree = "<group>"; };
+		EF58F1F920AC8A180009DE08 /* SDNearbyCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNearbyCollectionView.h; sourceTree = "<group>"; };
+		EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionView.m; sourceTree = "<group>"; };
+		EF58F1FC20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNearbyCollectionViewCell.h; sourceTree = "<group>"; };
+		EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -548,6 +554,10 @@
 			children = (
 				EF26D08220AA8C7C004573D5 /* SDShowTopView.h */,
 				EF26D08120AA8C7C004573D5 /* SDShowTopView.m */,
+				EF58F1F920AC8A180009DE08 /* SDNearbyCollectionView.h */,
+				EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */,
+				EF58F1FC20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.h */,
+				EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -793,6 +803,7 @@
 				EF26D07420AA7040004573D5 /* SDFocusViewController.m in Sources */,
 				EF26D07A20AA7057004573D5 /* SDNewsViewController.m in Sources */,
 				EF26D01A20A992E0004573D5 /* SDHttpTool.m in Sources */,
+				EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */,
 				EF26D07D20AA8BB4004573D5 /* SDRecommendViewController.m in Sources */,
 				EF26D09A20AB3AA2004573D5 /* BaseViewController.m in Sources */,
 				EF26D01920A992E0004573D5 /* SDHelper.m in Sources */,
@@ -803,6 +814,7 @@
 				EF26CFCB20A992BF004573D5 /* ViewController.m in Sources */,
 				EF26D03120A992E0004573D5 /* SDTabBar.m in Sources */,
 				EF26D07120AA7031004573D5 /* SDAddViewController.m in Sources */,
+				EF58F1FB20AC8A180009DE08 /* SDNearbyCollectionView.m in Sources */,
 				EF26D02F20A992E0004573D5 /* SDBaseTableViewCell.m in Sources */,
 				EF26D03920A99510004573D5 /* MJExtensionConfig.m in Sources */,
 				EF26D02E20A992E0004573D5 /* SDBaseTableView.m in Sources */,

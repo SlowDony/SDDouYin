@@ -30,15 +30,14 @@
 -(UIScrollView *)mainScrollView{
     if (!_mainScrollView) {
         _mainScrollView = [[UIScrollView alloc] init];
-        _mainScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64);
+        _mainScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kBottomTabbarHeight);
         _mainScrollView.delegate = self;
-        _mainScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-50);
-        _mainScrollView.contentOffset = CGPointMake(SCREEN_WIDTH, 0);
-        _mainScrollView.backgroundColor = [UIColor redColor];
+        _mainScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-kBottomTabbarHeight);
         _mainScrollView.showsHorizontalScrollIndicator = NO;
         _mainScrollView.showsVerticalScrollIndicator = NO;
         _mainScrollView.pagingEnabled = YES;
         _mainScrollView.bounces =NO;
+        _mainScrollView.scrollEnabled = NO;
     }
     return _mainScrollView;
 }
@@ -50,7 +49,7 @@
     if (!_nearbyVC){
         _nearbyVC = [[SDNearbyViewController alloc]init];
         [self addChildViewController:_nearbyVC];
-        _nearbyVC.view.frame =CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-50);
+        _nearbyVC.view.frame =CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kBottomTabbarHeight);
     }
     return _nearbyVC;
 }
@@ -62,7 +61,7 @@
     if (!_recommendVC){
         _recommendVC = [[SDRecommendViewController alloc]init];
         [self addChildViewController:_recommendVC];
-        _recommendVC.view.frame =CGRectMake(0,0 , SCREEN_WIDTH, SCREEN_HEIGHT-50);
+        _recommendVC.view.frame =CGRectMake(0,0 , SCREEN_WIDTH, SCREEN_HEIGHT-kBottomTabbarHeight);
     }
     return _recommendVC;
 }
@@ -73,8 +72,8 @@
         CGFloat width = SCREEN_WIDTH;
         _showTopView = [[SDShowTopView alloc]initWithFrame:CGRectMake(0, 0, width, kNavigationStatusBarHeight)];
         _showTopView.selectIndex = 0;
-        _showTopView.btnsArr = [NSMutableArray arrayWithArray:arr];
-        _showTopView.backgroundColor = [UIColor blackColor];
+        [_showTopView setTopTitleArr:arr];
+        _showTopView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.2];
         KWeakself
         _showTopView.selectBtnBlock = ^(UIButton *selectBtn) {
             CGFloat index = (selectBtn.tag-1000)*SCREEN_WIDTH;
@@ -93,12 +92,11 @@
 }
 
 - (void)setupUI{
+    
     [self.view addSubview:self.mainScrollView];
     [self.view addSubview:self.showTopView];
-//    self.navigationItem.titleView = self.showTopView;
-    //[self.mainScrollView addSubview:self.recommendVC.view];
-//[self rightButtonWithImage:[UIImage imageNamed:@"title_button_more"] action:@selector(rightBtnClick:) onTarget:self];
-   // [self leftButtonWithImage:[UIImage imageNamed:@"global_search"] action:@selector(leftBtnClick:) onTarget:self];
+    [self.mainScrollView addSubview:self.recommendVC.view];
+    
 }
 
 #pragma mark - UIScrollViewDelegate

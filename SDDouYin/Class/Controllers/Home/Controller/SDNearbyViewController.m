@@ -7,18 +7,39 @@
 //
 
 #import "SDNearbyViewController.h"
+#import "SDNearbyCollectionView.h"
 /**
  附近
  */
 @interface SDNearbyViewController ()
+@property (nonatomic, strong)SDNearbyCollectionView   *nearbyCollectionView;
 
 @end
 
 @implementation SDNearbyViewController
 
+#pragma mark - lazy
+- (SDNearbyCollectionView *)nearbyCollectionView{
+    if (!_nearbyCollectionView) {
+        
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        layout.minimumLineSpacing = 0;
+        layout.minimumInteritemSpacing = 0;
+        _nearbyCollectionView = [[SDNearbyCollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kBottomTabbarHeight) collectionViewLayout:layout];
+    }
+    return _nearbyCollectionView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor =[UIColor blueColor];
+    [self setupUI];
     // Do any additional setup after loading the view.
+}
+
+- (void)setupUI{
+    [self.view addSubview:self.nearbyCollectionView];
 }
 
 - (void)didReceiveMemoryWarning {
