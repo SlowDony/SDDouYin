@@ -6,4 +6,5 @@ pod 'YYKit'
 pod 'LFLiveKit'
 pod 'AFNetworking'
 pod 'Masonry'
+pod 'KSYMediaPlayer_iOS'
 end

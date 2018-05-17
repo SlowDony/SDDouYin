@@ -24,6 +24,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## KSYMediaPlayer_iOS
+
+Copyright 2015 kingsoft Ltd. All rights reserved.
+
+
 ## LFLiveKit
 
 The MIT License (MIT)

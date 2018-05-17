@@ -43,6 +43,17 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2015 kingsoft Ltd. All rights reserved.
+</string>
+			<key>License</key>
+			<string>Proprietary</string>
+			<key>Title</key>
+			<string>KSYMediaPlayer_iOS</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
 Copyright (c) 2016 LaiFengiOS
