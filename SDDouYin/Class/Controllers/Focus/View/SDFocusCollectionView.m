@@ -1,29 +1,20 @@
 //
-//  SDNearbyCollectionView.m
+//  SDFocusCollectionView.m
 //  SDDouYin
 //
-//  Created by slowdony on 2018/5/16.
+//  Created by slowdony on 2018/5/17.
 //  Copyright © 2018年 slowdony. All rights reserved.
 //
 
-#import "SDNearbyCollectionView.h"
-#import "SDNearbyCollectionViewCell.h"
-#define nearbyCell @"nearbyCell"
-
-@interface SDNearbyCollectionView()
+#import "SDFocusCollectionView.h"
+#import "SDFocusCollectionViewCell.h"
+#define focusCell @"focusCell"
+@interface SDFocusCollectionView()
 <UICollectionViewDelegate,
 UICollectionViewDataSource>
+
 @end
-
-@implementation SDNearbyCollectionView
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+@implementation SDFocusCollectionView
 
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout
 {
@@ -36,13 +27,13 @@ UICollectionViewDataSource>
         self.showsHorizontalScrollIndicator = NO;
         self.pagingEnabled = NO;
         //注册
-        [self registerClass:[SDNearbyCollectionViewCell class] forCellWithReuseIdentifier:nearbyCell];
+        [self registerClass:[SDFocusCollectionViewCell class] forCellWithReuseIdentifier:focusCell];
+        
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior =UIScrollViewContentInsetAdjustmentNever;
         } else {
             // Fallback on earlier versions
         }
-        
     }
     return self;
 }
@@ -67,16 +58,16 @@ UICollectionViewDataSource>
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SDNearbyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:nearbyCell forIndexPath:indexPath];
+    SDFocusCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:focusCell forIndexPath:indexPath];
     
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    if([self.collectionDelegate respondsToSelector:@selector(SDNearbyCollectionView:didSelectItemAtIndexPath:)])
+    if([self.collectionDelegate respondsToSelector:@selector(SDFocusCollectionView:didSelectItemAtIndexPath:)])
     {
-        [self.collectionDelegate SDNearbyCollectionView:collectionView didSelectItemAtIndexPath:indexPath];
+        [self.collectionDelegate SDFocusCollectionView:collectionView didSelectItemAtIndexPath:indexPath];
     }
 }
 

@@ -1,14 +1,14 @@
 //
-//  SDNearbyCollectionViewCell.m
+//  SDFocusCollectionViewCell.m
 //  SDDouYin
 //
-//  Created by slowdony on 2018/5/16.
+//  Created by slowdony on 2018/5/17.
 //  Copyright © 2018年 slowdony. All rights reserved.
 //
 
-#import "SDNearbyCollectionViewCell.h"
+#import "SDFocusCollectionViewCell.h"
 
-@implementation SDNearbyCollectionViewCell
+@implementation SDFocusCollectionViewCell
 
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -49,14 +49,30 @@
     }];
     
     
-//    @xWeakify
+    //    @xWeakify
     [headImageView sd_setImageWithURL:[NSURL URLWithString:@"https://p3.pstatp.com/aweme/100x100/3b5c0006d56892d3f78c.jpeg"] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-//        @xStrongify
+        //        @xStrongify
         dispatch_async(dispatch_get_main_queue(), ^{
             headImageView.image = [UIImage imageWithRoundCorner:image cornerRadius:kWidth(20)/2 size:CGSizeMake(kWidth(20), kWidth(20))];
         });
     }];
     
+    //时间
+    UILabel *timeLabel = [[UILabel alloc] init];
+    timeLabel.backgroundColor = [UIColor clearColor];
+    timeLabel.textColor = [UIColor whiteColor];
+    timeLabel.text = @"11分钟前";
+    timeLabel.textAlignment = NSTextAlignmentLeft;
+    timeLabel.font = SDFont(11);
+    timeLabel.numberOfLines = 0;
+    [self addSubview:timeLabel];
+    self.timeLabel = timeLabel;
+    [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(headImageView.mas_centerY);
+        make.right.equalTo(bgImageView.mas_right).offset(-10);
+        make.height.equalTo(headImageView.mas_height);
+        make.width.equalTo(@(50));
+    }];
     
     
     //姓名
@@ -72,26 +88,28 @@
     [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(headImageView.mas_right).offset(10);
         make.centerY.equalTo(headImageView.mas_centerY);
-        make.right.equalTo(bgImageView.mas_right).offset(-10);
+        make.right.equalTo(timeLabel.mas_left).offset(-5);
         make.height.equalTo(headImageView.mas_height);
     }];
     
-    //距离
-    UILabel *distanceLabel = [[UILabel alloc] init];
-    distanceLabel.backgroundColor = [UIColor clearColor];
-    distanceLabel.textColor = [UIColor whiteColor];
-    distanceLabel.text = @"11分钟前";
-    distanceLabel.textAlignment = NSTextAlignmentLeft;
-    distanceLabel.font = SDFont(11);
-    distanceLabel.numberOfLines = 0;
-    [self addSubview:distanceLabel];
-    self.distanceLabel = distanceLabel;
-    [distanceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    //内容
+    UILabel *contentLabel = [[UILabel alloc] init];
+    contentLabel.backgroundColor = [UIColor clearColor];
+    contentLabel.textColor = [UIColor whiteColor];
+    contentLabel.text = @"内容内容内容内容";
+    contentLabel.textAlignment = NSTextAlignmentLeft;
+    contentLabel.font = SDFont(13);
+    contentLabel.numberOfLines = 1;
+    self.contentLabel = contentLabel;
+    [self addSubview:contentLabel];
+    [contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(headImageView.mas_left);
-        make.bottom.equalTo(headImageView.mas_top).offset(-10);
-        make.right.equalTo(bgImageView.mas_right).offset(-10);
-        make.height.equalTo(@(30));
+        make.bottom.equalTo(headImageView.mas_top).offset(-5);
+        make.right.equalTo(timeLabel.mas_right);
+        make.height.equalTo(@(50));
     }];
+    
+   
     
 }
 @end

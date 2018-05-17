@@ -7,17 +7,36 @@
 //
 
 #import "SDFocusViewController.h"
-
+#import "SDFocusCollectionView.h"
 @interface SDFocusViewController ()
-
+@property (nonatomic,strong) SDFocusCollectionView  *focusCollectionView;
 @end
 
 @implementation SDFocusViewController
 
+
+#pragma mark - lazy
+- (SDFocusCollectionView *)focusCollectionView{
+    if(!_focusCollectionView){
+        
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        layout.minimumLineSpacing = 0;
+        layout.minimumInteritemSpacing = 0;
+        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        
+        _focusCollectionView = [[SDFocusCollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
+    }
+    return _focusCollectionView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-     [self setupTitle:@"关注"];
+    [self setupUI];
     // Do any additional setup after loading the view.
+}
+
+- (void)setupUI{
+    [self.view addSubview:self.focusCollectionView];
 }
 
 - (void)didReceiveMemoryWarning {

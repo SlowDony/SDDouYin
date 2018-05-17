@@ -8,10 +8,12 @@
 
 #import "SDNearbyViewController.h"
 #import "SDNearbyCollectionView.h"
+#import "SDNearbyListViewController.h"
 /**
  附近
  */
 @interface SDNearbyViewController ()
+<SDNearbyCollectionViewDelegate>
 @property (nonatomic, strong)SDNearbyCollectionView   *nearbyCollectionView;
 
 @end
@@ -27,6 +29,7 @@
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
         _nearbyCollectionView = [[SDNearbyCollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kBottomTabbarHeight) collectionViewLayout:layout];
+        _nearbyCollectionView.collectionDelegate = self;
     }
     return _nearbyCollectionView;
 }
@@ -40,6 +43,13 @@
 
 - (void)setupUI{
     [self.view addSubview:self.nearbyCollectionView];
+}
+
+#pragma mark - SDNearbyCollectionViewDelegat
+-(void)SDNearbyCollectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    SDNearbyListViewController *nearbyListVC = [[SDNearbyListViewController alloc]init];
+    nearbyListVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:nearbyListVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

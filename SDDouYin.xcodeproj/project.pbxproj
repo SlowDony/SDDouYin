@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9F3B32AEF97E6EB2EEE44FDF /* libPods-SDDouYin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C739C8C11D26CF8EAAC43F43 /* libPods-SDDouYin.a */; };
+		EF21069920ADD1540061B38B /* SDFocusCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21069820ADD1540061B38B /* SDFocusCollectionView.m */; };
+		EF21069C20ADD1650061B38B /* SDFocusCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21069B20ADD1650061B38B /* SDFocusCollectionViewCell.m */; };
+		EF21069F20ADD7620061B38B /* SDNearbyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21069E20ADD7620061B38B /* SDNearbyListViewController.m */; };
+		EF2106A220ADD93A0061B38B /* SDNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2106A120ADD93A0061B38B /* SDNewsTableView.m */; };
+		EF2106A520ADD95A0061B38B /* SDNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2106A420ADD95A0061B38B /* SDNewsTableViewCell.m */; };
+		EF2106A820ADD9740061B38B /* SDNewsHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2106A720ADD9740061B38B /* SDNewsHeadView.m */; };
 		EF26CF9420A98F74004573D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9220A98F74004573D5 /* Main.storyboard */; };
 		EF26CF9620A98F75004573D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9520A98F75004573D5 /* Assets.xcassets */; };
 		EF26CF9920A98F75004573D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9720A98F75004573D5 /* LaunchScreen.storyboard */; };
@@ -65,6 +71,18 @@
 		8391531588B2795116B10B7F /* Pods-SDDouYin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYin/Pods-SDDouYin.debug.xcconfig"; sourceTree = "<group>"; };
 		A3CDE64C0DC54377064539F6 /* Pods-SDDouYin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYin.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYin/Pods-SDDouYin.release.xcconfig"; sourceTree = "<group>"; };
 		C739C8C11D26CF8EAAC43F43 /* libPods-SDDouYin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDDouYin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF21069720ADD1540061B38B /* SDFocusCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDFocusCollectionView.h; sourceTree = "<group>"; };
+		EF21069820ADD1540061B38B /* SDFocusCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDFocusCollectionView.m; sourceTree = "<group>"; };
+		EF21069A20ADD1650061B38B /* SDFocusCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDFocusCollectionViewCell.h; sourceTree = "<group>"; };
+		EF21069B20ADD1650061B38B /* SDFocusCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDFocusCollectionViewCell.m; sourceTree = "<group>"; };
+		EF21069D20ADD7620061B38B /* SDNearbyListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNearbyListViewController.h; sourceTree = "<group>"; };
+		EF21069E20ADD7620061B38B /* SDNearbyListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyListViewController.m; sourceTree = "<group>"; };
+		EF2106A020ADD93A0061B38B /* SDNewsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNewsTableView.h; sourceTree = "<group>"; };
+		EF2106A120ADD93A0061B38B /* SDNewsTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNewsTableView.m; sourceTree = "<group>"; };
+		EF2106A320ADD95A0061B38B /* SDNewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNewsTableViewCell.h; sourceTree = "<group>"; };
+		EF2106A420ADD95A0061B38B /* SDNewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNewsTableViewCell.m; sourceTree = "<group>"; };
+		EF2106A620ADD9740061B38B /* SDNewsHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNewsHeadView.h; sourceTree = "<group>"; };
+		EF2106A720ADD9740061B38B /* SDNewsHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNewsHeadView.m; sourceTree = "<group>"; };
 		EF26CF8920A98F73004573D5 /* SDDouYin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDDouYin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF26CF9320A98F74004573D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF26CF9520A98F75004573D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -466,6 +484,12 @@
 		EF26D05C20A99739004573D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF2106A020ADD93A0061B38B /* SDNewsTableView.h */,
+				EF2106A120ADD93A0061B38B /* SDNewsTableView.m */,
+				EF2106A320ADD95A0061B38B /* SDNewsTableViewCell.h */,
+				EF2106A420ADD95A0061B38B /* SDNewsTableViewCell.m */,
+				EF2106A620ADD9740061B38B /* SDNewsHeadView.h */,
+				EF2106A720ADD9740061B38B /* SDNewsHeadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -507,6 +531,10 @@
 		EF26D06120A99739004573D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF21069720ADD1540061B38B /* SDFocusCollectionView.h */,
+				EF21069820ADD1540061B38B /* SDFocusCollectionView.m */,
+				EF21069A20ADD1650061B38B /* SDFocusCollectionViewCell.h */,
+				EF21069B20ADD1650061B38B /* SDFocusCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -531,6 +559,8 @@
 				EF26D07C20AA8BB4004573D5 /* SDRecommendViewController.m */,
 				EF26D07E20AA8BE9004573D5 /* SDNearbyViewController.h */,
 				EF26D07F20AA8BE9004573D5 /* SDNearbyViewController.m */,
+				EF21069D20ADD7620061B38B /* SDNearbyListViewController.h */,
+				EF21069E20ADD7620061B38B /* SDNearbyListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -796,16 +826,21 @@
 				EF26D08320AA8C7C004573D5 /* SDShowTopView.m in Sources */,
 				EF26D05120A99652004573D5 /* SDMeViewController.m in Sources */,
 				EF26D03220A992E0004573D5 /* SDTabBarViewController.m in Sources */,
+				EF2106A220ADD93A0061B38B /* SDNewsTableView.m in Sources */,
 				EF26D02A20A992E0004573D5 /* UIImage+SDImage.m in Sources */,
+				EF21069F20ADD7620061B38B /* SDNearbyListViewController.m in Sources */,
 				EF26D02D20A992E0004573D5 /* SDBaseNavigationController.m in Sources */,
 				EF26D08020AA8BE9004573D5 /* SDNearbyViewController.m in Sources */,
 				EF26D02920A992E0004573D5 /* UIBarButtonItem+Extension.m in Sources */,
+				EF2106A520ADD95A0061B38B /* SDNewsTableViewCell.m in Sources */,
+				EF21069920ADD1540061B38B /* SDFocusCollectionView.m in Sources */,
 				EF26D07420AA7040004573D5 /* SDFocusViewController.m in Sources */,
 				EF26D07A20AA7057004573D5 /* SDNewsViewController.m in Sources */,
 				EF26D01A20A992E0004573D5 /* SDHttpTool.m in Sources */,
 				EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */,
 				EF26D07D20AA8BB4004573D5 /* SDRecommendViewController.m in Sources */,
 				EF26D09A20AB3AA2004573D5 /* BaseViewController.m in Sources */,
+				EF21069C20ADD1650061B38B /* SDFocusCollectionViewCell.m in Sources */,
 				EF26D01920A992E0004573D5 /* SDHelper.m in Sources */,
 				EF26D07720AA704B004573D5 /* SDHomeViewController.m in Sources */,
 				EF26D03020A992E0004573D5 /* SDBaseViewController.m in Sources */,
@@ -818,6 +853,7 @@
 				EF26D02F20A992E0004573D5 /* SDBaseTableViewCell.m in Sources */,
 				EF26D03920A99510004573D5 /* MJExtensionConfig.m in Sources */,
 				EF26D02E20A992E0004573D5 /* SDBaseTableView.m in Sources */,
+				EF2106A820ADD9740061B38B /* SDNewsHeadView.m in Sources */,
 				EF26D02C20A992E0004573D5 /* SDBaseHandler.m in Sources */,
 				EF26CFCA20A992BF004573D5 /* AppDelegate.m in Sources */,
 				EF26CF9C20A98F75004573D5 /* main.m in Sources */,
@@ -923,7 +959,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -972,7 +1008,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -985,16 +1021,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PYAVNJVS7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDDouYin/Class/Lib/Framework",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SDDouYin/Class/Other/SDDouYin.pch";
 				INFOPLIST_FILE = SDDouYin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDDouYin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1004,16 +1042,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PYAVNJVS7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDDouYin/Class/Lib/Framework",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SDDouYin/Class/Other/SDDouYin.pch";
 				INFOPLIST_FILE = SDDouYin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDDouYin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
