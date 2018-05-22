@@ -1,23 +1,22 @@
 PODS:
-  - AFNetworking (3.2.0):
-    - AFNetworking/NSURLSession (= 3.2.0)
-    - AFNetworking/Reachability (= 3.2.0)
-    - AFNetworking/Security (= 3.2.0)
-    - AFNetworking/Serialization (= 3.2.0)
-    - AFNetworking/UIKit (= 3.2.0)
-  - AFNetworking/NSURLSession (3.2.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.0)
-  - AFNetworking/Security (3.2.0)
-  - AFNetworking/Serialization (3.2.0)
-  - AFNetworking/UIKit (3.2.0):
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - KSYMediaPlayer_iOS (3.0.2):
-    - KSYMediaPlayer_iOS/KSYMediaPlayer_live (= 3.0.2)
-  - KSYMediaPlayer_iOS/KSYMediaPlayer_live (3.0.2)
-  - LFLiveKit (2.6)
+  - KSYMediaPlayer_iOS (3.0.3):
+    - KSYMediaPlayer_iOS/KSYMediaPlayer_live (= 3.0.3)
+  - KSYMediaPlayer_iOS/KSYMediaPlayer_live (3.0.3)
   - Masonry (1.1.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.15.3)
@@ -31,7 +30,6 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - KSYMediaPlayer_iOS
-  - LFLiveKit
   - Masonry
   - MJExtension
   - MJRefresh
@@ -42,7 +40,6 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - KSYMediaPlayer_iOS
-    - LFLiveKit
     - Masonry
     - MJExtension
     - MJRefresh
@@ -50,15 +47,14 @@ SPEC REPOS:
     - YYKit
 
 SPEC CHECKSUMS:
-  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
-  KSYMediaPlayer_iOS: d6a39e42c1827c8193899721d4d471c9e516e096
-  LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  KSYMediaPlayer_iOS: bd163c277487e99df58941f10f090af2fb53fd6d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 214fff16d27e469782c8421793258ef1977788c8
+PODFILE CHECKSUM: 9050e0c8b150572b59776f0ddf6efd58cb4f1418
 
 COCOAPODS: 1.5.2

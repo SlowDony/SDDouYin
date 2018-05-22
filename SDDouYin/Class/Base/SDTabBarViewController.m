@@ -27,7 +27,7 @@
 #pragma mark - lazy
 - (SDTabBar *)tabbar{
     if (!_tabbar){
-        _tabbar = [[SDTabBar alloc]initWithFrame:CGRectMake(0, 0,SCREEN_WIDTH , 49)];
+        _tabbar = [[SDTabBar alloc]initWithFrame:CGRectMake(0, 0,SCREEN_WIDTH , kBottomTabbarHeight)];
         _tabbar.delegate = self;
     }
     return _tabbar;

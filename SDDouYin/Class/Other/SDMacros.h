@@ -17,7 +17,7 @@
 ///导航栏的高度(包括状态栏)
 #define kNavigationStatusBarHeight (SCREEN_HEIGHT == 812 ? 88 : 64)
 ///底部导航高度
-#define kBottomTabbarHeight 49
+#define kBottomTabbarHeight (SCREEN_HEIGHT == 812 ? 83 : 49)
 ///屏幕适配
 #define kWidth(x) ((x)*(SCREEN_WIDTH)/375.0)
 #define kHeight(y) ((y)*(SCREEN_HEIGHT)/667.0)

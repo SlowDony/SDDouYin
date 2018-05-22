@@ -113,7 +113,7 @@
     CGFloat btnX =0;
     CGFloat btnY =0;
     CGFloat btnW = self.bounds.size.width/(self.itemArr.count+1);
-    CGFloat btnH = self.frame.size.height;
+    CGFloat btnH = 49;
     
     for (int i = 0; i<[self subviews].count; i++) {
         UIView *btn = [self subviews][i];

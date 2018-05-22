@@ -26,7 +26,6 @@
 		EF26D01A20A992E0004573D5 /* SDHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFD220A992DD004573D5 /* SDHttpTool.m */; };
 		EF26D02920A992E0004573D5 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFF720A992DF004573D5 /* UIBarButtonItem+Extension.m */; };
 		EF26D02A20A992E0004573D5 /* UIImage+SDImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFF920A992DF004573D5 /* UIImage+SDImage.m */; };
-		EF26D02B20A992E0004573D5 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF26CFFB20A992DF004573D5 /* IJKMediaFramework.framework */; };
 		EF26D02C20A992E0004573D5 /* SDBaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26CFFE20A992DF004573D5 /* SDBaseHandler.m */; };
 		EF26D02D20A992E0004573D5 /* SDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D00020A992DF004573D5 /* SDBaseNavigationController.m */; };
 		EF26D02E20A992E0004573D5 /* SDBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D00220A992DF004573D5 /* SDBaseTableView.m */; };
@@ -48,6 +47,10 @@
 		EF26D09D20AB3AB9004573D5 /* SDBaseHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D09C20AB3AB9004573D5 /* SDBaseHiddenViewController.m */; };
 		EF58F1FB20AC8A180009DE08 /* SDNearbyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */; };
 		EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */; };
+		EFE64EC720B473B0006C3D86 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC620B473B0006C3D86 /* libstdc++.6.tbd */; };
+		EFE64EC920B473BD006C3D86 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC820B473BD006C3D86 /* libbz2.tbd */; };
+		EFE64ECB20B473C7006C3D86 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64ECA20B473C7006C3D86 /* libz.tbd */; };
+		EFE64ECC20B473D3006C3D86 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC520B473A0006C3D86 /* VideoToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +111,6 @@
 		EF26CFF720A992DF004573D5 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		EF26CFF820A992DF004573D5 /* UIImage+SDImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SDImage.h"; sourceTree = "<group>"; };
 		EF26CFF920A992DF004573D5 /* UIImage+SDImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SDImage.m"; sourceTree = "<group>"; };
-		EF26CFFB20A992DF004573D5 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		EF26CFFD20A992DF004573D5 /* SDBaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseHandler.h; sourceTree = "<group>"; };
 		EF26CFFE20A992DF004573D5 /* SDBaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseHandler.m; sourceTree = "<group>"; };
 		EF26CFFF20A992DF004573D5 /* SDBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseNavigationController.h; sourceTree = "<group>"; };
@@ -153,6 +155,10 @@
 		EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionView.m; sourceTree = "<group>"; };
 		EF58F1FC20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNearbyCollectionViewCell.h; sourceTree = "<group>"; };
 		EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionViewCell.m; sourceTree = "<group>"; };
+		EFE64EC520B473A0006C3D86 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		EFE64EC620B473B0006C3D86 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		EFE64EC820B473BD006C3D86 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		EFE64ECA20B473C7006C3D86 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +166,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF26D02B20A992E0004573D5 /* IJKMediaFramework.framework in Frameworks */,
+				EFE64ECC20B473D3006C3D86 /* VideoToolbox.framework in Frameworks */,
 				9F3B32AEF97E6EB2EEE44FDF /* libPods-SDDouYin.a in Frameworks */,
+				EFE64EC720B473B0006C3D86 /* libstdc++.6.tbd in Frameworks */,
+				EFE64EC920B473BD006C3D86 /* libbz2.tbd in Frameworks */,
+				EFE64ECB20B473C7006C3D86 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +194,10 @@
 		3E9B042C8E48C49768DFB2A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFE64ECA20B473C7006C3D86 /* libz.tbd */,
+				EFE64EC820B473BD006C3D86 /* libbz2.tbd */,
+				EFE64EC620B473B0006C3D86 /* libstdc++.6.tbd */,
+				EFE64EC520B473A0006C3D86 /* VideoToolbox.framework */,
 				C739C8C11D26CF8EAAC43F43 /* libPods-SDDouYin.a */,
 			);
 			name = Frameworks;
@@ -322,7 +335,6 @@
 		EF26CFFA20A992DF004573D5 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				EF26CFFB20A992DF004573D5 /* IJKMediaFramework.framework */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -1004,6 +1016,7 @@
 			baseConfigurationReference = 8391531588B2795116B10B7F /* Pods-SDDouYin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PYAVNJVS7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1025,6 +1038,7 @@
 			baseConfigurationReference = A3CDE64C0DC54377064539F6 /* Pods-SDDouYin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PYAVNJVS7;
 				FRAMEWORK_SEARCH_PATHS = (
