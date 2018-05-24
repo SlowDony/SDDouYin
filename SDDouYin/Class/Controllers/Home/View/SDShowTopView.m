@@ -145,8 +145,7 @@
     
     //leftBtn
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftBtn setImage:[UIImage imageNamed:@"<#string#>"] forState:UIControlStateNormal];
-    leftBtn.backgroundColor = [UIColor redColor];
+    [leftBtn setImage:[UIImage imageNamed:@"icon_storyhome_open"] forState:UIControlStateNormal];
     [leftBtn  addTarget:self action:@selector(leftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview: leftBtn];
     [leftBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -217,8 +216,8 @@
 
 ///左按钮点击
 - (void)leftBtnClick:(UIButton *)sender{
-    if (self.headImageBtnBlock){
-        self.headImageBtnBlock();
+    if (self.leftBtnBlock){
+        self.leftBtnBlock();
     }
 }
 

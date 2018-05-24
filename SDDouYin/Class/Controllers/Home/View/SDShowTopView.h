@@ -27,8 +27,8 @@
 @property (nonatomic,copy) void (^selectBtnBlock)(UIButton * selectBtn);
 ///搜索按钮点击
 @property (nonatomic,copy) void (^searchBtnBlock)(UIButton * searchBtn);
-///头像按钮点击
-@property (nonatomic,copy) void (^headImageBtnBlock)(void);
+///leftBtn点击
+@property (nonatomic,copy) void (^leftBtnBlock)(void);
 
 
 ///设置标题

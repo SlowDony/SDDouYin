@@ -18,7 +18,7 @@
  @param size 尺寸
  @return 图片
  */
-+ (UIImage *)imageWithRoundCorner:(UIImage *)sourceImage
++ (UIImage *)sd_imageWithRoundCorner:(UIImage *)sourceImage
                      cornerRadius:(CGFloat)cornerRadius
                              size:(CGSize)size{
     CGFloat scale = [UIScreen mainScreen].scale;
@@ -34,6 +34,26 @@
     return image;
 }
 
+
+/**
+ 根据颜色生成纯色图片
+
+ @param color 颜色
+ @return 图片
+ */
++ (UIImage *)sd_imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 
 
 @end

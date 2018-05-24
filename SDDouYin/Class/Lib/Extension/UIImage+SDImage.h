@@ -18,7 +18,14 @@
  @param size 尺寸
  @return 图片
  */
-+ (UIImage *)imageWithRoundCorner:(UIImage *)sourceImage
++ (UIImage *)sd_imageWithRoundCorner:(UIImage *)sourceImage
                      cornerRadius:(CGFloat)cornerRadius
                              size:(CGSize)size;
+/**
+ 根据颜色生成纯色图片
+ 
+ @param color 颜色
+ @return 图片
+ */
++ (UIImage *)sd_imageWithColor:(UIColor *)color;
 @end

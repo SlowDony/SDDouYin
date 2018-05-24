@@ -9,5 +9,5 @@
 #import "SDBaseTableViewCell.h"
 
 @interface SDNewsTableViewCell : SDBaseTableViewCell
-
++(instancetype)cellWithTableView:(UITableView *)tableView;
 @end

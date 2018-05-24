@@ -29,6 +29,9 @@
 
 #define UIColorFromRGBAlpha(rgbValue,alpha) [UIColorFromRGB0X(rgbValue) colorWithAlphaComponent:alpha]
 
+///随机色
+#define UIColorFormRandom [UIColor colorWithRed:(arc4random() % 256)/255.0 green:(arc4random() % 256)/255.0 blue:(arc4random() % 256)/255.0 alpha:1]
+
 ///字体
 #define SDFont(size) ([UIFont systemFontOfSize:size])
 #define SDBoldFont(size) ([UIFont boldSystemFontOfSize:size])

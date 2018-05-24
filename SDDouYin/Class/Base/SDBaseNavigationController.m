@@ -382,7 +382,7 @@
     }
     else
     {
-        backgroundImage = [UIImage imageNamed:@"tabbar_bg"];
+        backgroundImage = [UIImage sd_imageWithColor:UIColorFromRGB0X(0x242137)];
         backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
     }
     

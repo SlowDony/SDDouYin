@@ -17,5 +17,8 @@
 
 @end
 @interface SDNewsHeadView : UIView
+@property (nonatomic,strong)  SDNewsHeadItem *headItem;
+
+@property (nonatomic,copy) void (^headItemClickBlock)(UIButton *sender);
 
 @end
