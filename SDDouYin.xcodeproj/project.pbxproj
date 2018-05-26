@@ -47,6 +47,14 @@
 		EF26D09D20AB3AB9004573D5 /* SDBaseHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D09C20AB3AB9004573D5 /* SDBaseHiddenViewController.m */; };
 		EF58F1FB20AC8A180009DE08 /* SDNearbyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */; };
 		EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */; };
+		EFCC623820B93CE500C8FA7A /* SDMeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623720B93CE500C8FA7A /* SDMeHeadView.m */; };
+		EFCC623B20B93FA400C8FA7A /* NSString+SDString.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623A20B93FA400C8FA7A /* NSString+SDString.m */; };
+		EFCC623E20B940B300C8FA7A /* SDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623D20B940B300C8FA7A /* SDUser.m */; };
+		EFCC624120B9412000C8FA7A /* SDMeHeadTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC624020B9412000C8FA7A /* SDMeHeadTopView.m */; };
+		EFCC624420B951F400C8FA7A /* SDMeEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC624320B951F400C8FA7A /* SDMeEditViewController.m */; };
+		EFCC624720B954B300C8FA7A /* SDMeWorksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC624620B954B300C8FA7A /* SDMeWorksViewController.m */; };
+		EFCC624A20B954C900C8FA7A /* SDMeLikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC624920B954C900C8FA7A /* SDMeLikeViewController.m */; };
+		EFCC624D20B956F200C8FA7A /* SDMeHeadTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC624C20B956F200C8FA7A /* SDMeHeadTitleView.m */; };
 		EFE64EC720B473B0006C3D86 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC620B473B0006C3D86 /* libstdc++.6.tbd */; };
 		EFE64EC920B473BD006C3D86 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC820B473BD006C3D86 /* libbz2.tbd */; };
 		EFE64ECB20B473C7006C3D86 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64ECA20B473C7006C3D86 /* libz.tbd */; };
@@ -155,6 +163,22 @@
 		EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionView.m; sourceTree = "<group>"; };
 		EF58F1FC20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNearbyCollectionViewCell.h; sourceTree = "<group>"; };
 		EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionViewCell.m; sourceTree = "<group>"; };
+		EFCC623620B93CE500C8FA7A /* SDMeHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDMeHeadView.h; sourceTree = "<group>"; };
+		EFCC623720B93CE500C8FA7A /* SDMeHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMeHeadView.m; sourceTree = "<group>"; };
+		EFCC623920B93FA400C8FA7A /* NSString+SDString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SDString.h"; sourceTree = "<group>"; };
+		EFCC623A20B93FA400C8FA7A /* NSString+SDString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SDString.m"; sourceTree = "<group>"; };
+		EFCC623C20B940B300C8FA7A /* SDUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDUser.h; sourceTree = "<group>"; };
+		EFCC623D20B940B300C8FA7A /* SDUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDUser.m; sourceTree = "<group>"; };
+		EFCC623F20B9412000C8FA7A /* SDMeHeadTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDMeHeadTopView.h; sourceTree = "<group>"; };
+		EFCC624020B9412000C8FA7A /* SDMeHeadTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMeHeadTopView.m; sourceTree = "<group>"; };
+		EFCC624220B951F400C8FA7A /* SDMeEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDMeEditViewController.h; sourceTree = "<group>"; };
+		EFCC624320B951F400C8FA7A /* SDMeEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMeEditViewController.m; sourceTree = "<group>"; };
+		EFCC624520B954B300C8FA7A /* SDMeWorksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDMeWorksViewController.h; sourceTree = "<group>"; };
+		EFCC624620B954B300C8FA7A /* SDMeWorksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMeWorksViewController.m; sourceTree = "<group>"; };
+		EFCC624820B954C900C8FA7A /* SDMeLikeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDMeLikeViewController.h; sourceTree = "<group>"; };
+		EFCC624920B954C900C8FA7A /* SDMeLikeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMeLikeViewController.m; sourceTree = "<group>"; };
+		EFCC624B20B956F200C8FA7A /* SDMeHeadTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDMeHeadTitleView.h; sourceTree = "<group>"; };
+		EFCC624C20B956F200C8FA7A /* SDMeHeadTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMeHeadTitleView.m; sourceTree = "<group>"; };
 		EFE64EC520B473A0006C3D86 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		EFE64EC620B473B0006C3D86 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		EFE64EC820B473BD006C3D86 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
@@ -328,6 +352,8 @@
 				EF26CFF720A992DF004573D5 /* UIBarButtonItem+Extension.m */,
 				EF26CFF820A992DF004573D5 /* UIImage+SDImage.h */,
 				EF26CFF920A992DF004573D5 /* UIImage+SDImage.m */,
+				EFCC623920B93FA400C8FA7A /* NSString+SDString.h */,
+				EFCC623A20B93FA400C8FA7A /* NSString+SDString.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -393,6 +419,12 @@
 			children = (
 				EF26D04420A99651004573D5 /* SDMeViewController.h */,
 				EF26D04520A99651004573D5 /* SDMeViewController.m */,
+				EFCC624220B951F400C8FA7A /* SDMeEditViewController.h */,
+				EFCC624320B951F400C8FA7A /* SDMeEditViewController.m */,
+				EFCC624520B954B300C8FA7A /* SDMeWorksViewController.h */,
+				EFCC624620B954B300C8FA7A /* SDMeWorksViewController.m */,
+				EFCC624820B954C900C8FA7A /* SDMeLikeViewController.h */,
+				EFCC624920B954C900C8FA7A /* SDMeLikeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -400,6 +432,8 @@
 		EF26D04620A99651004573D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFCC623C20B940B300C8FA7A /* SDUser.h */,
+				EFCC623D20B940B300C8FA7A /* SDUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -414,6 +448,12 @@
 		EF26D04820A99651004573D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EFCC623620B93CE500C8FA7A /* SDMeHeadView.h */,
+				EFCC623720B93CE500C8FA7A /* SDMeHeadView.m */,
+				EFCC623F20B9412000C8FA7A /* SDMeHeadTopView.h */,
+				EFCC624020B9412000C8FA7A /* SDMeHeadTopView.m */,
+				EFCC624B20B956F200C8FA7A /* SDMeHeadTitleView.h */,
+				EFCC624C20B956F200C8FA7A /* SDMeHeadTitleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -827,20 +867,28 @@
 				EF21069F20ADD7620061B38B /* SDNearbyListViewController.m in Sources */,
 				EF26D02D20A992E0004573D5 /* SDBaseNavigationController.m in Sources */,
 				EF26D08020AA8BE9004573D5 /* SDNearbyViewController.m in Sources */,
+				EFCC623E20B940B300C8FA7A /* SDUser.m in Sources */,
+				EFCC624120B9412000C8FA7A /* SDMeHeadTopView.m in Sources */,
 				EF26D02920A992E0004573D5 /* UIBarButtonItem+Extension.m in Sources */,
 				EF2106A520ADD95A0061B38B /* SDNewsTableViewCell.m in Sources */,
 				EF21069920ADD1540061B38B /* SDFocusCollectionView.m in Sources */,
 				EF26D07420AA7040004573D5 /* SDFocusViewController.m in Sources */,
 				EF26D07A20AA7057004573D5 /* SDNewsViewController.m in Sources */,
+				EFCC623820B93CE500C8FA7A /* SDMeHeadView.m in Sources */,
 				EF26D01A20A992E0004573D5 /* SDHttpTool.m in Sources */,
 				EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */,
+				EFCC624720B954B300C8FA7A /* SDMeWorksViewController.m in Sources */,
 				EF26D07D20AA8BB4004573D5 /* SDRecommendViewController.m in Sources */,
+				EFCC624D20B956F200C8FA7A /* SDMeHeadTitleView.m in Sources */,
 				EF26D09A20AB3AA2004573D5 /* BaseViewController.m in Sources */,
 				EF21069C20ADD1650061B38B /* SDFocusCollectionViewCell.m in Sources */,
 				EF26D01920A992E0004573D5 /* SDHelper.m in Sources */,
+				EFCC624420B951F400C8FA7A /* SDMeEditViewController.m in Sources */,
 				EF26D07720AA704B004573D5 /* SDHomeViewController.m in Sources */,
 				EF26D03020A992E0004573D5 /* SDBaseViewController.m in Sources */,
 				EF26D06E20AA7024004573D5 /* SDLoginViewController.m in Sources */,
+				EFCC623B20B93FA400C8FA7A /* NSString+SDString.m in Sources */,
+				EFCC624A20B954C900C8FA7A /* SDMeLikeViewController.m in Sources */,
 				EF26D09D20AB3AB9004573D5 /* SDBaseHiddenViewController.m in Sources */,
 				EF26CFCB20A992BF004573D5 /* ViewController.m in Sources */,
 				EF26D03120A992E0004573D5 /* SDTabBar.m in Sources */,

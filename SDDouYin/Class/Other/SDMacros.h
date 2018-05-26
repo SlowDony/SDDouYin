@@ -37,6 +37,9 @@
 #define SDBoldFont(size) ([UIFont boldSystemFontOfSize:size])
 #define SDFontCustomName(name,fontSize) ([UIFont fontWithName:name  size:fontSize])
 
+///标题
+#define kDouYinTitle @"抖音"
+
 //log扩展
 #ifdef DEBUG
 #   define DLog(fmt, ...) {NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}

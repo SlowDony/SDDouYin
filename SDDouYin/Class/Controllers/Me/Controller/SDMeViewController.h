@@ -6,8 +6,8 @@
 //  Copyright © 2018年 slowdony. All rights reserved.
 //
 
-#import "SDBaseViewController.h"
+#import "SDBaseHiddenViewController.h"
 
-@interface SDMeViewController : SDBaseViewController
+@interface SDMeViewController : SDBaseHiddenViewController
 
 @end
