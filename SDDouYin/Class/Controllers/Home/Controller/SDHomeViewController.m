@@ -38,6 +38,9 @@
         _mainScrollView.pagingEnabled = YES;
         _mainScrollView.bounces =NO;
         _mainScrollView.scrollEnabled = NO;
+        if (@available(iOS 11.0, *)) {
+            _mainScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
     }
     return _mainScrollView;
 }

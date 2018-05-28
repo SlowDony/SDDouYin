@@ -8,6 +8,9 @@
 
 #import "SDMeHeadTitleView.h"
 
+@interface SDMeHeadTitleView()
+@property (nonatomic,strong)  UIView *bgView;
+@end
 @implementation SDMeHeadTitleView
 
 /*
@@ -28,6 +31,18 @@
 }
 - (void)setupUI{
     
+    
+    UIView *bgView = [[UIView alloc] init];
+    bgView.backgroundColor = [UIColor clearColor];
+    [self addSubview:bgView];
+    self.bgView = bgView;
+    [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mas_left);
+        make.top.equalTo(self.mas_top);
+        make.width.equalTo(self.mas_width);
+        make.height.equalTo(self.mas_height);
+    }];
+    
     //
     UIButton *productionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [productionBtn setTitle:@"作品" forState:UIControlStateNormal];
@@ -39,14 +54,14 @@
     [productionBtn  addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     productionBtn.tag = 10;
     productionBtn.titleLabel.font = SDBoldFont(14);
-    [self addSubview: productionBtn];
+    [bgView addSubview: productionBtn];
     
     self.productionBtn = productionBtn;
     [productionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left);
-        make.top.equalTo(self.mas_top);
+        make.left.equalTo(bgView.mas_left);
+        make.top.equalTo(bgView.mas_top);
         make.width.equalTo(@(SCREEN_WIDTH/2));
-        make.height.equalTo(self.mas_height);
+        make.height.equalTo(bgView.mas_height);
     }];
     
     
@@ -62,13 +77,13 @@
     likeBtn.tag = 11;
     likeBtn.adjustsImageWhenHighlighted = NO;
     [likeBtn  addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview: likeBtn];
+    [bgView addSubview: likeBtn];
     self.likeBtn = likeBtn;
     [likeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.mas_right);
-        make.top.equalTo(self.mas_top);
+        make.right.equalTo(bgView.mas_right);
+        make.top.equalTo(bgView.mas_top);
         make.width.equalTo(@(SCREEN_WIDTH/2));
-        make.height.equalTo(self.mas_height);
+        make.height.equalTo(bgView.mas_height);
     }];
     
     //分割线
@@ -86,8 +101,8 @@
 
 - (void)btnClick:(UIButton *)sender{
     
-    for (int i=0 ; i< self.subviews.count; i++) {
-        UIButton * btn = self.subviews[i];
+    for (int i=0 ; i< self.bgView.subviews.count; i++) {
+        UIButton * btn = self.bgView.subviews[i];
         if (btn.tag ==sender.tag) {
             btn.selected = YES;
             btn.titleLabel.font = SDBoldFont(14);

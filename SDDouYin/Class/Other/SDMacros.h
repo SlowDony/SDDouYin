@@ -39,6 +39,7 @@
 
 ///标题
 #define kDouYinTitle @"抖音"
+#define KNavigationTitleColor ([UIColor whiteColor])
 
 //log扩展
 #ifdef DEBUG

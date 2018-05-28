@@ -7,7 +7,6 @@
 //
 
 #import "SDBaseNavigationController.h"
-#define uColorBannerText        [UIColor whiteColor]       //导航栏文字主色  白色
 
 @interface SDBaseNavigationController ()
 
@@ -75,7 +74,7 @@
     }
     self.titleLabel = [SDHelper labelBulidWithText:title
                                        andFontSize:17
-                                      andTextColor:uColorBannerText
+                                      andTextColor:KNavigationTitleColor
                                 andBackgroundColor:nil
                                            andFram:CGRectMake((SCREEN_WIDTH - titleWhidth)/2, 0,titleWhidth, 44)
                                       andAlignment:NSTextAlignmentCenter
@@ -360,7 +359,7 @@
         lbl.backgroundColor = [UIColor clearColor];
         lbl.textAlignment = alignment;
         lbl.font = [UIFont systemFontOfSize:20];
-        lbl.textColor = uColorBannerText;
+        lbl.textColor = KNavigationTitleColor;
         lbl.text = title;
         //    [lbl sizeToFit];
         [button addSubview:lbl];

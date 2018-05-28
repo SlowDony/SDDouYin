@@ -17,13 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTitle:@"个人资料"];
-    
     // Do any additional setup after loading the view.
 }
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -39,5 +35,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+
 
 @end

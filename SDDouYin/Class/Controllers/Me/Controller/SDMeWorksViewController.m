@@ -13,18 +13,38 @@
  */
 @interface SDMeWorksViewController ()
 
+
+<SDMeCollectionViewDelegate>
+
 @end
 
 @implementation SDMeWorksViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view addSubview:self.collectionView];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - SDMeCollectionViewDelegate
+- (void)sdMeCollectionView:(SDMeCollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    DLog(@"点击");
+}
+
+- (void)sdMeCollectionViewLoadMoreData {
+    DLog(@"geng'duo");
+}
+
+
+#pragma mark - lazy
+-(SDMeCollectionView *)collectionView{
+    if(!_collectionView){
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        layout.minimumLineSpacing = 0;
+        layout.minimumInteritemSpacing = 0;
+        _collectionView = [[SDMeCollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
+    }
+    return _collectionView;
 }
 
 /*

@@ -7,7 +7,7 @@
 //
 
 #import "SDBaseHiddenViewController.h"
-
+#import "SDMeCollectionView.h"
 @interface SDMeWorksViewController : SDBaseHiddenViewController
-
+@property (nonatomic,strong)  SDMeCollectionView *collectionView;
 @end
