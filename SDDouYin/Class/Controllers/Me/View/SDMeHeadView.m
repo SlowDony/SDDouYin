@@ -205,7 +205,7 @@
     [headImageView addGestureRecognizer:tap];
     [headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(kWidth(15)));
-        make.top.equalTo(@(kWidth(5)));
+        make.top.equalTo(@(kWidth(5)+kNavigationStatusBarHeight));
         make.width.height.equalTo(@(kWidth(75)));
     }];
     

@@ -477,7 +477,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.headerZoomIn = YES;
     
-    self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, kNavigationStatusBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT-kNavigationStatusBarHeight)];
+    self.containerView = [[UIView alloc] initWithFrame:self.view.bounds];
     self.containerView.backgroundColor = [UIColor clearColor];
     self.containerView.clipsToBounds = YES;
     self.containerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

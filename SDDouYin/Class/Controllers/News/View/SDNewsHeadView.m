@@ -93,10 +93,9 @@
         NSDictionary * dic = self.titleArr[i];
         headItem.iconImageView.image = [UIImage imageNamed:dic[@"iconImage"]];
         headItem.nameLable.text =dic[@"title"];
-        
+        headItem.backgroundColor = [UIColor clearColor];
         headItem.tag = 100+i;
         [headItem addTarget:self action:@selector(itemBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        headItem.backgroundColor = [UIColor clearColor];
         [self addSubview:headItem];
     }
 }
@@ -108,9 +107,10 @@
 -(void)layoutSubviews{
     
     CGFloat btnX = 0;
-    CGFloat btnY =(CGRectGetHeight(self.frame)-60)/2;
-    CGFloat btnW = SCREEN_WIDTH/4;
     CGFloat btnH = 80;
+    CGFloat btnY =(CGRectGetHeight(self.frame)-btnH)/2;
+    CGFloat btnW = SCREEN_WIDTH/4;
+   
     for (int i=0; i<self.subviews.count; i++) {
         SDNewsHeadItem * headItem =(SDNewsHeadItem *) self.subviews[i];
         btnX = i*btnW;

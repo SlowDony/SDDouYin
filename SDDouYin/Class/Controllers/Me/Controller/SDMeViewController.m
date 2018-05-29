@@ -18,7 +18,7 @@
 #import "HJTabViewControllerPlugin_TabViewBar.h"
 #import "HJDefaultTabViewBar.h"
 
-#define headViewHeight 300
+#define headViewHeight (300+44+kNavigationStatusBarHeight)
 @interface SDMeViewController ()
 <
 SDMeHeadViewDelegate,
@@ -245,7 +245,7 @@ HJDefaultTabViewBarDelegate
 ///头部view
 -(SDMeHeadView *)headView{
     if(!_headView){
-        _headView = [[SDMeHeadView alloc]initWithFrame:CGRectMake(0,kNavigationStatusBarHeight, SCREEN_WIDTH, headViewHeight+44)];
+        _headView = [[SDMeHeadView alloc]initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, headViewHeight)];
         _headView.headViewDelegate = self;
         _headView.backgroundColor = KMainBackgroundColor;
     }

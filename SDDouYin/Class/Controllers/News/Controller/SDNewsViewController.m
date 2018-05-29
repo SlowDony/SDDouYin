@@ -31,7 +31,7 @@
 -(SDNewsHeadView *)headView{
     if (!_headView){
         _headView = [[SDNewsHeadView alloc]initWithFrame:CGRectMake(0, kNavigationStatusBarHeight, SCREEN_WIDTH, 100)];
-        
+        _headView.backgroundColor = KNavigationBarBackgroundColor;
     }
     return _headView;
 }

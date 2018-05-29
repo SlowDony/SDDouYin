@@ -24,7 +24,8 @@
     if (self) {
         self.dataSource     = self;
         self.delegate       = self;
-        self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        self.separatorColor = KMainBackgroundColor;
 #ifdef __IPHONE_11_0
         if ([self respondsToSelector:@selector(setContentInsetAdjustmentBehavior:)]) {
             if (@available(iOS 11.0, *)) {

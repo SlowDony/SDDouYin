@@ -43,7 +43,10 @@
 #define KNavigationBarBackgroundColor (UIColorFromRGB0X(0x2B2841))
 ///主题背景色
 #define KMainBackgroundColor (UIColorFromRGB0X(0x242137))
-
+///列表标题
+#define KTitleColor (UIColorFromRGB0X(0xFFFFFF))
+///子标题
+#define KDetailTitleColor (UIColorFromRGB0X(0x979698))
 
 ///字体
 #define SDFont(size) ([UIFont systemFontOfSize:size])
