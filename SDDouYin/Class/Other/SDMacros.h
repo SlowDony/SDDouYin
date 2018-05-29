@@ -8,6 +8,9 @@
 
 #ifndef SDMacros_h
 #define SDMacros_h
+
+#pragma mark ---------- 尺寸 ---------
+
 ///屏幕宽高
 #define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT    [UIScreen mainScreen].bounds.size.height
@@ -24,6 +27,8 @@
 
 #define KWeakself __weak typeof(self) weakSelf = self;
 
+
+#pragma mark ---------- 颜色 ---------
 ///颜色
 #define UIColorFromRGB0X(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -32,14 +37,20 @@
 ///随机色
 #define UIColorFormRandom [UIColor colorWithRed:(arc4random() % 256)/255.0 green:(arc4random() % 256)/255.0 blue:(arc4random() % 256)/255.0 alpha:1]
 
+///导航栏标题颜色
+#define KNavigationTitleColor ([UIColor whiteColor])
+///导航栏背景颜色
+#define KNavigationBarBackgroundColor (UIColorFromRGB0X(0x2B2841))
+///主题背景色
+#define KMainBackgroundColor (UIColorFromRGB0X(0x242137))
+
+
 ///字体
 #define SDFont(size) ([UIFont systemFontOfSize:size])
 #define SDBoldFont(size) ([UIFont boldSystemFontOfSize:size])
 #define SDFontCustomName(name,fontSize) ([UIFont fontWithName:name  size:fontSize])
-
 ///标题
-#define kDouYinTitle @"抖音"
-#define KNavigationTitleColor ([UIColor whiteColor])
+#define KDouYinTitle @"抖音"
 
 //log扩展
 #ifdef DEBUG

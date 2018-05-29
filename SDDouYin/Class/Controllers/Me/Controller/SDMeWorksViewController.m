@@ -7,14 +7,13 @@
 //
 
 #import "SDMeWorksViewController.h"
-
+#import "SDMeCollectionView.h"
 /**
  个人作品
  */
 @interface SDMeWorksViewController ()
-
-
 <SDMeCollectionViewDelegate>
+@property (nonatomic,strong)  SDMeCollectionView *collectionView;
 
 @end
 

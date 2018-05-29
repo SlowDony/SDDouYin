@@ -381,7 +381,7 @@
     }
     else
     {
-        backgroundImage = [UIImage sd_imageWithColor:UIColorFromRGB0X(0x242137)];
+        backgroundImage = [UIImage sd_imageWithColor:KNavigationBarBackgroundColor];
         backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
     }
     

@@ -230,7 +230,7 @@
     UILabel *numLabel = [[UILabel alloc] init];
     numLabel.backgroundColor = [UIColor clearColor];
     numLabel.textColor = UIColorFromRGB0X(0xFFFFFF);
-    numLabel.text = [NSString stringWithFormat:@"%@号:",kDouYinTitle];
+    numLabel.text = [NSString stringWithFormat:@"%@号:",KDouYinTitle];
     numLabel.textAlignment = NSTextAlignmentLeft;
     numLabel.font = SDFont(12);
     numLabel.numberOfLines = 1;

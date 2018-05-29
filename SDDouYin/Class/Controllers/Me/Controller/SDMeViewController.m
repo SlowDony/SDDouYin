@@ -12,16 +12,27 @@
 #import "SDMeHeadTitleView.h"
 #import "SDBaseNavigationView.h"
 #import "SDMeWorksViewController.h"
+#import "SDMeLikeViewController.h"
+
+#import "HJTabViewControllerPlugin_HeaderScroll.h"
+#import "HJTabViewControllerPlugin_TabViewBar.h"
+#import "HJDefaultTabViewBar.h"
 
 #define headViewHeight 300
 @interface SDMeViewController ()
-<SDMeHeadViewDelegate,UIScrollViewDelegate>
+<
+SDMeHeadViewDelegate,
+UIScrollViewDelegate,
+HJTabViewControllerDataSource,
+HJTabViewControllerDelagate,
+HJDefaultTabViewBarDelegate
+>
 @property (nonatomic,strong)  SDMeHeadView *headView;
-@property (nonatomic,strong)  SDMeHeadTitleView *titleView;
-@property (nonatomic,strong)  UIScrollView *mainScrollView;
-@property (nonatomic,strong)  UIScrollView *childVCScrollView;
+//@property (nonatomic,strong)  SDMeHeadTitleView *titleView;
+//@property (nonatomic,strong)  UIScrollView *mainScrollView;
+//@property (nonatomic,strong)  UIScrollView *childVCScrollView;
 @property (nonatomic,strong)  SDBaseNavigationView *navigationView;
-@property (nonatomic,strong)  SDMeWorksViewController * worksVC; 
+//@property (nonatomic,strong)  SDMeWorksViewController * worksVC;
 @end
 
 @implementation SDMeViewController
@@ -29,31 +40,111 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    [self addNotification];
-    // Do any additional setup after loading the view.
 }
+- (void)setupUI{
+    self.tabDataSource = self;
+    self.tabDelegate = self;
+    self.view.backgroundColor = KMainBackgroundColor;
+    HJDefaultTabViewBar *tabViewBar = [HJDefaultTabViewBar new];
+    tabViewBar.delegate = self;
+    HJTabViewControllerPlugin_TabViewBar *tabViewBarPlugin = [[HJTabViewControllerPlugin_TabViewBar alloc] initWithTabViewBar:tabViewBar delegate:nil];
+    [self enablePlugin:tabViewBarPlugin];
+    
+    [self enablePlugin:[HJTabViewControllerPlugin_HeaderScroll new]];
+    // Do any additional setup after loading the view.
+    [self.view addSubview:self.navigationView];
+}
+
+
+
+#pragma mark - HJDefaultTabViewBarDelegate
+
+- (NSInteger)numberOfTabForTabViewBar:(HJDefaultTabViewBar *)tabViewBar {
+    return [self numberOfViewControllerForTabViewController:self];
+}
+
+///返回按钮标题
+- (id)tabViewBar:(HJDefaultTabViewBar *)tabViewBar titleForIndex:(NSInteger)index {
+    if (index == 0) {
+       return @"作品";
+    }else {
+       return @"喜欢";
+    }
+    
+}
+
+- (void)tabViewBar:(HJDefaultTabViewBar *)tabViewBar didSelectIndex:(NSInteger)index {
+    BOOL anim = labs(index - self.curIndex) > 1 ? NO: YES;
+    [self scrollToIndex:index animated:anim];
+}
+
+#pragma mark - HJTabViewControllerDelagate
+
+- (void)tabViewController:(HJTabViewController *)tabViewController scrollViewVerticalScroll:(CGFloat)contentPercentY {
+    // 博主很傻，用此方法渐变导航栏是偷懒表现，只是为了demo演示。正确科学方法请自行百度 iOS导航栏透明
+//    self.navigationController.navigationBar.alpha = contentPercentY;
+    self.navigationView.alpha =contentPercentY;
+}
+///返回控制器两个
+- (NSInteger)numberOfViewControllerForTabViewController:(HJTabViewController *)tabViewController {
+    return 2;
+}
+
+///返回当前显示控制器
+- (UIViewController *)tabViewController:(HJTabViewController *)tabViewController viewControllerForIndex:(NSInteger)index {
+    if(index==0){
+      SDMeWorksViewController *vc = [[SDMeWorksViewController alloc]init];
+      return vc;
+    }else {
+       SDMeLikeViewController *vc = [[SDMeLikeViewController alloc]init];
+       return vc;
+    }
+}
+///返回头部
+- (UIView *)tabHeaderViewForTabViewController:(HJTabViewController *)tabViewController {
+    
+    return self.headView;
+}
+
+- (CGFloat)tabHeaderBottomInsetForTabViewController:(HJTabViewController *)tabViewController {
+    return HJTabViewBarDefaultHeight+kNavigationStatusBarHeight;
+}
+
+- (UIEdgeInsets)containerInsetsForTabViewController:(HJTabViewController *)tabViewController {
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+#pragma mark - SDMeHeadViewDelegate
+- (void)sdMeHeadView:(SDMeHeadView *)headView bottomViewBtnClick:(UIButton *)sender {
+    DLog(@"bottomView");
+}
+
+- (void)sdMeHeadView:(SDMeHeadView *)headView topViewBtnClick:(UIButton *)sender {
+    DLog(@"topView");
+}
+
+- (void)sdMeHeadViewHeadBtnClick {
+    DLog(@"头部点击");
+    SDMeEditViewController *editMeVC = [[SDMeEditViewController alloc]init];
+    [self.navigationController pushViewController:editMeVC animated:YES];
+}
+
+
+
+
+/*
 - (void)setupUI{
     [self.view addSubview:self.mainScrollView];
     [self.mainScrollView addSubview:self.headView];
     [self.mainScrollView addSubview:self.titleView];
-    [self.view addSubview:self.navigationView];
+   
     [self.mainScrollView addSubview:self.childVCScrollView];
     [self.childVCScrollView addSubview:self.worksVC.view];
 
 }
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    DLog(@"scrollViewWillBeginDragging");
-}
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    DLog(@"scrollViewDidEndDecelerating");
-}
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
-    DLog(@"scrollViewDidEndScrollingAnimation");
-}
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView{
-     DLog(@"scrollViewDidZoom");
-}
+
+
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if (scrollView ==self.mainScrollView)
@@ -74,20 +165,7 @@
     
 }
 
-#pragma mark - SDMeHeadViewDelegate
-- (void)sdMeHeadView:(SDMeHeadView *)headView bottomViewBtnClick:(UIButton *)sender {
-    DLog(@"bottomView");
-}
 
-- (void)sdMeHeadView:(SDMeHeadView *)headView topViewBtnClick:(UIButton *)sender {
-    DLog(@"topView");
-}
-
-- (void)sdMeHeadViewHeadBtnClick {
-    DLog(@"头部点击");
-    SDMeEditViewController *editMeVC = [[SDMeEditViewController alloc]init];
-    [self.navigationController pushViewController:editMeVC animated:YES];
-}
 
 
 #pragma mark - addNotification
@@ -118,26 +196,12 @@
         self.mainScrollView.scrollEnabled = NO;
     }
     
-    
-//    DLog(@"scrollViewOffY:%f",scrollViewOffY);
-    
-//    [self.mainScrollView setContentOffset:CGPointMake(0, scrollViewOffY) animated:NO];
-    /*
-    self.headView.frame = CGRectMake(0, SafeAreaTopHeight- scrollViewOffY, ScreenWidth, 300);
-    if (CGRectGetHeight(self.headView.frame)-scrollViewOffY >=0){
-        self.titleBtnView.frame = CGRectMake(0, SafeAreaTopHeight+CGRectGetHeight(self.headView.frame)- scrollViewOffY, ScreenWidth, 44);
-    }else {
-        self.titleBtnView.frame = CGRectMake(0, SafeAreaTopHeight, ScreenWidth, 44);
-    }
-     */
-   // self.navigationView.alpha = scrollViewOffY/300;
-    
 }
-
+*/
 
 
 #pragma mark - lazy
-
+/*
 -(UIScrollView *)mainScrollView{
     if(!_mainScrollView){
         _mainScrollView = [[UIScrollView alloc] init];
@@ -177,38 +241,39 @@
     }
     return _titleView;
 }
-
+*/
+///头部view
 -(SDMeHeadView *)headView{
     if(!_headView){
-        _headView = [[SDMeHeadView alloc]initWithFrame:CGRectMake(0, kNavigationStatusBarHeight, SCREEN_WIDTH, headViewHeight)];
+        _headView = [[SDMeHeadView alloc]initWithFrame:CGRectMake(0,kNavigationStatusBarHeight, SCREEN_WIDTH, headViewHeight+44)];
         _headView.headViewDelegate = self;
-//        _headView.backgroundColor = UIColorFormRandom;
-        //  _headView.headViewType = self.personalDataType==PersonalDataTypeMe?HeadViewTypeMe:HeadViewTypeOther;
+        _headView.backgroundColor = KMainBackgroundColor;
     }
     return _headView;
 }
-
+///导航栏
 - (SDBaseNavigationView *)navigationView{
     if (!_navigationView) {
         _navigationView = [[SDBaseNavigationView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kNavigationStatusBarHeight)];
         _navigationView.titleLabel.text = @"昵称";
-        _navigationView.backgroundColor = [UIColor redColor];
+        _navigationView.backgroundColor = KNavigationBarBackgroundColor;
+        _navigationView.alpha = 0;
     }
     return _navigationView;
 }
 
-/**
- 作品
- */
--(SDMeWorksViewController *)worksVC{
-    if (!_worksVC) {
-        _worksVC = [[SDMeWorksViewController alloc]init];
-        [self addChildViewController:_worksVC];
-        _worksVC.view.frame =CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-        self.worksVC.collectionView.scrollEnabled = NO;
-    }
-    return _worksVC;
-}
+///**
+// 作品
+// */
+//-(SDMeWorksViewController *)worksVC{
+//    if (!_worksVC) {
+//        _worksVC = [[SDMeWorksViewController alloc]init];
+//        [self addChildViewController:_worksVC];
+//        _worksVC.view.frame =CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+//        self.worksVC.collectionView.scrollEnabled = NO;
+//    }
+//    return _worksVC;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

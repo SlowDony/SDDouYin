@@ -14,6 +14,14 @@
 		EF2106A220ADD93A0061B38B /* SDNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2106A120ADD93A0061B38B /* SDNewsTableView.m */; };
 		EF2106A520ADD95A0061B38B /* SDNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2106A420ADD95A0061B38B /* SDNewsTableViewCell.m */; };
 		EF2106A820ADD9740061B38B /* SDNewsHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2106A720ADD9740061B38B /* SDNewsHeadView.m */; };
+		EF231CC920BC6049006DA519 /* HJDefaultTabViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CC820BC6049006DA519 /* HJDefaultTabViewBar.m */; };
+		EF231CDA20BC605F006DA519 /* HJTabViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CCC20BC605F006DA519 /* HJTabViewBar.m */; };
+		EF231CDB20BC605F006DA519 /* HJTabViewController+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CCF20BC605F006DA519 /* HJTabViewController+ViewController.m */; };
+		EF231CDC20BC605F006DA519 /* HJTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CD120BC605F006DA519 /* HJTabViewController.m */; };
+		EF231CDD20BC605F006DA519 /* HJTabViewControllerPlugin_Base.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CD320BC605F006DA519 /* HJTabViewControllerPlugin_Base.m */; };
+		EF231CDE20BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CD520BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m */; };
+		EF231CDF20BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CD720BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.m */; };
+		EF231CE020BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CD920BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.m */; };
 		EF26CF9420A98F74004573D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9220A98F74004573D5 /* Main.storyboard */; };
 		EF26CF9620A98F75004573D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9520A98F75004573D5 /* Assets.xcassets */; };
 		EF26CF9920A98F75004573D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9720A98F75004573D5 /* LaunchScreen.storyboard */; };
@@ -98,6 +106,23 @@
 		EF2106A420ADD95A0061B38B /* SDNewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNewsTableViewCell.m; sourceTree = "<group>"; };
 		EF2106A620ADD9740061B38B /* SDNewsHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNewsHeadView.h; sourceTree = "<group>"; };
 		EF2106A720ADD9740061B38B /* SDNewsHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNewsHeadView.m; sourceTree = "<group>"; };
+		EF231CC720BC6049006DA519 /* HJDefaultTabViewBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJDefaultTabViewBar.h; sourceTree = "<group>"; };
+		EF231CC820BC6049006DA519 /* HJDefaultTabViewBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJDefaultTabViewBar.m; sourceTree = "<group>"; };
+		EF231CCB20BC605F006DA519 /* HJTabViewBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewBar.h; sourceTree = "<group>"; };
+		EF231CCC20BC605F006DA519 /* HJTabViewBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewBar.m; sourceTree = "<group>"; };
+		EF231CCD20BC605F006DA519 /* HJTabViewController+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HJTabViewController+Private.h"; sourceTree = "<group>"; };
+		EF231CCE20BC605F006DA519 /* HJTabViewController+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HJTabViewController+ViewController.h"; sourceTree = "<group>"; };
+		EF231CCF20BC605F006DA519 /* HJTabViewController+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HJTabViewController+ViewController.m"; sourceTree = "<group>"; };
+		EF231CD020BC605F006DA519 /* HJTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewController.h; sourceTree = "<group>"; };
+		EF231CD120BC605F006DA519 /* HJTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewController.m; sourceTree = "<group>"; };
+		EF231CD220BC605F006DA519 /* HJTabViewControllerPlugin_Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewControllerPlugin_Base.h; sourceTree = "<group>"; };
+		EF231CD320BC605F006DA519 /* HJTabViewControllerPlugin_Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewControllerPlugin_Base.m; sourceTree = "<group>"; };
+		EF231CD420BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewControllerPlugin_BottomInset.h; sourceTree = "<group>"; };
+		EF231CD520BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewControllerPlugin_BottomInset.m; sourceTree = "<group>"; };
+		EF231CD620BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewControllerPlugin_HeaderScroll.h; sourceTree = "<group>"; };
+		EF231CD720BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewControllerPlugin_HeaderScroll.m; sourceTree = "<group>"; };
+		EF231CD820BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewControllerPlugin_TabViewBar.h; sourceTree = "<group>"; };
+		EF231CD920BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewControllerPlugin_TabViewBar.m; sourceTree = "<group>"; };
 		EF26CF8920A98F73004573D5 /* SDDouYin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDDouYin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF26CF9320A98F74004573D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF26CF9520A98F75004573D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -248,6 +273,46 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF231CC520BC6028006DA519 /* HJTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF231CCA20BC605F006DA519 /* HJTabViewController */,
+				EF231CC620BC6049006DA519 /* HJTabViewBar */,
+			);
+			path = HJTabViewController;
+			sourceTree = "<group>";
+		};
+		EF231CC620BC6049006DA519 /* HJTabViewBar */ = {
+			isa = PBXGroup;
+			children = (
+				EF231CC720BC6049006DA519 /* HJDefaultTabViewBar.h */,
+				EF231CC820BC6049006DA519 /* HJDefaultTabViewBar.m */,
+			);
+			path = HJTabViewBar;
+			sourceTree = "<group>";
+		};
+		EF231CCA20BC605F006DA519 /* HJTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF231CCB20BC605F006DA519 /* HJTabViewBar.h */,
+				EF231CCC20BC605F006DA519 /* HJTabViewBar.m */,
+				EF231CCD20BC605F006DA519 /* HJTabViewController+Private.h */,
+				EF231CCE20BC605F006DA519 /* HJTabViewController+ViewController.h */,
+				EF231CCF20BC605F006DA519 /* HJTabViewController+ViewController.m */,
+				EF231CD020BC605F006DA519 /* HJTabViewController.h */,
+				EF231CD120BC605F006DA519 /* HJTabViewController.m */,
+				EF231CD220BC605F006DA519 /* HJTabViewControllerPlugin_Base.h */,
+				EF231CD320BC605F006DA519 /* HJTabViewControllerPlugin_Base.m */,
+				EF231CD420BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.h */,
+				EF231CD520BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m */,
+				EF231CD620BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.h */,
+				EF231CD720BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.m */,
+				EF231CD820BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.h */,
+				EF231CD920BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.m */,
+			);
+			path = HJTabViewController;
+			sourceTree = "<group>";
+		};
 		EF26CF8020A98F73004573D5 = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +440,7 @@
 		EF26CFFA20A992DF004573D5 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				EF231CC520BC6028006DA519 /* HJTabViewController */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -886,10 +952,12 @@
 				EF26D02A20A992E0004573D5 /* UIImage+SDImage.m in Sources */,
 				EF21069F20ADD7620061B38B /* SDNearbyListViewController.m in Sources */,
 				EF26D02D20A992E0004573D5 /* SDBaseNavigationController.m in Sources */,
+				EF231CDB20BC605F006DA519 /* HJTabViewController+ViewController.m in Sources */,
 				EFCC625920BAF23C00C8FA7A /* SDNotificationConst.m in Sources */,
 				EF26D08020AA8BE9004573D5 /* SDNearbyViewController.m in Sources */,
 				EFCC623E20B940B300C8FA7A /* SDUser.m in Sources */,
 				EFCC624120B9412000C8FA7A /* SDMeHeadTopView.m in Sources */,
+				EF231CE020BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.m in Sources */,
 				EF26D02920A992E0004573D5 /* UIBarButtonItem+Extension.m in Sources */,
 				EF2106A520ADD95A0061B38B /* SDNewsTableViewCell.m in Sources */,
 				EF21069920ADD1540061B38B /* SDFocusCollectionView.m in Sources */,
@@ -897,8 +965,10 @@
 				EF26D07A20AA7057004573D5 /* SDNewsViewController.m in Sources */,
 				EFCC623820B93CE500C8FA7A /* SDMeHeadView.m in Sources */,
 				EF26D01A20A992E0004573D5 /* SDHttpTool.m in Sources */,
+				EF231CDA20BC605F006DA519 /* HJTabViewBar.m in Sources */,
 				EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */,
 				EFCC624720B954B300C8FA7A /* SDMeWorksViewController.m in Sources */,
+				EF231CDF20BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.m in Sources */,
 				EF26D07D20AA8BB4004573D5 /* SDRecommendViewController.m in Sources */,
 				EFCC624D20B956F200C8FA7A /* SDMeHeadTitleView.m in Sources */,
 				EF26D09A20AB3AA2004573D5 /* BaseViewController.m in Sources */,
@@ -909,17 +979,21 @@
 				EF26D03020A992E0004573D5 /* SDBaseViewController.m in Sources */,
 				EFCC625320B9C42B00C8FA7A /* SDMeCollectionView.m in Sources */,
 				EF26D06E20AA7024004573D5 /* SDLoginViewController.m in Sources */,
+				EF231CDE20BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m in Sources */,
 				EFCC623B20B93FA400C8FA7A /* NSString+SDString.m in Sources */,
 				EFCC624A20B954C900C8FA7A /* SDMeLikeViewController.m in Sources */,
+				EF231CC920BC6049006DA519 /* HJDefaultTabViewBar.m in Sources */,
 				EF26D09D20AB3AB9004573D5 /* SDBaseHiddenViewController.m in Sources */,
 				EFCC625020B9BC2C00C8FA7A /* SDBaseNavigationView.m in Sources */,
 				EF26CFCB20A992BF004573D5 /* ViewController.m in Sources */,
 				EF26D03120A992E0004573D5 /* SDTabBar.m in Sources */,
 				EF26D07120AA7031004573D5 /* SDAddViewController.m in Sources */,
+				EF231CDD20BC605F006DA519 /* HJTabViewControllerPlugin_Base.m in Sources */,
 				EFCC625620B9C43900C8FA7A /* SDMeCollectionViewCell.m in Sources */,
 				EF58F1FB20AC8A180009DE08 /* SDNearbyCollectionView.m in Sources */,
 				EF26D02F20A992E0004573D5 /* SDBaseTableViewCell.m in Sources */,
 				EF26D03920A99510004573D5 /* MJExtensionConfig.m in Sources */,
+				EF231CDC20BC605F006DA519 /* HJTabViewController.m in Sources */,
 				EF26D02E20A992E0004573D5 /* SDBaseTableView.m in Sources */,
 				EF2106A820ADD9740061B38B /* SDNewsHeadView.m in Sources */,
 				EF26D02C20A992E0004573D5 /* SDBaseHandler.m in Sources */,

@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = UIColorFromRGB0X(0x242137);
+    self.view.backgroundColor = KMainBackgroundColor;
     
 }
 
