@@ -37,11 +37,7 @@ UICollectionViewDataSource>
         self.pagingEnabled = NO;
         //注册
         [self registerClass:[SDNearbyCollectionViewCell class] forCellWithReuseIdentifier:nearbyCell];
-        if (@available(iOS 11.0, *)) {
-            self.contentInsetAdjustmentBehavior =UIScrollViewContentInsetAdjustmentNever;
-        } else {
-            // Fallback on earlier versions
-        }
+        
         
     }
     return self;

@@ -156,8 +156,7 @@
     
     //搜索
     UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [searchBtn setImage:[UIImage imageNamed:@"HomeSearchIcon"] forState:UIControlStateNormal];
-    [searchBtn setBackgroundColor:[UIColor redColor]];
+    [searchBtn setImage:[UIImage imageNamed:@"icon_search"] forState:UIControlStateNormal];
     [searchBtn addTarget:self action:@selector(searchBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview: searchBtn];
     self.searchBtn = searchBtn;

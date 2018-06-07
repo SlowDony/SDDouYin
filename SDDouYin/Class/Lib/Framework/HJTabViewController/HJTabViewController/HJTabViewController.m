@@ -493,6 +493,7 @@
     self.scrollView.scrollsToTop = NO;
     self.scrollView.delaysContentTouches = NO;
     self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.scrollView.scrollEnabled = NO;
     [self.containerView addSubview:self.scrollView];
 }
 

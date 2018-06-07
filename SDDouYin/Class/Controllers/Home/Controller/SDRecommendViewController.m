@@ -7,26 +7,37 @@
 //
 
 #import "SDRecommendViewController.h"
-
+#import "SDHomeBtnView.h"
 /**
  推荐
  */
 @interface SDRecommendViewController ()
-
+@property (nonatomic,strong)  SDHomeBtnView *homeBtnView;
 @end
 
 @implementation SDRecommendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor =[UIColor redColor];
+    [self.view addSubview:self.homeBtnView];
     // Do any additional setup after loading the view.
 }
 
+
+#pragma mark - lazy
+-(SDHomeBtnView *)homeBtnView{
+    if(!_homeBtnView){
+        _homeBtnView = [[SDHomeBtnView alloc]initWithFrame:self.view.bounds];
+        
+    }
+    return _homeBtnView;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation

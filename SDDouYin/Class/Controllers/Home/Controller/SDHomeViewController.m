@@ -40,6 +40,8 @@
         _mainScrollView.scrollEnabled = NO;
         if (@available(iOS 11.0, *)) {
             _mainScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }else {
+             self.automaticallyAdjustsScrollViewInsets = NO;
         }
     }
     return _mainScrollView;

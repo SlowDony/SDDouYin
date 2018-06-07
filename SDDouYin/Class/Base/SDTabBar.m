@@ -33,8 +33,7 @@
     if (!_cameraBtn){
         //
         _cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [_cameraBtn setImage:[UIImage imageNamed:@"tab_launch"] forState:UIControlStateNormal];
-        [_cameraBtn setTitle:@"添加" forState:UIControlStateNormal];
+        [_cameraBtn setImage:[UIImage imageNamed:@"upload_icon"] forState:UIControlStateNormal];
         [_cameraBtn  addTarget:self action:@selector(itemBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         _cameraBtn.tag = TabBarTypeAdd;
     }

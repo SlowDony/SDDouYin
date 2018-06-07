@@ -8,6 +8,7 @@
 
 #import "SDBaseHiddenViewController.h"
 
+///推荐
 @interface SDRecommendViewController : SDBaseHiddenViewController
 
 @end

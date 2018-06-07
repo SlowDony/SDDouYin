@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F3B32AEF97E6EB2EEE44FDF /* libPods-SDDouYin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C739C8C11D26CF8EAAC43F43 /* libPods-SDDouYin.a */; };
+		EF1EC7FF20C99060006C0BE5 /* SDHomeBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1EC7FE20C99060006C0BE5 /* SDHomeBtnView.m */; };
 		EF21069920ADD1540061B38B /* SDFocusCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21069820ADD1540061B38B /* SDFocusCollectionView.m */; };
 		EF21069C20ADD1650061B38B /* SDFocusCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21069B20ADD1650061B38B /* SDFocusCollectionViewCell.m */; };
 		EF21069F20ADD7620061B38B /* SDNearbyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21069E20ADD7620061B38B /* SDNearbyListViewController.m */; };
@@ -53,6 +54,7 @@
 		EF26D08320AA8C7C004573D5 /* SDShowTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D08120AA8C7C004573D5 /* SDShowTopView.m */; };
 		EF26D09A20AB3AA2004573D5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D09920AB3AA2004573D5 /* BaseViewController.m */; };
 		EF26D09D20AB3AB9004573D5 /* SDBaseHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D09C20AB3AB9004573D5 /* SDBaseHiddenViewController.m */; };
+		EF3F07DA20C930F2001F9DC5 /* SDHomeBtnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3F07D920C930F2001F9DC5 /* SDHomeBtnItem.m */; };
 		EF58F1FB20AC8A180009DE08 /* SDNearbyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */; };
 		EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */; };
 		EFCC623820B93CE500C8FA7A /* SDMeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623720B93CE500C8FA7A /* SDMeHeadView.m */; };
@@ -94,6 +96,8 @@
 		8391531588B2795116B10B7F /* Pods-SDDouYin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYin/Pods-SDDouYin.debug.xcconfig"; sourceTree = "<group>"; };
 		A3CDE64C0DC54377064539F6 /* Pods-SDDouYin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYin.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYin/Pods-SDDouYin.release.xcconfig"; sourceTree = "<group>"; };
 		C739C8C11D26CF8EAAC43F43 /* libPods-SDDouYin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDDouYin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1EC7FD20C99060006C0BE5 /* SDHomeBtnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHomeBtnView.h; sourceTree = "<group>"; };
+		EF1EC7FE20C99060006C0BE5 /* SDHomeBtnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHomeBtnView.m; sourceTree = "<group>"; };
 		EF21069720ADD1540061B38B /* SDFocusCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDFocusCollectionView.h; sourceTree = "<group>"; };
 		EF21069820ADD1540061B38B /* SDFocusCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDFocusCollectionView.m; sourceTree = "<group>"; };
 		EF21069A20ADD1650061B38B /* SDFocusCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDFocusCollectionViewCell.h; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 		EF26D09920AB3AA2004573D5 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		EF26D09B20AB3AB9004573D5 /* SDBaseHiddenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDBaseHiddenViewController.h; sourceTree = "<group>"; };
 		EF26D09C20AB3AB9004573D5 /* SDBaseHiddenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBaseHiddenViewController.m; sourceTree = "<group>"; };
+		EF3F07D820C930F2001F9DC5 /* SDHomeBtnItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHomeBtnItem.h; sourceTree = "<group>"; };
+		EF3F07D920C930F2001F9DC5 /* SDHomeBtnItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHomeBtnItem.m; sourceTree = "<group>"; };
 		EF58F1F920AC8A180009DE08 /* SDNearbyCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNearbyCollectionView.h; sourceTree = "<group>"; };
 		EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionView.m; sourceTree = "<group>"; };
 		EF58F1FC20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNearbyCollectionViewCell.h; sourceTree = "<group>"; };
@@ -726,6 +732,10 @@
 				EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */,
 				EF58F1FC20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.h */,
 				EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */,
+				EF3F07D820C930F2001F9DC5 /* SDHomeBtnItem.h */,
+				EF3F07D920C930F2001F9DC5 /* SDHomeBtnItem.m */,
+				EF1EC7FD20C99060006C0BE5 /* SDHomeBtnView.h */,
+				EF1EC7FE20C99060006C0BE5 /* SDHomeBtnView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -978,12 +988,14 @@
 				EF26D07720AA704B004573D5 /* SDHomeViewController.m in Sources */,
 				EF26D03020A992E0004573D5 /* SDBaseViewController.m in Sources */,
 				EFCC625320B9C42B00C8FA7A /* SDMeCollectionView.m in Sources */,
+				EF1EC7FF20C99060006C0BE5 /* SDHomeBtnView.m in Sources */,
 				EF26D06E20AA7024004573D5 /* SDLoginViewController.m in Sources */,
 				EF231CDE20BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m in Sources */,
 				EFCC623B20B93FA400C8FA7A /* NSString+SDString.m in Sources */,
 				EFCC624A20B954C900C8FA7A /* SDMeLikeViewController.m in Sources */,
 				EF231CC920BC6049006DA519 /* HJDefaultTabViewBar.m in Sources */,
 				EF26D09D20AB3AB9004573D5 /* SDBaseHiddenViewController.m in Sources */,
+				EF3F07DA20C930F2001F9DC5 /* SDHomeBtnItem.m in Sources */,
 				EFCC625020B9BC2C00C8FA7A /* SDBaseNavigationView.m in Sources */,
 				EF26CFCB20A992BF004573D5 /* ViewController.m in Sources */,
 				EF26D03120A992E0004573D5 /* SDTabBar.m in Sources */,
