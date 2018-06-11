@@ -13,11 +13,19 @@
 #define HomeHeadImageViewWidth 50
 #define HomeHandleBtnWidth 42
 
-typedef NS_ENUM(NSInteger ,HomeBtnItemType){
-    HomeBtnItemHead = 0, //头像试图
-    HomeBtnItemOther ,   //其他试图
-};
 
+
+@interface SDHomeMusicView :UIView
+
+@property (nonatomic,strong)  UIButton *musicImageBtn;
+
+@end
+
+typedef NS_ENUM(NSInteger ,HomeBtnItemType){
+    HomeBtnItemHead = 100, //头像试图
+    HomeBtnItemBtns = 101, //按钮试图
+    HomeBtnItemMusic = 102, //音乐封面转动
+};
 @interface SDHomeBtnItem : UIView
 
 @property (nonatomic,assign) HomeBtnItemType homeBtnType;

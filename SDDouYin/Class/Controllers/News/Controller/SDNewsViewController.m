@@ -21,7 +21,7 @@
 -(SDNewsTableView *)tableView{
     if (!_tableView){
         //
-        _tableView = [[SDNewsTableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kNavigationStatusBarHeight) style:UITableViewStylePlain];
+        _tableView = [[SDNewsTableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kNavBarHeight) style:UITableViewStylePlain];
         _tableView.tableHeaderView = self.headView;
         
     }
@@ -30,7 +30,7 @@
 
 -(SDNewsHeadView *)headView{
     if (!_headView){
-        _headView = [[SDNewsHeadView alloc]initWithFrame:CGRectMake(0, kNavigationStatusBarHeight, SCREEN_WIDTH, 100)];
+        _headView = [[SDNewsHeadView alloc]initWithFrame:CGRectMake(0, kNavBarHeight, SCREEN_WIDTH, 100)];
         _headView.backgroundColor = KNavigationBarBackgroundColor;
     }
     return _headView;

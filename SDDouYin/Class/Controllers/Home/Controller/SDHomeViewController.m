@@ -30,9 +30,9 @@
 -(UIScrollView *)mainScrollView{
     if (!_mainScrollView) {
         _mainScrollView = [[UIScrollView alloc] init];
-        _mainScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kBottomTabbarHeight);
+        _mainScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kTabBarHeight);
         _mainScrollView.delegate = self;
-        _mainScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-kBottomTabbarHeight);
+        _mainScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-kTabBarHeight);
         _mainScrollView.showsHorizontalScrollIndicator = NO;
         _mainScrollView.showsVerticalScrollIndicator = NO;
         _mainScrollView.pagingEnabled = YES;
@@ -54,7 +54,7 @@
     if (!_nearbyVC){
         _nearbyVC = [[SDNearbyViewController alloc]init];
         [self addChildViewController:_nearbyVC];
-        _nearbyVC.view.frame =CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kBottomTabbarHeight);
+        _nearbyVC.view.frame =CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kTabBarHeight);
     }
     return _nearbyVC;
 }
@@ -66,7 +66,7 @@
     if (!_recommendVC){
         _recommendVC = [[SDRecommendViewController alloc]init];
         [self addChildViewController:_recommendVC];
-        _recommendVC.view.frame =CGRectMake(0,0 , SCREEN_WIDTH, SCREEN_HEIGHT-kBottomTabbarHeight);
+        _recommendVC.view.frame =CGRectMake(0,0 , SCREEN_WIDTH, SCREEN_HEIGHT-kTabBarHeight);
     }
     return _recommendVC;
 }
@@ -75,10 +75,9 @@
     if (!_showTopView) {
         NSArray *arr = @[@"推荐",@"附近"];
         CGFloat width = SCREEN_WIDTH;
-        _showTopView = [[SDShowTopView alloc]initWithFrame:CGRectMake(0, 0, width, kNavigationStatusBarHeight)];
+        _showTopView = [[SDShowTopView alloc]initWithFrame:CGRectMake(0, 0, width, kNavBarHeight)];
         _showTopView.selectIndex = 0;
         [_showTopView setTopTitleArr:arr];
-        _showTopView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.2];
         KWeakself
         _showTopView.selectBtnBlock = ^(UIButton *selectBtn) {
             CGFloat index = (selectBtn.tag-1000)*SCREEN_WIDTH;

@@ -13,14 +13,20 @@
 
 ///屏幕宽高
 #define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
-#define SCREEN_HEIGHT    [UIScreen mainScreen].bounds.size.height
+#define SCREEN_HEIGHT   [UIScreen mainScreen].bounds.size.height
 
-///导航栏的高度(不包括状态栏)
-#define kNavigationBarHeight 44
-///导航栏的高度(包括状态栏)
-#define kNavigationStatusBarHeight (SCREEN_HEIGHT == 812 ? 88 : 64)
-///底部导航高度
-#define kBottomTabbarHeight (SCREEN_HEIGHT == 812 ? 83 : 49)
+///判断设备类型是否iPhoneX
+#define ISIphoneX    (SCREEN_WIDTH == 375.f && SCREEN_HEIGHT == 812.f ? YES : NO)
+
+///导航栏内容高度(不包括状态栏)
+#define kNavContentBarHeight 44.0
+///状态栏高度
+#define kStatusBarHeight (ISIphoneX ? 44.f : 20.f)
+///导航栏高度
+#define kNavBarHeight (ISIphoneX ? 88.f : 64.f)
+///底部标签栏高度
+#define kTabBarHeight (ISIphoneX ? 49.f + 34.f : 49.f)
+
 ///屏幕适配
 #define kWidth(x) ((x)*(SCREEN_WIDTH)/375.0)
 #define kHeight(y) ((y)*(SCREEN_HEIGHT)/667.0)
@@ -48,6 +54,7 @@
 ///子标题
 #define KDetailTitleColor (UIColorFromRGB0X(0x979698))
 
+#pragma mark ---------- 字体 ---------
 ///字体
 #define SDFont(size) ([UIFont systemFontOfSize:size])
 #define SDBoldFont(size) ([UIFont boldSystemFontOfSize:size])
@@ -64,18 +71,7 @@
 #   define ELog(err)
 #endif
 
-/**
- *  @author slowdony, 16-01-13 15:01:04
- *  这个宏灵感来源于ReactiveCocoa EXTScope.h
- *  使用方法如下,注意前面的@符号 :
- @xWeakify
- [obj block:^{
- @xStrongify
- [self doAnything];
- self.property = something;
- }];
- *  @since v0.1.0
- */
+
 #ifndef    xWeakify
 #if __has_feature(objc_arc)
 #define xWeakify autoreleasepool{} __weak __typeof__(self) weakRef = self;

@@ -29,18 +29,30 @@
 
 - (void)setupUI{
     
-    SDHomeBtnItem *shareItem = [[SDHomeBtnItem alloc]initWithType:HomeBtnItemOther];
+    ///音乐背景
+    SDHomeMusicView *musicView = [[SDHomeMusicView alloc]init];
+    [self addSubview:musicView];
+    [musicView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.mas_right);
+        make.bottom.equalTo(self.mas_bottom).offset(-50);
+        make.width.equalTo(@(100));
+        make.height.equalTo(@(100));
+    }];
+    
+    ///分享
+    SDHomeBtnItem *shareItem = [[SDHomeBtnItem alloc]initWithType:HomeBtnItemBtns];
     [shareItem.handleBtn setImage:[UIImage imageNamed:@"img_share"] forState:UIControlStateNormal];
     shareItem.numLabel.text = @"100";
     [self addSubview:shareItem];
     [shareItem mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.mas_right);
-        make.bottom.equalTo(self.mas_bottom).offset(-100);
+        make.bottom.equalTo(musicView.mas_top).offset(-10);
         make.width.equalTo(@(HomeBtnItemWidth));
         make.height.equalTo(@(HomeBtnItemHeight));
     }];
     
-    SDHomeBtnItem *commentItem = [[SDHomeBtnItem alloc]initWithType:HomeBtnItemOther];
+    ///评论
+    SDHomeBtnItem *commentItem = [[SDHomeBtnItem alloc]initWithType:HomeBtnItemBtns];
     [commentItem.handleBtn setImage:[UIImage imageNamed:@"img_comment"] forState:UIControlStateNormal];
     commentItem.numLabel.text = @"100";
     [self addSubview:commentItem];
@@ -52,7 +64,8 @@
     }];
     
     
-    SDHomeBtnItem *likeItem = [[SDHomeBtnItem alloc]initWithType:HomeBtnItemOther];
+    ///点赞
+    SDHomeBtnItem *likeItem = [[SDHomeBtnItem alloc]initWithType:HomeBtnItemBtns];
     [likeItem.handleBtn setImage:[UIImage imageNamed:@"img_dislike"] forState:UIControlStateNormal];
     likeItem.numLabel.text = @"100";
     [self addSubview:likeItem];
@@ -63,6 +76,7 @@
         make.height.equalTo(@(HomeBtnItemHeight));
     }];
     
+    ///头部
     SDHomeBtnItem *headItem = [[SDHomeBtnItem alloc]initWithType:HomeBtnItemHead];
     [headItem.focusBtn setImage:[UIImage imageNamed:@"iconPersonalAddLittle"] forState:UIControlStateNormal];
     [self addSubview:headItem];

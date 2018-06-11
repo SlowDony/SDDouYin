@@ -28,8 +28,15 @@
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
-        _nearbyCollectionView = [[SDNearbyCollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kBottomTabbarHeight) collectionViewLayout:layout];
+        _nearbyCollectionView = [[SDNearbyCollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kTabBarHeight) collectionViewLayout:layout];
         _nearbyCollectionView.collectionDelegate = self;
+        if (@available(iOS 11.0, *)) {
+            _nearbyCollectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        } else {
+            // Fallback on earlier versions
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        
     }
     return _nearbyCollectionView;
 }

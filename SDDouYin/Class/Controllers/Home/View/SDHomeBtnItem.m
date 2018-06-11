@@ -7,7 +7,36 @@
 //
 
 #import "SDHomeBtnItem.h"
+@implementation SDHomeMusicView
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupSubviews];
+    }
+    return self;
+}
+
+- (void)setupSubviews{
+    //
+    UIButton *musicImageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [musicImageBtn setBackgroundImage:[UIImage imageNamed:@"music_bg"] forState:UIControlStateNormal];
+    [musicImageBtn  addTarget:self action:@selector(musicImageBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview: musicImageBtn];
+    [musicImageBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.mas_right).offset(-10);
+        make.bottom.equalTo(self.mas_bottom).offset(-10);
+        make.width.height.equalTo(@(60));
+    }];
+    
+    
+}
+
+- (void)musicImageBtnClick:(UIButton *)sender{
+    
+}
+@end
 @implementation SDHomeBtnItem
 
 /*

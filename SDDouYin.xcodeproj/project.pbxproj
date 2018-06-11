@@ -57,6 +57,7 @@
 		EF3F07DA20C930F2001F9DC5 /* SDHomeBtnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3F07D920C930F2001F9DC5 /* SDHomeBtnItem.m */; };
 		EF58F1FB20AC8A180009DE08 /* SDNearbyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */; };
 		EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */; };
+		EF7C654B20CE169E009E7915 /* SDPlayerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7C654A20CE169E009E7915 /* SDPlayerScrollView.m */; };
 		EFCC623820B93CE500C8FA7A /* SDMeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623720B93CE500C8FA7A /* SDMeHeadView.m */; };
 		EFCC623B20B93FA400C8FA7A /* NSString+SDString.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623A20B93FA400C8FA7A /* NSString+SDString.m */; };
 		EFCC623E20B940B300C8FA7A /* SDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623D20B940B300C8FA7A /* SDUser.m */; };
@@ -198,6 +199,8 @@
 		EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionView.m; sourceTree = "<group>"; };
 		EF58F1FC20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNearbyCollectionViewCell.h; sourceTree = "<group>"; };
 		EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionViewCell.m; sourceTree = "<group>"; };
+		EF7C654920CE169E009E7915 /* SDPlayerScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPlayerScrollView.h; sourceTree = "<group>"; };
+		EF7C654A20CE169E009E7915 /* SDPlayerScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPlayerScrollView.m; sourceTree = "<group>"; };
 		EFCC623620B93CE500C8FA7A /* SDMeHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDMeHeadView.h; sourceTree = "<group>"; };
 		EFCC623720B93CE500C8FA7A /* SDMeHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMeHeadView.m; sourceTree = "<group>"; };
 		EFCC623920B93FA400C8FA7A /* NSString+SDString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SDString.h"; sourceTree = "<group>"; };
@@ -736,6 +739,8 @@
 				EF3F07D920C930F2001F9DC5 /* SDHomeBtnItem.m */,
 				EF1EC7FD20C99060006C0BE5 /* SDHomeBtnView.h */,
 				EF1EC7FE20C99060006C0BE5 /* SDHomeBtnView.m */,
+				EF7C654920CE169E009E7915 /* SDPlayerScrollView.h */,
+				EF7C654A20CE169E009E7915 /* SDPlayerScrollView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -964,6 +969,7 @@
 				EF26D02D20A992E0004573D5 /* SDBaseNavigationController.m in Sources */,
 				EF231CDB20BC605F006DA519 /* HJTabViewController+ViewController.m in Sources */,
 				EFCC625920BAF23C00C8FA7A /* SDNotificationConst.m in Sources */,
+				EF7C654B20CE169E009E7915 /* SDPlayerScrollView.m in Sources */,
 				EF26D08020AA8BE9004573D5 /* SDNearbyViewController.m in Sources */,
 				EFCC623E20B940B300C8FA7A /* SDUser.m in Sources */,
 				EFCC624120B9412000C8FA7A /* SDMeHeadTopView.m in Sources */,

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDDouYin/Class/Controllers/Me/Controller/SDMeViewController.m"
-            timestampString = "549304887.073082"
+            timestampString = "550427181.311715"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
@@ -32,6 +32,22 @@
             startingLineNumber = "345"
             endingLineNumber = "345"
             landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDDouYin/Class/Controllers/Home/Controller/SDRecommendViewController.m"
+            timestampString = "550427181.31183"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-handlePlayerNotify:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

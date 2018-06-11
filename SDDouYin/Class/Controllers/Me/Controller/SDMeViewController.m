@@ -18,7 +18,7 @@
 #import "HJTabViewControllerPlugin_TabViewBar.h"
 #import "HJDefaultTabViewBar.h"
 
-#define headViewHeight (300+44+kNavigationStatusBarHeight)
+#define headViewHeight (300+44+kNavBarHeight)
 @interface SDMeViewController ()
 <
 SDMeHeadViewDelegate,
@@ -107,7 +107,7 @@ HJDefaultTabViewBarDelegate
 }
 
 - (CGFloat)tabHeaderBottomInsetForTabViewController:(HJTabViewController *)tabViewController {
-    return HJTabViewBarDefaultHeight+kNavigationStatusBarHeight;
+    return HJTabViewBarDefaultHeight+kNavBarHeight;
 }
 
 - (UIEdgeInsets)containerInsetsForTabViewController:(HJTabViewController *)tabViewController {
@@ -223,7 +223,7 @@ HJDefaultTabViewBarDelegate
 -(UIScrollView *)childVCScrollView{
     if (!_childVCScrollView) {
         _childVCScrollView = [[UIScrollView alloc] init];
-        _childVCScrollView.frame = CGRectMake(0, 300+40+kNavigationStatusBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT-(300+40+kNavigationStatusBarHeight));
+        _childVCScrollView.frame = CGRectMake(0, 300+40+kNavBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT-(300+40+kNavBarHeight));
         _childVCScrollView.contentSize = CGSizeMake(0,SCREEN_HEIGHT);
         _childVCScrollView.backgroundColor = [UIColor clearColor];
         _childVCScrollView.showsHorizontalScrollIndicator = NO;
@@ -237,7 +237,7 @@ HJDefaultTabViewBarDelegate
 
 -(SDMeHeadTitleView *)titleView{
     if (!_titleView) {
-        _titleView = [[SDMeHeadTitleView alloc]initWithFrame:CGRectMake(0,kNavigationStatusBarHeight+CGRectGetHeight(self.headView.frame), SCREEN_WIDTH, 40)];
+        _titleView = [[SDMeHeadTitleView alloc]initWithFrame:CGRectMake(0,kNavBarHeight+CGRectGetHeight(self.headView.frame), SCREEN_WIDTH, 40)];
     }
     return _titleView;
 }
@@ -254,7 +254,7 @@ HJDefaultTabViewBarDelegate
 ///导航栏
 - (SDBaseNavigationView *)navigationView{
     if (!_navigationView) {
-        _navigationView = [[SDBaseNavigationView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kNavigationStatusBarHeight)];
+        _navigationView = [[SDBaseNavigationView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kNavBarHeight)];
         _navigationView.titleLabel.text = @"昵称";
         _navigationView.backgroundColor = KNavigationBarBackgroundColor;
         _navigationView.alpha = 0;

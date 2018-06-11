@@ -121,7 +121,7 @@
             btn.frame = CGRectMake(btnX, btnY, btnW,btnH);
         }
     }
-    [self.cameraBtn sizeToFit];
+//    [self.cameraBtn sizeToFit];
     self.cameraBtn.frame = CGRectMake(2*btnW, btnY, btnW,btnH);
 }
 
