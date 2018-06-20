@@ -28,6 +28,17 @@
 }
 
 - (void)setupUI{
+
+    //封面图片
+    UIImageView *bgImageView = [[UIImageView alloc] init];
+    self.bgImageView = bgImageView;
+    [self addSubview:bgImageView];
+    [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mas_left);
+        make.top.equalTo(self.mas_top);
+        make.width.equalTo(self.mas_width);
+        make.height.equalTo(self.mas_height);
+    }];
     
     ///音乐背景
     SDHomeMusicView *musicView = [[SDHomeMusicView alloc]init];

@@ -9,30 +9,37 @@
 #import "SDRecommendViewController.h"
 #import "SDHomeBtnView.h"
 #import "SDPlayerScrollView.h"
+#import "SDShortVideoModel.h"
+#import <KSYMediaPlayer/KSYMediaPlayer.h>
 /**
  推荐
  */
 @interface SDRecommendViewController ()
 @property (nonatomic,strong)  SDHomeBtnView *homeBtnView;
 @property (nonatomic,strong)  SDPlayerScrollView *playerScrollView;
+@property (nonatomic,strong) NSMutableArray *dataArr;
 @end
 
 @implementation SDRecommendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
+   
+}
+
+- (void)setupUI{
     
     [self.view addSubview:self.playerScrollView];
-    
     [self.playerScrollView addSubview:self.homeBtnView];
     [self addNotification];
-    [self.playerScrollView prepareForVideo:self.playerScrollView.topPlayer];
-    // Do any additional setup after loading the view.
+    [self.playerScrollView updateCurrentPlayerDatas:self.dataArr currentIndex:0];
 }
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.playerScrollView.topPlayer play];
+    [self.playerScrollView.middlePlayer play];
 }
 
 #pragma mark - addNotification
@@ -90,8 +97,10 @@
             break;
         case 1002:
         {
-            if(self.playerScrollView.middlePlayer.view.frame.origin.y==SCREEN_HEIGHT){
+        if(self.playerScrollView.middlePlayer.view.frame.origin.y==SCREEN_HEIGHT){
                 [self.playerScrollView.middlePlayer.view setHidden:NO];
+                [self.playerScrollView.middlePlayer prepareToPlay];
+                [self.playerScrollView.middlePlayer play];
             }
         }
             break;
@@ -129,6 +138,21 @@
     }
     return _homeBtnView;
 }
+
+-(NSMutableArray *)dataArr{
+    if(!_dataArr){
+        _dataArr = [NSMutableArray array];
+        NSArray *arr = @[
+                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f970000bcks2l0858lmn4qmh7qg&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p1.pstatp.com/large/8ff10004c9eeff1f9044.jpeg"},
+                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f180000bci0kkrd82dj0u4fadj0&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p3.pstatp.com/large/8ebd000fe09637445df0.jpeg"},
+                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f660000bcfu1ot1mikeotn5i7ng&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p3.pstatp.com/large/8d0f0006f571436ea78d.jpeg"},
+                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v02001560000bckaiup75rdmqh4q9sug&line=0&ratio=default&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p1.pstatp.com/large/8d41000f687968170788.jpeg"},
+                         ];
+        _dataArr = [SDShortVideoModel mj_objectArrayWithKeyValuesArray:arr];
+    }
+    return _dataArr;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -10,4 +10,5 @@
 
 @interface SDHomeBtnView : UIView
 
+@property (nonatomic,strong) UIImageView *bgImageView;
 @end

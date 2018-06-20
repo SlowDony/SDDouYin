@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <KSYMediaPlayer/KSYMediaPlayer.h>
+@class SDShortVideoModel;
 @interface SDPlayerScrollView : UIScrollView
 @property (nonatomic,strong)  KSYMoviePlayerController *topPlayer ,*middlePlayer ,*bottomPlayer;
+/**
+ 更新数据
 
-- (void) prepareForVideo: (KSYMoviePlayerController *)player;
+ @param videoDataArrs 数据源
+ @param index idnex
+ */
+- (void)updateCurrentPlayerDatas:(NSMutableArray <SDShortVideoModel *>*)videoDataArrs currentIndex:(NSInteger )index;
 @end

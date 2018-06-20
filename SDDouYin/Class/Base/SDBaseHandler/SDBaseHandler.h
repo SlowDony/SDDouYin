@@ -13,7 +13,7 @@
 /**
  *  Handler处理完成后调用的Block
  */
-typedef void (^CompleteBlock)();
+typedef void (^CompleteBlock)(void);
 
 /**
  *  Handler处理成功时调用的Block

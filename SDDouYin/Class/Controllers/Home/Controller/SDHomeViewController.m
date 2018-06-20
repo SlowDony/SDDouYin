@@ -27,66 +27,7 @@
 
 @implementation SDHomeViewController
 
--(UIScrollView *)mainScrollView{
-    if (!_mainScrollView) {
-        _mainScrollView = [[UIScrollView alloc] init];
-        _mainScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kTabBarHeight);
-        _mainScrollView.delegate = self;
-        _mainScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-kTabBarHeight);
-        _mainScrollView.showsHorizontalScrollIndicator = NO;
-        _mainScrollView.showsVerticalScrollIndicator = NO;
-        _mainScrollView.pagingEnabled = YES;
-        _mainScrollView.bounces =NO;
-        _mainScrollView.scrollEnabled = NO;
-        if (@available(iOS 11.0, *)) {
-            _mainScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        }else {
-             self.automaticallyAdjustsScrollViewInsets = NO;
-        }
-    }
-    return _mainScrollView;
-}
-/**
- 附近
- */
--(SDNearbyViewController *)nearbyVC{
-    
-    if (!_nearbyVC){
-        _nearbyVC = [[SDNearbyViewController alloc]init];
-        [self addChildViewController:_nearbyVC];
-        _nearbyVC.view.frame =CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kTabBarHeight);
-    }
-    return _nearbyVC;
-}
-/**
- 推荐
- */
--(SDRecommendViewController *)recommendVC{
-    
-    if (!_recommendVC){
-        _recommendVC = [[SDRecommendViewController alloc]init];
-        [self addChildViewController:_recommendVC];
-        _recommendVC.view.frame =CGRectMake(0,0 , SCREEN_WIDTH, SCREEN_HEIGHT-kTabBarHeight);
-    }
-    return _recommendVC;
-}
 
--(SDShowTopView *)showTopView{
-    if (!_showTopView) {
-        NSArray *arr = @[@"推荐",@"附近"];
-        CGFloat width = SCREEN_WIDTH;
-        _showTopView = [[SDShowTopView alloc]initWithFrame:CGRectMake(0, 0, width, kNavBarHeight)];
-        _showTopView.selectIndex = 0;
-        [_showTopView setTopTitleArr:arr];
-        KWeakself
-        _showTopView.selectBtnBlock = ^(UIButton *selectBtn) {
-            CGFloat index = (selectBtn.tag-1000)*SCREEN_WIDTH;
-            CGPoint point = CGPointMake(index, 0);
-            [weakSelf.mainScrollView setContentOffset:point animated:NO];
-        };
-    }
-    return _showTopView;
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -129,6 +70,67 @@
     DLog(@"左按钮");
 }
 
+#pragma mark - lazy
+-(UIScrollView *)mainScrollView{
+    if (!_mainScrollView) {
+        _mainScrollView = [[UIScrollView alloc] init];
+        _mainScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        _mainScrollView.delegate = self;
+        _mainScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT);
+        _mainScrollView.showsHorizontalScrollIndicator = NO;
+        _mainScrollView.showsVerticalScrollIndicator = NO;
+        _mainScrollView.pagingEnabled = YES;
+        _mainScrollView.bounces =NO;
+        _mainScrollView.scrollEnabled = NO;
+        if (@available(iOS 11.0, *)) {
+            _mainScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }else {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+    }
+    return _mainScrollView;
+}
+/**
+ 附近
+ */
+-(SDNearbyViewController *)nearbyVC{
+    
+    if (!_nearbyVC){
+        _nearbyVC = [[SDNearbyViewController alloc]init];
+        [self addChildViewController:_nearbyVC];
+        _nearbyVC.view.frame =CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    }
+    return _nearbyVC;
+}
+/**
+ 推荐
+ */
+-(SDRecommendViewController *)recommendVC{
+    
+    if (!_recommendVC){
+        _recommendVC = [[SDRecommendViewController alloc]init];
+        [self addChildViewController:_recommendVC];
+        _recommendVC.view.frame =CGRectMake(0,0 , SCREEN_WIDTH, SCREEN_HEIGHT);
+    }
+    return _recommendVC;
+}
+
+-(SDShowTopView *)showTopView{
+    if (!_showTopView) {
+        NSArray *arr = @[@"推荐",@"附近"];
+        CGFloat width = SCREEN_WIDTH;
+        _showTopView = [[SDShowTopView alloc]initWithFrame:CGRectMake(0, 0, width, kNavBarHeight)];
+        _showTopView.selectIndex = 0;
+        [_showTopView setTopTitleArr:arr];
+        KWeakself
+        _showTopView.selectBtnBlock = ^(UIButton *selectBtn) {
+            CGFloat index = (selectBtn.tag-1000)*SCREEN_WIDTH;
+            CGPoint point = CGPointMake(index, 0);
+            [weakSelf.mainScrollView setContentOffset:point animated:NO];
+        };
+    }
+    return _showTopView;
+}
 /*
 #pragma mark - Navigation
 
