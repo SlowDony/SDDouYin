@@ -27,7 +27,7 @@
     [musicImageBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.mas_right).offset(-10);
         make.bottom.equalTo(self.mas_bottom).offset(-10);
-        make.width.height.equalTo(@(60));
+        make.width.height.equalTo(@(HomeHeadImageViewWidth));
     }];
     
     
@@ -67,6 +67,8 @@
     headImageView.image = [UIImage imageNamed:@"imgXiaozhushou80"];
     headImageView.layer.borderColor = [UIColor whiteColor].CGColor;
     headImageView.layer.borderWidth = 1.f;
+    headImageView.layer.cornerRadius =HomeHeadImageViewWidth/2;
+    headImageView.layer.masksToBounds = YES;
     [self addSubview:headImageView];
     self.headImageView = headImageView;
     [headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -95,7 +97,6 @@
     [handleBtn  addTarget:self action:@selector(handleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview: handleBtn];
     self.handleBtn = handleBtn;
-//    self.handleBtn.backgroundColor = UIColorFormRandom;
     [handleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mas_centerX);
         make.top.equalTo(self.mas_top);
@@ -107,9 +108,8 @@
     UILabel *numLabel = [[UILabel alloc] init];
     numLabel.backgroundColor = [UIColor clearColor];
     numLabel.textColor = [UIColor whiteColor];
-    numLabel.text = @"100";
     numLabel.textAlignment = NSTextAlignmentCenter;
-    numLabel.font = SDFont(15);
+    numLabel.font = SDFont(14);
     numLabel.numberOfLines = 0;
     [self addSubview:numLabel];
     self.numLabel = numLabel;

@@ -12,7 +12,7 @@
 @interface SDPlayerScrollView()
 <UIScrollViewDelegate>
 
-//@property (nonatomic,strong)  UIImageView  *topImageView,*middleImageView,*bottomImageView;
+
 
 @property (nonatomic,strong)  NSMutableArray *dataArrs;
 @property (nonatomic,strong)  SDShortVideoModel  *currentVideoModel;
@@ -36,72 +36,90 @@
         self.pagingEnabled = YES;
         self.delegate = self;
         self.bounces = YES;
-        [self setupSubviews];
+        [self setupSubviews1];
     }
     return self;
 }
+
 - (void)setupSubviews{
+    SDPlayerScrollItem *topItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    topItem.videoPlayer.view.tag =1001;
+    [self addSubview:topItem];
+    self.topItem = topItem;
     
-    //顶部图片
-    SDHomeBtnView *topImageView = [[SDHomeBtnView alloc] init];
-    topImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-//    topImageView.backgroundColor = UIColorFormRandom;
-    self.topBtnView = topImageView;
-    [self addSubview:topImageView];
+    SDPlayerScrollItem *middleItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    middleItem.videoPlayer.view.tag =1002;
+    [self addSubview:middleItem];
+    self.middleItem = middleItem;
     
-    //播放当前图片
-    SDHomeBtnView *middleImageView = [[SDHomeBtnView alloc] init];
-    middleImageView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
-    middleImageView.backgroundColor = UIColorFormRandom;
-    self.middleBtnView = middleImageView;
-    [self addSubview:middleImageView];
+    SDPlayerScrollItem *bottomItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    bottomItem.videoPlayer.view.tag =1003;
+    [self addSubview:bottomItem];
+    self.bottomItem = bottomItem;
     
-    //底部图片
-    SDHomeBtnView *bottomImageView = [[SDHomeBtnView alloc] init];
-    bottomImageView.frame = CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT);
-    bottomImageView.backgroundColor = UIColorFormRandom;
-    self.bottomBtnView = bottomImageView;
-    [self addSubview:bottomImageView];
+}
+
+
+- (void)setupSubviews1{
+
     
-    /*
-    KSYMoviePlayerController *topPlayer = [[KSYMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:@"https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=bea0903abb954f58ac0e17c21226a3c3&line=0&app_id=1115&quality=720p"]];
-    topPlayer.view.backgroundColor = [UIColor clearColor];
-    topPlayer.view.tag = 1001;
-    [topPlayer setBufferSizeMax:1];
-    topPlayer.view.autoresizesSubviews = YES;
-    [topPlayer.view setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    topPlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    topPlayer.shouldAutoplay = YES;
-    topPlayer.scalingMode = MPMovieScalingModeAspectFit;
-    [self addSubview:topPlayer.view];
-    self.topPlayer = topPlayer;
-    [topPlayer play];
-    */
-    KSYMoviePlayerController *middlePlayer = [[KSYMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:@"http://v1-hs.ixigua.com/1e821625ec5523773686c449efbeeb21/5b1e4bfe/video/m/220ba53aef558c947c1b6e2d03064b0228911514d450000684f1976db7f/"]];
+    
+    
+    KSYMoviePlayerController *middlePlayer = [[KSYMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:@""]];
+     [middlePlayer.view setFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
     middlePlayer.view.backgroundColor = [UIColor clearColor];
     middlePlayer.view.tag = 1002;
     [middlePlayer setBufferSizeMax:1];
-    middlePlayer.view.autoresizesSubviews = YES;
-    [middlePlayer.view setFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
     middlePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    middlePlayer.view.autoresizesSubviews = YES;
     middlePlayer.shouldAutoplay = YES;
+    middlePlayer.videoDecoderMode = MPMovieVideoDecoderMode_AUTO;
     middlePlayer.scalingMode = MPMovieScalingModeAspectFit;
     [self addSubview:middlePlayer.view];
+    [middlePlayer prepareToPlay];
     self.middlePlayer = middlePlayer;
+
+    //顶部图片
+    UIImageView *topImageView = [[UIImageView alloc] init];
+    topImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    self.topImageView = topImageView;
+    [self addSubview:topImageView];
     
-    /*
-    KSYMoviePlayerController *bottomPlayer = [[KSYMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:@""]];
-    bottomPlayer.view.backgroundColor = [UIColor clearColor];
-    bottomPlayer.view.tag = 1003;
-    [bottomPlayer setBufferSizeMax:1];
-    bottomPlayer.view.autoresizesSubviews = YES;
-    [bottomPlayer.view setFrame:CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    bottomPlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    bottomPlayer.shouldAutoplay = YES;
-    bottomPlayer.scalingMode = MPMovieScalingModeAspectFit;
-    self.bottomPlayer = bottomPlayer;
-    [self addSubview:bottomPlayer.view];
-     */
+    //播放当前图片
+    UIImageView *middleImageView = [[UIImageView alloc] init];
+    middleImageView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
+    middleImageView.backgroundColor = UIColorFormRandom;
+    self.middleImageView = middleImageView;
+    [self addSubview:middleImageView];
+    
+    //底部图片
+    UIImageView *bottomImageView = [[UIImageView alloc] init];
+    bottomImageView.frame = CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT);
+    bottomImageView.backgroundColor = UIColorFormRandom;
+    self.bottomImageView = bottomImageView;
+    [self addSubview:bottomImageView];
+    
+    //顶部图片
+    SDHomeBtnView *topBtnView = [[SDHomeBtnView alloc] init];
+    topBtnView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    topBtnView.backgroundColor = [UIColor clearColor];
+    self.topBtnView = topBtnView;
+    [self addSubview:topBtnView];
+    
+    //播放当前图片
+    SDHomeBtnView *middleBtnView = [[SDHomeBtnView alloc] init];
+    middleBtnView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
+    middleBtnView.backgroundColor = [UIColor clearColor];
+    self.middleBtnView = middleBtnView;
+    [self addSubview:middleBtnView];
+    
+    //底部图片
+    SDHomeBtnView *bottomBtnView = [[SDHomeBtnView alloc] init];
+    bottomBtnView.frame = CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT);
+    bottomBtnView.backgroundColor = [UIColor clearColor];
+    self.bottomBtnView = bottomBtnView;
+    [self addSubview:bottomBtnView];
+    
 }
 
                                                                                                
@@ -141,30 +159,65 @@
         self.bottomVideoModel = (SDShortVideoModel *)self.dataArrs[index+1];
     }
     /** 设置封面 */
-    [self prepareForImageView:self.topBtnView shortVideoModel:self.topVideoModel];
-    [self prepareForImageView:self.middleBtnView shortVideoModel:self.middleVideoModel];
-    [self prepareForImageView:self.bottomBtnView shortVideoModel:self.bottomVideoModel];
-    
+    [self prepareForImageView:self.topImageView btnView:self.topBtnView shortVideoModel:self.topVideoModel];
+    [self prepareForImageView:self.middleImageView btnView:self.middleBtnView shortVideoModel:self.middleVideoModel];
+    [self prepareForImageView:self.bottomImageView btnView:self.bottomBtnView shortVideoModel:self.bottomVideoModel];
+
     /** 设置视频数据 */
     [self prepareForVideo:self.middlePlayer shortVideoModel:self.middleVideoModel];
+//
+//    [self prepareForScrollItem:self.topItem shortVideoModel:self.topVideoModel];
+//    [self prepareForScrollItem:self.middleItem shortVideoModel:self.middleVideoModel];
+//    [self prepareForScrollItem:self.bottomItem shortVideoModel:self.bottomVideoModel];
 }
 
-- (void)prepareForImageView:(SDHomeBtnView *)btnView shortVideoModel:(SDShortVideoModel *)shortVideoModel{
-    [btnView.bgImageView sd_setImageWithURL:[NSURL URLWithString:shortVideoModel.imageUrl]];
+
+
+/**
+ 设置scrollItem
+
+ @param scrollItem scrollItem
+ @param shortVideoModel shortVideoModel
+ */
+- (void)prepareForScrollItem:(SDPlayerScrollItem *)scrollItem shortVideoModel:(SDShortVideoModel *)shortVideoModel{
+    
+    [self prepareForImageView:scrollItem.bgImageView btnView:scrollItem.homeBtnView shortVideoModel:shortVideoModel];
+    [self prepareForVideo:scrollItem.videoPlayer shortVideoModel:shortVideoModel];
+    
 }
 
+
+
+/**
+ 设置图片
+
+ @param imageView 图片
+ @param btnView 按钮
+ @param shortVideoModel shortVideoModel
+ */
+- (void)prepareForImageView:(UIImageView *)imageView btnView:(SDHomeBtnView *)btnView shortVideoModel:(SDShortVideoModel *)shortVideoModel{
+    
+    [imageView sd_setImageWithURL:[NSURL URLWithString:shortVideoModel.imageUrl]];
+    [btnView setValueWithModel:shortVideoModel];
+}
+
+
+/**
+ 设置视频资源
+
+ @param player 播放器
+ @param shortVideoModel 视频资源
+ */
 - (void)prepareForVideo:(KSYMoviePlayerController *)player shortVideoModel:(SDShortVideoModel *)shortVideoModel
 {
-    [player reset:false];
-    [player setUrl:[NSURL URLWithString:shortVideoModel.videoUrl]];
-    [player setShouldAutoplay:false];
-    [player setBufferSizeMax:1];
-    [player setShouldLoop:YES];
-    player.view.backgroundColor = [UIColor clearColor];
-    [player prepareToPlay];
-    [player play];
-    DLog(@"self.middle:%@",NSStringFromCGRect(player.view.frame));
-//    self.middleImageView.hidden = NO;
+    [self.middlePlayer reset:NO];
+    [self.middlePlayer setUrl:[NSURL URLWithString:shortVideoModel.videoUrl]];
+//    [player setShouldAutoplay:YES];
+//    [player setBufferSizeMax:1];
+//    [player setShouldLoop:YES];
+    self.middlePlayer.view.backgroundColor = [UIColor clearColor];
+    [self.middlePlayer prepareToPlay];
+    self.middleImageView.hidden = NO;
 }
 
                                                                                                
@@ -174,22 +227,41 @@
     [self changeCurrentPlayer:scrollView];
 }
 
+- (void)changeCurrentVideoPlayer:(UIScrollView *)scrollView{
+     CGFloat currentOffsetY = scrollView.contentOffset.y;
+    if (currentOffsetY>=2*SCREEN_HEIGHT) {
+        self.contentOffset = CGPointMake(0, SCREEN_HEIGHT);
+        if(self.topItem.frame.origin.y==0){
+            self.topItem.frame = CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT);
+        }else{
+            self.topItem.frame = CGRectMake(0, self.topItem.frame.origin.y-SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
+        }
+        
+        if(self.middleItem.frame.origin.y==0){
+            self.middleItem.frame = CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT);
+        }else{
+            self.middleItem.frame = CGRectMake(0, self.middleItem.frame.origin.y-SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
+        }
+        
+        if(self.bottomItem.frame.origin.y==0){
+            self.bottomItem.frame = CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT);
+        }else{
+            self.bottomItem.frame = CGRectMake(0, self.bottomItem.frame.origin.y-SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
+        }
+  
+    }else if (currentOffsetY<=0){
+        self.contentOffset = CGPointMake(0, SCREEN_HEIGHT);
+    }
+    
+}
+
+
 ///滚动滑动
 -(void)changeCurrentPlayer:(UIScrollView *)scrollView{
     CGFloat currentOffsetY = scrollView.contentOffset.y;
-    DLog(@"currentOffsetY:%f",currentOffsetY);
     if(currentOffsetY>=2*SCREEN_HEIGHT){
         self.contentOffset = CGPointMake(0, SCREEN_HEIGHT);
         self.currentIndex++;
-//        ///替换数据
-//        self.topImageView.image = self.middleImageView.image;
-//        self.middleImageView.image = self.bottomImageView.image;
-//
-//        self.middleVideoModel = self.dataArrs[self.currentIndex];
-//
-//        if(self.currentIndex==0){
-//            self.topVideoModel = [self.dataArrs lastObject];
-//        }
         if(self.currentIndex==self.dataArrs.count){
             self.currentIndex = 0;
         }
@@ -203,12 +275,8 @@
             self.currentIndex = self.dataArrs.count-1;
         }
         [self updateVideo:self.currentIndex];
-        
     }
 }
-
-
-
 
 /**
  视频数据源

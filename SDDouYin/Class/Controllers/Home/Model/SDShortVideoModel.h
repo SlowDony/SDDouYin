@@ -12,5 +12,7 @@
 
 @property (nonatomic,copy)  NSString *videoUrl;
 @property (nonatomic,copy)  NSString *imageUrl;
-
+@property (nonatomic,assign)  NSInteger likeNum;
+@property (nonatomic,assign)  NSInteger commentNum;
+@property (nonatomic,assign)  NSInteger shareNum;
 @end

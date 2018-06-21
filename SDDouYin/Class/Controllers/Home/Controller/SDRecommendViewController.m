@@ -39,7 +39,15 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.playerScrollView.middlePlayer play];
+    if(![self.playerScrollView.middlePlayer isPlaying]){
+         [self.playerScrollView.middlePlayer play];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    if([self.playerScrollView.middlePlayer isPlaying]){
+        [self.playerScrollView.middlePlayer pause];
+    }
 }
 
 #pragma mark - addNotification
@@ -52,69 +60,34 @@
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerFirstVideoFrameRenderedNotification object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMediaPlaybackIsPreparedToPlayDidChangeNotification object:nil];
+    
+    
 }
 
 - (void)dealloc{
     [self removeNotification];
 }
 
+
+
+
+
 - (void)handlePlayerNotify:(NSNotification *)notify{
-    KSYMoviePlayerController *playerController = notify.object;
-    switch (playerController.view.tag) {
-        case 1001:
-        {
-        if(self.playerScrollView.topPlayer.view.frame.origin.y ==0) {
-            [self.playerScrollView.topPlayer play];
-            }
-        }
-            break;
-        case 1002:{
-            if (self.playerScrollView.middlePlayer.view.frame.origin.y==SCREEN_HEIGHT) {
-                [self.playerScrollView.middlePlayer play];
-            }
-        }
-          break;
-        case 1003:{
-            if (self.playerScrollView.bottomPlayer.view.frame.origin.y==SCREEN_HEIGHT) {
-                [self.playerScrollView.bottomPlayer play];
-            }
-        }
-            break;
-        default:
-            break;
+ if(self.playerScrollView.middlePlayer.view.frame.origin.y==SCREEN_HEIGHT) {
+        self.playerScrollView.middleImageView.hidden = YES;
+        [self.playerScrollView.middlePlayer play];
     }
 }
 
 - (void)handlePlayerPreparedToPlayNotify:(NSNotification *)notify{
     KSYMoviePlayerController *playerController =notify.object;
-    switch (playerController.view.tag) {
-        case 1001:
-            {
-                if(self.playerScrollView.topPlayer.view.frame.origin.y==0){
-                    [self.playerScrollView.topPlayer.view setHidden:NO];
-                }
-            }
-            break;
-        case 1002:
-        {
-        if(self.playerScrollView.middlePlayer.view.frame.origin.y==SCREEN_HEIGHT){
-                [self.playerScrollView.middlePlayer.view setHidden:NO];
-                [self.playerScrollView.middlePlayer prepareToPlay];
-                [self.playerScrollView.middlePlayer play];
-            }
-        }
-            break;
-        case 1003:
-        {
-            if(self.playerScrollView.bottomPlayer.view.frame.origin.y==SCREEN_HEIGHT){
-                [self.playerScrollView.bottomPlayer.view setHidden:NO];
-                
-            }
-        }
-            break;
-        default:
-            break;
-    }
+// if(self.playerScrollView.middlePlayer.view.frame.origin.y==SCREEN_HEIGHT){
+//        if ([self.playerScrollView.middlePlayer isPreparedToPlay]) {
+//            if (self.playerScrollView.middlePlayer.currentPlaybackTime >  0.1) {
+//                [self.playerScrollView.middlePlayer.view setHidden:false];
+//            }
+//        }
+//    }
     
 }
 
@@ -143,10 +116,10 @@
     if(!_dataArr){
         _dataArr = [NSMutableArray array];
         NSArray *arr = @[
-                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f970000bcks2l0858lmn4qmh7qg&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p1.pstatp.com/large/8ff10004c9eeff1f9044.jpeg"},
-                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f180000bci0kkrd82dj0u4fadj0&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p3.pstatp.com/large/8ebd000fe09637445df0.jpeg"},
-                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f660000bcfu1ot1mikeotn5i7ng&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p3.pstatp.com/large/8d0f0006f571436ea78d.jpeg"},
-                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v02001560000bckaiup75rdmqh4q9sug&line=0&ratio=default&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p1.pstatp.com/large/8d41000f687968170788.jpeg"},
+                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f970000bcks2l0858lmn4qmh7qg&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p1.pstatp.com/large/8ff10004c9eeff1f9044.jpeg",@"likeNum":@1,@"commentNum":@20,@"shareNum":@30},
+                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f180000bci0kkrd82dj0u4fadj0&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p3.pstatp.com/large/8ebd000fe09637445df0.jpeg",@"likeNum":@2,@"commentNum":@10,@"shareNum":@1000},
+                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f660000bcfu1ot1mikeotn5i7ng&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p3.pstatp.com/large/8d0f0006f571436ea78d.jpeg",@"likeNum":@3,@"commentNum":@40,@"shareNum":@21},
+                         @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v02001560000bckaiup75rdmqh4q9sug&line=0&ratio=default&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p1.pstatp.com/large/8d41000f687968170788.jpeg",@"likeNum":@4,@"commentNum":@21,@"shareNum":@333},
                          ];
         _dataArr = [SDShortVideoModel mj_objectArrayWithKeyValuesArray:arr];
     }

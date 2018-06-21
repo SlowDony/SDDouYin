@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #define HomeBtnItemWidth 70
-#define HomeBtnItemHeight 80
+#define HomeBtnItemHeight 70
 #define HomeHeadImageViewWidth 50
 #define HomeHandleBtnWidth 42
 

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <KSYMediaPlayer/KSYMediaPlayer.h>
+#import "SDPlayerScrollItem.h"
 @class SDShortVideoModel;
 @interface SDPlayerScrollView : UIScrollView
-@property (nonatomic,strong)  KSYMoviePlayerController *topPlayer ,*middlePlayer ,*bottomPlayer;
+@property (nonatomic,strong) KSYMoviePlayerController *topPlayer ,*middlePlayer ,*bottomPlayer;
+@property (nonatomic,strong) SDPlayerScrollItem *topItem,*middleItem,*bottomItem;
+@property (nonatomic,strong)  UIImageView  *topImageView,*middleImageView,*bottomImageView;
 /**
  更新数据
 
