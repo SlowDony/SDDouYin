@@ -7,7 +7,6 @@
 //
 
 #import "SDHomeBtnView.h"
-#import "SDHomeBtnItem.h"
 #import "SDShortVideoModel.h"
 @implementation SDHomeBtnView
 
@@ -80,7 +79,9 @@
     
     ///头部
     SDHomeBtnItem *headItem = [[SDHomeBtnItem alloc]initWithType:HomeBtnItemHead];
+    headItem.headImageView.image = [UIImage imageNamed:@"imgXiaozhushou80"];
     [headItem.focusBtn setImage:[UIImage imageNamed:@"iconPersonalAddLittle"] forState:UIControlStateNormal];
+    self.headItem = headItem;
     [self addSubview:headItem];
     [headItem mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.mas_right);

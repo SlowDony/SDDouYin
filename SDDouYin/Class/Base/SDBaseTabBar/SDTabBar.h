@@ -22,6 +22,10 @@ typedef NS_ENUM(NSInteger ,TabBarType){
 - (void) tabbar:(SDTabBar *)tabbar withBtn:(TabBarType )tabbarType;
 @end
 @interface SDTabBar : UIView
+/**
+ 背景
+ */
+@property (nonatomic,strong)  UIImageView *tabBarBJView;
 - (instancetype)initWithFrame:(CGRect)frame;
 @property (nonatomic,weak) id<SDTabBarDelegate>delegate;
 @end

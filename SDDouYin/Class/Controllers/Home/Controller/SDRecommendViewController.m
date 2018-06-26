@@ -11,12 +11,15 @@
 #import "SDPlayerScrollView.h"
 #import "SDShortVideoModel.h"
 #import <KSYMediaPlayer/KSYMediaPlayer.h>
+#import "SDMeViewController.h"
 /**
  推荐
  */
 @interface SDRecommendViewController ()
-@property (nonatomic,strong)  SDHomeBtnView *homeBtnView;
-@property (nonatomic,strong)  SDPlayerScrollView *playerScrollView;
+<SDPlayerScrollViewDelegate>
+
+@property (nonatomic,strong) SDHomeBtnView *homeBtnView;
+
 @property (nonatomic,strong) NSMutableArray *dataArr;
 @end
 
@@ -29,22 +32,17 @@
 }
 
 - (void)setupUI{
-    
     [self.view addSubview:self.playerScrollView];
     [self.playerScrollView addSubview:self.homeBtnView];
-    [self addNotification];
     [self.playerScrollView updateCurrentPlayerDatas:self.dataArr currentIndex:0];
 }
 
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
+- (void)videoPlay{
     if(![self.playerScrollView.middlePlayer isPlaying]){
-         [self.playerScrollView.middlePlayer play];
+        [self.playerScrollView.middlePlayer play];
     }
 }
-
-- (void)viewWillDisappear:(BOOL)animated{
+- (void)videoPause{
     if([self.playerScrollView.middlePlayer isPlaying]){
         [self.playerScrollView.middlePlayer pause];
     }
@@ -60,17 +58,10 @@
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerFirstVideoFrameRenderedNotification object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMediaPlaybackIsPreparedToPlayDidChangeNotification object:nil];
-    
-    
-}
-
-- (void)dealloc{
-    [self removeNotification];
 }
 
 
-
-
+#pragma mark - NSNotification
 
 - (void)handlePlayerNotify:(NSNotification *)notify{
  if(self.playerScrollView.middlePlayer.view.frame.origin.y==SCREEN_HEIGHT) {
@@ -91,10 +82,17 @@
     
 }
 
+#pragma mark - SDPlayerScrollViewDelegate
+-(void)playerScrollViewHeadBtnClick:(SDPlayerScrollView *)playerScrollView{
+    SDMeViewController *meVC = [[SDMeViewController alloc]init];
+    [self.navigationController pushViewController:meVC animated:YES];
+}
+
 #pragma mark - lazy
 -(SDPlayerScrollView *)playerScrollView{
     if(!_playerScrollView){
         _playerScrollView = [[SDPlayerScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        _playerScrollView.playerDelegate = self;
         if (@available(iOS 11.0, *)) {
             _playerScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         } else {

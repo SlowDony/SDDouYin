@@ -10,15 +10,12 @@
 #import "SDShortVideoModel.h"
 #import "SDHomeBtnView.h"
 @interface SDPlayerScrollView()
-<UIScrollViewDelegate>
-
-
+<UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
 @property (nonatomic,strong)  NSMutableArray *dataArrs;
 @property (nonatomic,strong)  SDShortVideoModel  *currentVideoModel;
-@property (nonatomic,assign)  NSInteger currentIndex , previousIndex;
 @property (nonatomic,strong)  SDShortVideoModel  *topVideoModel,*middleVideoModel,*bottomVideoModel;
-@property (nonatomic,strong) SDHomeBtnView
+@property (nonatomic,strong)  SDHomeBtnView
     *topBtnView,*middleBtnView,*bottomBtnView;
 @end
 @implementation SDPlayerScrollView
@@ -36,35 +33,12 @@
         self.pagingEnabled = YES;
         self.delegate = self;
         self.bounces = YES;
-        [self setupSubviews1];
+        self.userInteractionEnabled = YES;
+        [self setupSubviews];
     }
     return self;
 }
-
 - (void)setupSubviews{
-    SDPlayerScrollItem *topItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    topItem.videoPlayer.view.tag =1001;
-    [self addSubview:topItem];
-    self.topItem = topItem;
-    
-    SDPlayerScrollItem *middleItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    middleItem.videoPlayer.view.tag =1002;
-    [self addSubview:middleItem];
-    self.middleItem = middleItem;
-    
-    SDPlayerScrollItem *bottomItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    bottomItem.videoPlayer.view.tag =1003;
-    [self addSubview:bottomItem];
-    self.bottomItem = bottomItem;
-    
-}
-
-
-- (void)setupSubviews1{
-
-    
-    
-    
     KSYMoviePlayerController *middlePlayer = [[KSYMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:@""]];
      [middlePlayer.view setFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
     middlePlayer.view.backgroundColor = [UIColor clearColor];
@@ -111,6 +85,13 @@
     middleBtnView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
     middleBtnView.backgroundColor = [UIColor clearColor];
     self.middleBtnView = middleBtnView;
+//    middleBtnView.userInteractionEnabled = YES;
+//    middleBtnView.headItem.userInteractionEnabled = YES;
+    middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(headImagePanClick:)];
+    pan.delegate = self;
+    [middleBtnView.headItem.headImageView addGestureRecognizer:pan];
+    [middleBtnView.headItem.focusBtn  addTarget:self action:@selector(focusBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:middleBtnView];
     
     //底部图片
@@ -122,8 +103,22 @@
     
 }
 
-                                                                                               
+#pragma mark - clicks
+///点击头像
+- (void)headImagePanClick:(UIGestureRecognizer *)recognizer{
+    
+    if([self.playerDelegate respondsToSelector:@selector(playerScrollViewHeadBtnClick:)]){
+        [self.playerDelegate playerScrollViewHeadBtnClick:self];
+    }
+}
+- (void)focusBtnClick:(UIButton *)sender{
+    DLog(@"关注按钮点击");
+}
+
 #pragma mark - funcs
+
+
+
 /**
  更新数据
  
@@ -288,4 +283,24 @@
     return _dataArrs;
 }
 
+
+/*
+ - (void)setupSubviews{
+ SDPlayerScrollItem *topItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+ topItem.videoPlayer.view.tag =1001;
+ [self addSubview:topItem];
+ self.topItem = topItem;
+ 
+ SDPlayerScrollItem *middleItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
+ middleItem.videoPlayer.view.tag =1002;
+ [self addSubview:middleItem];
+ self.middleItem = middleItem;
+ 
+ SDPlayerScrollItem *bottomItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT)];
+ bottomItem.videoPlayer.view.tag =1003;
+ [self addSubview:bottomItem];
+ self.bottomItem = bottomItem;
+ 
+ }
+ */
 @end

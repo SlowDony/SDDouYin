@@ -216,7 +216,7 @@
 ///左按钮点击
 - (void)leftBtnClick:(UIButton *)sender{
     if (self.leftBtnBlock){
-        self.leftBtnBlock();
+        self.leftBtnBlock(sender);
     }
 }
 

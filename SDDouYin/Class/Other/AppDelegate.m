@@ -17,8 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    SDTabBarViewController *tabBar = [[SDTabBarViewController alloc]init];
-    self.window.rootViewController = tabBar;
+    self.tabBarVC = [[SDTabBarViewController alloc]init];
+    self.window.rootViewController = self.tabBarVC;
     return YES;
 }
 

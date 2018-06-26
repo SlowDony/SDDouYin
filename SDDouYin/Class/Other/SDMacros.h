@@ -62,6 +62,9 @@
 ///标题
 #define KDouYinTitle @"抖音"
 
+/// AppDelegate
+#define KAppDelegate ((AppDelegate *)([UIApplication sharedApplication].delegate))
+
 //log扩展
 #ifdef DEBUG
 #   define DLog(fmt, ...) {NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}

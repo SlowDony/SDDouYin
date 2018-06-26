@@ -9,6 +9,14 @@
 #import "SDBaseHiddenViewController.h"
 
 ///推荐
+@class SDPlayerScrollView;
 @interface SDRecommendViewController : SDBaseHiddenViewController
+@property (nonatomic,strong)  SDPlayerScrollView *playerScrollView;
 
+- (void)videoPlay;
+- (void)videoPause;
+
+- (void)removeNotification;
+- (void)addNotification;
 @end
+

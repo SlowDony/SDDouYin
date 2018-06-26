@@ -9,9 +9,19 @@
 #import <UIKit/UIKit.h>
 #import <KSYMediaPlayer/KSYMediaPlayer.h>
 #import "SDPlayerScrollItem.h"
-@class SDShortVideoModel;
+@class SDShortVideoModel ,SDPlayerScrollView;
+
+@protocol  SDPlayerScrollViewDelegate<NSObject>
+@optional
+
+- (void)playerScrollViewHeadBtnClick:(SDPlayerScrollView *)playerScrollView ;
+
+
+@end
+
 @interface SDPlayerScrollView : UIScrollView
 @property (nonatomic,strong) KSYMoviePlayerController *topPlayer ,*middlePlayer ,*bottomPlayer;
+@property (nonatomic,assign)  NSInteger currentIndex , previousIndex;
 @property (nonatomic,strong) SDPlayerScrollItem *topItem,*middleItem,*bottomItem;
 @property (nonatomic,strong)  UIImageView  *topImageView,*middleImageView,*bottomImageView;
 /**
@@ -21,4 +31,8 @@
  @param index idnex
  */
 - (void)updateCurrentPlayerDatas:(NSMutableArray <SDShortVideoModel *>*)videoDataArrs currentIndex:(NSInteger )index;
+
+
+@property (nonatomic,weak) id<SDPlayerScrollViewDelegate>playerDelegate;
+
 @end

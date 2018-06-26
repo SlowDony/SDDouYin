@@ -57,10 +57,24 @@
     self.viewControllers = arr;
 }
 
+- (void)setTabbarAlpha:(BOOL )isAlpha{
+    
+    if(isAlpha){
+        self.tabbar.tabBarBJView.alpha = 0;
+    }else{
+        self.tabbar.tabBarBJView.alpha = 1;
+    }
+}
+
+
 #pragma mark - SDTabBarDelegate
 - (void)tabbar:(SDTabBar *)tabbar withBtn:(TabBarType)tabbarType{
+    
     if (tabbarType !=TabBarTypeAdd){
         self.selectedIndex = tabbarType-TabBarTypeHome;
+        if (tabbarType != TabBarTypeHome){
+            [self setTabbarAlpha:NO];
+        }
         return;
     }
     SDAddViewController *addVC = [[SDAddViewController alloc]init];

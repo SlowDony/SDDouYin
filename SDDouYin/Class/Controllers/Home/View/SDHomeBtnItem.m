@@ -51,11 +51,10 @@
 {
     self = [super init];
     if (self) {
-//        self.backgroundColor = UIColorFormRandom;
         if(itemType ==HomeBtnItemHead){
             [self setupHeadView];
-        }else {
-            [self setupOtherView];
+        }else if (itemType == HomeBtnItemBtns) {
+            [self setupBtnsView];
         }
     }
     return self;
@@ -64,12 +63,13 @@
 - (void)setupHeadView{
     //头像
     UIImageView *headImageView = [[UIImageView alloc] init];
-    headImageView.image = [UIImage imageNamed:@"imgXiaozhushou80"];
+
     headImageView.layer.borderColor = [UIColor whiteColor].CGColor;
     headImageView.layer.borderWidth = 1.f;
     headImageView.layer.cornerRadius =HomeHeadImageViewWidth/2;
     headImageView.layer.masksToBounds = YES;
     [self addSubview:headImageView];
+    headImageView.userInteractionEnabled = YES;
     self.headImageView = headImageView;
     [headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mas_centerX);
@@ -79,10 +79,11 @@
     //关注按钮
     UIButton *focusBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [focusBtn setImage:[UIImage imageNamed:@"iconPersonalAddLittle"] forState:UIControlStateNormal];
-    [focusBtn  addTarget:self action:@selector(focusBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [focusBtn  addTarget:self action:@selector(focusBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     self.focusBtn = focusBtn;
 //    focusBtn.backgroundColor = UIColorFormRandom;
     [self addSubview: focusBtn];
+    
     [focusBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mas_centerX);
         make.top.equalTo(headImageView.mas_bottom).offset(-15);
@@ -91,7 +92,7 @@
     }];
 }
 
-- (void)setupOtherView{
+- (void)setupBtnsView{
     //
     UIButton *handleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [handleBtn  addTarget:self action:@selector(handleBtnClick:) forControlEvents:UIControlEventTouchUpInside];

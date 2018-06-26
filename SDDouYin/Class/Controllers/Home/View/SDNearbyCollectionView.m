@@ -8,6 +8,8 @@
 
 #import "SDNearbyCollectionView.h"
 #import "SDNearbyCollectionViewCell.h"
+#import "SDShortVideoModel.h"
+
 #define nearbyCell @"nearbyCell"
 
 @interface SDNearbyCollectionView()
@@ -37,8 +39,6 @@ UICollectionViewDataSource>
         self.pagingEnabled = NO;
         //注册
         [self registerClass:[SDNearbyCollectionViewCell class] forCellWithReuseIdentifier:nearbyCell];
-        
-        
     }
     return self;
 }
@@ -53,7 +53,7 @@ UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return self.dataArrs.count;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -64,7 +64,8 @@ UICollectionViewDataSource>
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SDNearbyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:nearbyCell forIndexPath:indexPath];
-    
+    SDShortVideoModel *videoModel = self.dataArrs[indexPath.row];
+    [cell setValueWithModel:videoModel];
     return cell;
 }
 

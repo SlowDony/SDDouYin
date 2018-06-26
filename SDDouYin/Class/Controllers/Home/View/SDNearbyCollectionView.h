@@ -16,6 +16,8 @@
 @end
 
 @interface SDNearbyCollectionView : UICollectionView
+
 @property (nonatomic,weak)  id <SDNearbyCollectionViewDelegate> collectionDelegate;
+@property (nonatomic,strong) NSMutableArray *dataArrs;
 
 @end

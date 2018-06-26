@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SDHomeBtnItem,SDHomeMusicView,SDShortVideoModel;
+#import "SDHomeBtnItem.h"
+@class SDHomeMusicView,SDShortVideoModel;
 @interface SDHomeBtnView : UIView
 
 @property (nonatomic,strong) SDHomeMusicView *musicView;

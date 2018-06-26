@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SDTabBarViewController : UITabBarController
-
+/**
+ 设置tabbar是否透明
+ */
+- (void)setTabbarAlpha:(BOOL )isAlpha;
 @end

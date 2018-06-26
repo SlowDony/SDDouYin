@@ -11,6 +11,9 @@
 #import "SDShowTopView.h"
 #import "SDRecommendViewController.h"
 #import "SDNearbyViewController.h"
+#import "AppDelegate.h"
+#import "SDTabBarViewController.h"
+#import "SDSearchViewController.h"
 /**
  首页
  */
@@ -26,6 +29,23 @@
 @end
 
 @implementation SDHomeViewController
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    DLog(@"viewWillAppear");
+    [self.recommendVC addNotification];
+    if (self.mainScrollView.contentOffset.x==0){
+        [self.recommendVC videoPlay];
+    }else {
+        [self.recommendVC videoPause];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.recommendVC videoPause];
+    [self.recommendVC removeNotification];
+}
 
 
 - (void)viewDidLoad {
@@ -64,10 +84,16 @@
 - (void)rightBtnClick:(UIButton *)sender
 {
     DLog(@"右按钮");
+    SDSearchViewController *searchVC = [[SDSearchViewController alloc]init];
+    searchVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 - (void)leftBtnClick:(UIButton *)sender
 {
     DLog(@"左按钮");
+    SDSearchViewController *searchVC = [[SDSearchViewController alloc]init];
+    searchVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 
 #pragma mark - lazy
@@ -114,7 +140,6 @@
     }
     return _recommendVC;
 }
-
 -(SDShowTopView *)showTopView{
     if (!_showTopView) {
         NSArray *arr = @[@"推荐",@"附近"];
@@ -125,9 +150,23 @@
         KWeakself
         _showTopView.selectBtnBlock = ^(UIButton *selectBtn) {
             CGFloat index = (selectBtn.tag-1000)*SCREEN_WIDTH;
+            if (index==0){
+                [KAppDelegate.tabBarVC  setTabbarAlpha:YES];
+                [weakSelf.recommendVC videoPlay];
+            }else if (index ==SCREEN_WIDTH){
+                [KAppDelegate.tabBarVC  setTabbarAlpha:NO];
+                [weakSelf.recommendVC videoPause];
+            }
             CGPoint point = CGPointMake(index, 0);
             [weakSelf.mainScrollView setContentOffset:point animated:NO];
         };
+        _showTopView.searchBtnBlock = ^(UIButton *searchBtn) {
+            [weakSelf rightBtnClick:searchBtn];
+        };
+        _showTopView.leftBtnBlock = ^(UIButton *leftBtn) {
+            [weakSelf leftBtnClick:leftBtn];
+        };
+        
     }
     return _showTopView;
 }
