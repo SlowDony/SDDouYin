@@ -7,7 +7,7 @@
 //
 
 #import "SDBaseHiddenViewController.h"
-
+@class SDMeCollectionView;
 @interface SDMeLikeViewController : SDBaseHiddenViewController
-
+@property (nonatomic,strong)  SDMeCollectionView *collectionView;
 @end

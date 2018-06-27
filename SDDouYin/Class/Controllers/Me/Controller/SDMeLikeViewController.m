@@ -14,7 +14,7 @@
  */
 @interface SDMeLikeViewController ()
 <SDMeCollectionViewDelegate>
-@property (nonatomic,strong)  SDMeCollectionView *collectionView;
+
 @end
 
 @implementation SDMeLikeViewController
@@ -44,8 +44,9 @@
 -(SDMeCollectionView *)collectionView{
     if(!_collectionView){
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-        layout.minimumLineSpacing = 0;
-        layout.minimumInteritemSpacing = 0;
+        layout.minimumLineSpacing = 1;
+        layout.minimumInteritemSpacing = 1;
+        layout.headerReferenceSize = CGSizeMake(0, (kWidth(130)+160)+44);
         _collectionView = [[SDMeCollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
         _collectionView.scrollEnabled = NO;
     }

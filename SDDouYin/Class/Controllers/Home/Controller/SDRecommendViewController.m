@@ -48,6 +48,17 @@
     }
 }
 
+- (BOOL)pushPersonalInfoViewController {
+    
+    BOOL isPush = YES;
+        SDMeViewController *meVC = [[SDMeViewController alloc]init];
+         meVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:meVC animated:YES];
+    return isPush;
+}
+
+
+
 #pragma mark - addNotification
 - (void)addNotification{
     
@@ -85,6 +96,7 @@
 #pragma mark - SDPlayerScrollViewDelegate
 -(void)playerScrollViewHeadBtnClick:(SDPlayerScrollView *)playerScrollView{
     SDMeViewController *meVC = [[SDMeViewController alloc]init];
+    meVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:meVC animated:YES];
 }
 

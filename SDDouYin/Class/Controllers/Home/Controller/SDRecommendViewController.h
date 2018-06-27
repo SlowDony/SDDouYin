@@ -6,11 +6,11 @@
 //  Copyright © 2018年 slowdony. All rights reserved.
 //
 
-#import "SDBaseHiddenViewController.h"
+#import "SDBaseLeftSlidingViewController.h"
 
 ///推荐
 @class SDPlayerScrollView;
-@interface SDRecommendViewController : SDBaseHiddenViewController
+@interface SDRecommendViewController :SDBaseLeftSlidingViewController
 @property (nonatomic,strong)  SDPlayerScrollView *playerScrollView;
 
 - (void)videoPlay;

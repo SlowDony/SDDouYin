@@ -77,6 +77,5 @@ typedef NS_ENUM(NSInteger,HeadViewType){
 @property (nonatomic,strong) UIImageView *headImageView;
 @property (nonatomic,weak) id<SDMeHeadViewDelegate>headViewDelegate; //
 
-
 - (void)setHeadValueModel:(SDUser *)user;
 @end

@@ -83,7 +83,7 @@ UICollectionViewDataSource>
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(SCREEN_WIDTH/3,SCREEN_WIDTH/3/124*165);
+    return CGSizeMake((SCREEN_WIDTH-2)/3,SCREEN_WIDTH/3/124*165);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -101,6 +101,7 @@ UICollectionViewDataSource>
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
     CGFloat pointY = scrollView.contentOffset.y;
     NSDictionary *userInfo = @{SDScrollViewOffSetKey:@(pointY)};
     [[NSNotificationCenter defaultCenter]postNotificationName:SDScrollViewOffSetNotification object:nil userInfo:userInfo];

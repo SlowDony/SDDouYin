@@ -18,14 +18,6 @@
 		EF2106A220ADD93A0061B38B /* SDNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2106A120ADD93A0061B38B /* SDNewsTableView.m */; };
 		EF2106A520ADD95A0061B38B /* SDNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2106A420ADD95A0061B38B /* SDNewsTableViewCell.m */; };
 		EF2106A820ADD9740061B38B /* SDNewsHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2106A720ADD9740061B38B /* SDNewsHeadView.m */; };
-		EF231CC920BC6049006DA519 /* HJDefaultTabViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CC820BC6049006DA519 /* HJDefaultTabViewBar.m */; };
-		EF231CDA20BC605F006DA519 /* HJTabViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CCC20BC605F006DA519 /* HJTabViewBar.m */; };
-		EF231CDB20BC605F006DA519 /* HJTabViewController+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CCF20BC605F006DA519 /* HJTabViewController+ViewController.m */; };
-		EF231CDC20BC605F006DA519 /* HJTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CD120BC605F006DA519 /* HJTabViewController.m */; };
-		EF231CDD20BC605F006DA519 /* HJTabViewControllerPlugin_Base.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CD320BC605F006DA519 /* HJTabViewControllerPlugin_Base.m */; };
-		EF231CDE20BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CD520BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m */; };
-		EF231CDF20BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CD720BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.m */; };
-		EF231CE020BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231CD920BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.m */; };
 		EF26CF9420A98F74004573D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9220A98F74004573D5 /* Main.storyboard */; };
 		EF26CF9620A98F75004573D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9520A98F75004573D5 /* Assets.xcassets */; };
 		EF26CF9920A98F75004573D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF26CF9720A98F75004573D5 /* LaunchScreen.storyboard */; };
@@ -64,6 +56,12 @@
 		EF42987420DCD4C9008174EA /* SDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF42986F20DCD4C9008174EA /* SDBaseViewController.m */; };
 		EF58F1FB20AC8A180009DE08 /* SDNearbyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */; };
 		EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */; };
+		EF5999F320E3552B003D0392 /* SDHeadViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5999F220E3552B003D0392 /* SDHeadViewConfig.m */; };
+		EF5999F620E37738003D0392 /* UIViewController+SDTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5999F520E37738003D0392 /* UIViewController+SDTransitionAnimation.m */; };
+		EF5999F920E377DB003D0392 /* UIViewController+SDScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5999F820E377DB003D0392 /* UIViewController+SDScrollView.m */; };
+		EF5999FD20E37FC8003D0392 /* SDLeftSlidingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5999FC20E37FC8003D0392 /* SDLeftSlidingAnimation.m */; };
+		EF599A0020E38AF5003D0392 /* UIView+SDView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5999FF20E38AF5003D0392 /* UIView+SDView.m */; };
+		EF70BD7320E28F240090FC3F /* SDBaseLeftSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF70BD7220E28F240090FC3F /* SDBaseLeftSlidingViewController.m */; };
 		EF7C654B20CE169E009E7915 /* SDPlayerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7C654A20CE169E009E7915 /* SDPlayerScrollView.m */; };
 		EFB8703320DB81450067C20B /* SDPlayerScrollItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB8703220DB81450067C20B /* SDPlayerScrollItem.m */; };
 		EFCC623820B93CE500C8FA7A /* SDMeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623720B93CE500C8FA7A /* SDMeHeadView.m */; };
@@ -124,23 +122,6 @@
 		EF2106A420ADD95A0061B38B /* SDNewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNewsTableViewCell.m; sourceTree = "<group>"; };
 		EF2106A620ADD9740061B38B /* SDNewsHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNewsHeadView.h; sourceTree = "<group>"; };
 		EF2106A720ADD9740061B38B /* SDNewsHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNewsHeadView.m; sourceTree = "<group>"; };
-		EF231CC720BC6049006DA519 /* HJDefaultTabViewBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJDefaultTabViewBar.h; sourceTree = "<group>"; };
-		EF231CC820BC6049006DA519 /* HJDefaultTabViewBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJDefaultTabViewBar.m; sourceTree = "<group>"; };
-		EF231CCB20BC605F006DA519 /* HJTabViewBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewBar.h; sourceTree = "<group>"; };
-		EF231CCC20BC605F006DA519 /* HJTabViewBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewBar.m; sourceTree = "<group>"; };
-		EF231CCD20BC605F006DA519 /* HJTabViewController+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HJTabViewController+Private.h"; sourceTree = "<group>"; };
-		EF231CCE20BC605F006DA519 /* HJTabViewController+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HJTabViewController+ViewController.h"; sourceTree = "<group>"; };
-		EF231CCF20BC605F006DA519 /* HJTabViewController+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HJTabViewController+ViewController.m"; sourceTree = "<group>"; };
-		EF231CD020BC605F006DA519 /* HJTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewController.h; sourceTree = "<group>"; };
-		EF231CD120BC605F006DA519 /* HJTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewController.m; sourceTree = "<group>"; };
-		EF231CD220BC605F006DA519 /* HJTabViewControllerPlugin_Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewControllerPlugin_Base.h; sourceTree = "<group>"; };
-		EF231CD320BC605F006DA519 /* HJTabViewControllerPlugin_Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewControllerPlugin_Base.m; sourceTree = "<group>"; };
-		EF231CD420BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewControllerPlugin_BottomInset.h; sourceTree = "<group>"; };
-		EF231CD520BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewControllerPlugin_BottomInset.m; sourceTree = "<group>"; };
-		EF231CD620BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewControllerPlugin_HeaderScroll.h; sourceTree = "<group>"; };
-		EF231CD720BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewControllerPlugin_HeaderScroll.m; sourceTree = "<group>"; };
-		EF231CD820BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabViewControllerPlugin_TabViewBar.h; sourceTree = "<group>"; };
-		EF231CD920BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabViewControllerPlugin_TabViewBar.m; sourceTree = "<group>"; };
 		EF26CF8920A98F73004573D5 /* SDDouYin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDDouYin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF26CF9320A98F74004573D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF26CF9520A98F75004573D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -220,6 +201,18 @@
 		EF58F1FA20AC8A180009DE08 /* SDNearbyCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionView.m; sourceTree = "<group>"; };
 		EF58F1FC20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNearbyCollectionViewCell.h; sourceTree = "<group>"; };
 		EF58F1FD20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNearbyCollectionViewCell.m; sourceTree = "<group>"; };
+		EF5999F120E3552B003D0392 /* SDHeadViewConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHeadViewConfig.h; sourceTree = "<group>"; };
+		EF5999F220E3552B003D0392 /* SDHeadViewConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHeadViewConfig.m; sourceTree = "<group>"; };
+		EF5999F420E37738003D0392 /* UIViewController+SDTransitionAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SDTransitionAnimation.h"; sourceTree = "<group>"; };
+		EF5999F520E37738003D0392 /* UIViewController+SDTransitionAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SDTransitionAnimation.m"; sourceTree = "<group>"; };
+		EF5999F720E377DB003D0392 /* UIViewController+SDScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SDScrollView.h"; sourceTree = "<group>"; };
+		EF5999F820E377DB003D0392 /* UIViewController+SDScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SDScrollView.m"; sourceTree = "<group>"; };
+		EF5999FB20E37FC8003D0392 /* SDLeftSlidingAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLeftSlidingAnimation.h; sourceTree = "<group>"; };
+		EF5999FC20E37FC8003D0392 /* SDLeftSlidingAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLeftSlidingAnimation.m; sourceTree = "<group>"; };
+		EF5999FE20E38AF5003D0392 /* UIView+SDView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SDView.h"; sourceTree = "<group>"; };
+		EF5999FF20E38AF5003D0392 /* UIView+SDView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDView.m"; sourceTree = "<group>"; };
+		EF70BD7120E28F240090FC3F /* SDBaseLeftSlidingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDBaseLeftSlidingViewController.h; sourceTree = "<group>"; };
+		EF70BD7220E28F240090FC3F /* SDBaseLeftSlidingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBaseLeftSlidingViewController.m; sourceTree = "<group>"; };
 		EF7C654920CE169E009E7915 /* SDPlayerScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPlayerScrollView.h; sourceTree = "<group>"; };
 		EF7C654A20CE169E009E7915 /* SDPlayerScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPlayerScrollView.m; sourceTree = "<group>"; };
 		EFB8703120DB81450067C20B /* SDPlayerScrollItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPlayerScrollItem.h; sourceTree = "<group>"; };
@@ -301,46 +294,6 @@
 				A3CDE64C0DC54377064539F6 /* Pods-SDDouYin.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		EF231CC520BC6028006DA519 /* HJTabViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EF231CCA20BC605F006DA519 /* HJTabViewController */,
-				EF231CC620BC6049006DA519 /* HJTabViewBar */,
-			);
-			path = HJTabViewController;
-			sourceTree = "<group>";
-		};
-		EF231CC620BC6049006DA519 /* HJTabViewBar */ = {
-			isa = PBXGroup;
-			children = (
-				EF231CC720BC6049006DA519 /* HJDefaultTabViewBar.h */,
-				EF231CC820BC6049006DA519 /* HJDefaultTabViewBar.m */,
-			);
-			path = HJTabViewBar;
-			sourceTree = "<group>";
-		};
-		EF231CCA20BC605F006DA519 /* HJTabViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EF231CCB20BC605F006DA519 /* HJTabViewBar.h */,
-				EF231CCC20BC605F006DA519 /* HJTabViewBar.m */,
-				EF231CCD20BC605F006DA519 /* HJTabViewController+Private.h */,
-				EF231CCE20BC605F006DA519 /* HJTabViewController+ViewController.h */,
-				EF231CCF20BC605F006DA519 /* HJTabViewController+ViewController.m */,
-				EF231CD020BC605F006DA519 /* HJTabViewController.h */,
-				EF231CD120BC605F006DA519 /* HJTabViewController.m */,
-				EF231CD220BC605F006DA519 /* HJTabViewControllerPlugin_Base.h */,
-				EF231CD320BC605F006DA519 /* HJTabViewControllerPlugin_Base.m */,
-				EF231CD420BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.h */,
-				EF231CD520BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m */,
-				EF231CD620BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.h */,
-				EF231CD720BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.m */,
-				EF231CD820BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.h */,
-				EF231CD920BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.m */,
-			);
-			path = HJTabViewController;
 			sourceTree = "<group>";
 		};
 		EF26CF8020A98F73004573D5 = {
@@ -459,8 +412,14 @@
 			children = (
 				EF26CFF620A992DF004573D5 /* UIBarButtonItem+Extension.h */,
 				EF26CFF720A992DF004573D5 /* UIBarButtonItem+Extension.m */,
+				EF5999F420E37738003D0392 /* UIViewController+SDTransitionAnimation.h */,
+				EF5999F520E37738003D0392 /* UIViewController+SDTransitionAnimation.m */,
+				EF5999F720E377DB003D0392 /* UIViewController+SDScrollView.h */,
+				EF5999F820E377DB003D0392 /* UIViewController+SDScrollView.m */,
 				EF26CFF820A992DF004573D5 /* UIImage+SDImage.h */,
 				EF26CFF920A992DF004573D5 /* UIImage+SDImage.m */,
+				EF5999FE20E38AF5003D0392 /* UIView+SDView.h */,
+				EF5999FF20E38AF5003D0392 /* UIView+SDView.m */,
 				EFCC623920B93FA400C8FA7A /* NSString+SDString.h */,
 				EFCC623A20B93FA400C8FA7A /* NSString+SDString.m */,
 			);
@@ -470,7 +429,6 @@
 		EF26CFFA20A992DF004573D5 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				EF231CC520BC6028006DA519 /* HJTabViewController */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -534,6 +492,8 @@
 			children = (
 				EFCC623C20B940B300C8FA7A /* SDUser.h */,
 				EFCC623D20B940B300C8FA7A /* SDUser.m */,
+				EF5999F120E3552B003D0392 /* SDHeadViewConfig.h */,
+				EF5999F220E3552B003D0392 /* SDHeadViewConfig.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -834,6 +794,8 @@
 				EF42986E20DCD4C9008174EA /* SDBaseHiddenViewController.m */,
 				EF42986C20DCD4C9008174EA /* SDBaseViewController.h */,
 				EF42986F20DCD4C9008174EA /* SDBaseViewController.m */,
+				EF70BD7120E28F240090FC3F /* SDBaseLeftSlidingViewController.h */,
+				EF70BD7220E28F240090FC3F /* SDBaseLeftSlidingViewController.m */,
 			);
 			path = SDBaseViewController;
 			sourceTree = "<group>";
@@ -854,6 +816,8 @@
 			children = (
 				EF31731720DA3C86004BEA6F /* SDBaseHandler.h */,
 				EF31731820DA3C86004BEA6F /* SDBaseHandler.m */,
+				EF5999FB20E37FC8003D0392 /* SDLeftSlidingAnimation.h */,
+				EF5999FC20E37FC8003D0392 /* SDLeftSlidingAnimation.m */,
 			);
 			path = SDBaseHandler;
 			sourceTree = "<group>";
@@ -1048,34 +1012,34 @@
 				EF2106A220ADD93A0061B38B /* SDNewsTableView.m in Sources */,
 				EF26D02A20A992E0004573D5 /* UIImage+SDImage.m in Sources */,
 				EF21069F20ADD7620061B38B /* SDNearbyListViewController.m in Sources */,
-				EF231CDB20BC605F006DA519 /* HJTabViewController+ViewController.m in Sources */,
 				EFCC625920BAF23C00C8FA7A /* SDNotificationConst.m in Sources */,
+				EF5999F620E37738003D0392 /* UIViewController+SDTransitionAnimation.m in Sources */,
 				EF7C654B20CE169E009E7915 /* SDPlayerScrollView.m in Sources */,
 				EF26D08020AA8BE9004573D5 /* SDNearbyViewController.m in Sources */,
 				EFCC623E20B940B300C8FA7A /* SDUser.m in Sources */,
 				EF42987420DCD4C9008174EA /* SDBaseViewController.m in Sources */,
 				EFCC624120B9412000C8FA7A /* SDMeHeadTopView.m in Sources */,
 				EF31733020DA5340004BEA6F /* SDVideoModel.m in Sources */,
-				EF231CE020BC605F006DA519 /* HJTabViewControllerPlugin_TabViewBar.m in Sources */,
 				EF26D02920A992E0004573D5 /* UIBarButtonItem+Extension.m in Sources */,
+				EF5999F320E3552B003D0392 /* SDHeadViewConfig.m in Sources */,
 				EF31732A20DA3CC0004BEA6F /* SDBaseModel.m in Sources */,
 				EF2106A520ADD95A0061B38B /* SDNewsTableViewCell.m in Sources */,
 				EFB8703320DB81450067C20B /* SDPlayerScrollItem.m in Sources */,
+				EF70BD7320E28F240090FC3F /* SDBaseLeftSlidingViewController.m in Sources */,
 				EF21069920ADD1540061B38B /* SDFocusCollectionView.m in Sources */,
 				EF26D07420AA7040004573D5 /* SDFocusViewController.m in Sources */,
 				EF26D07A20AA7057004573D5 /* SDNewsViewController.m in Sources */,
 				EFCC623820B93CE500C8FA7A /* SDMeHeadView.m in Sources */,
 				EF26D01A20A992E0004573D5 /* SDHttpTool.m in Sources */,
 				EF31732D20DA3D92004BEA6F /* SDShortVideoModel.m in Sources */,
-				EF231CDA20BC605F006DA519 /* HJTabViewBar.m in Sources */,
 				EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */,
 				EFCC624720B954B300C8FA7A /* SDMeWorksViewController.m in Sources */,
-				EF231CDF20BC605F006DA519 /* HJTabViewControllerPlugin_HeaderScroll.m in Sources */,
 				EF26D07D20AA8BB4004573D5 /* SDRecommendViewController.m in Sources */,
 				EF31732620DA3C87004BEA6F /* SDBaseNavigationController.m in Sources */,
 				EF31731F20DA3C87004BEA6F /* SDBaseTableViewCell.m in Sources */,
 				EF15CD0020DFA662001FD70F /* SDSearchViewController.m in Sources */,
 				EFCC624D20B956F200C8FA7A /* SDMeHeadTitleView.m in Sources */,
+				EF599A0020E38AF5003D0392 /* UIView+SDView.m in Sources */,
 				EF21069C20ADD1650061B38B /* SDFocusCollectionViewCell.m in Sources */,
 				EF041C9A20DCE5960041794B /* SDMeStoryViewController.m in Sources */,
 				EF42987320DCD4C9008174EA /* SDBaseHiddenViewController.m in Sources */,
@@ -1083,27 +1047,25 @@
 				EF31732720DA3C87004BEA6F /* SDBaseNavigationView.m in Sources */,
 				EF42987220DCD4C9008174EA /* BaseViewController.m in Sources */,
 				EFCC624420B951F400C8FA7A /* SDMeEditViewController.m in Sources */,
+				EF5999F920E377DB003D0392 /* UIViewController+SDScrollView.m in Sources */,
 				EF26D07720AA704B004573D5 /* SDHomeViewController.m in Sources */,
 				EF31732320DA3C87004BEA6F /* SDTabBar.m in Sources */,
 				EFCC625320B9C42B00C8FA7A /* SDMeCollectionView.m in Sources */,
 				EF1EC7FF20C99060006C0BE5 /* SDHomeBtnView.m in Sources */,
 				EF26D06E20AA7024004573D5 /* SDLoginViewController.m in Sources */,
-				EF231CDE20BC605F006DA519 /* HJTabViewControllerPlugin_BottomInset.m in Sources */,
 				EFCC623B20B93FA400C8FA7A /* NSString+SDString.m in Sources */,
 				EFCC624A20B954C900C8FA7A /* SDMeLikeViewController.m in Sources */,
 				EF31731E20DA3C87004BEA6F /* SDBaseTableView.m in Sources */,
-				EF231CC920BC6049006DA519 /* HJDefaultTabViewBar.m in Sources */,
 				EF31732520DA3C87004BEA6F /* SDBaseHandler.m in Sources */,
 				EF3F07DA20C930F2001F9DC5 /* SDHomeBtnItem.m in Sources */,
 				EF041C9720DCD5480041794B /* SDVideoDetailViewController.m in Sources */,
 				EF26CFCB20A992BF004573D5 /* ViewController.m in Sources */,
 				EF26D07120AA7031004573D5 /* SDAddViewController.m in Sources */,
-				EF231CDD20BC605F006DA519 /* HJTabViewControllerPlugin_Base.m in Sources */,
 				EF31732420DA3C87004BEA6F /* SDTabBarViewController.m in Sources */,
 				EFCC625620B9C43900C8FA7A /* SDMeCollectionViewCell.m in Sources */,
+				EF5999FD20E37FC8003D0392 /* SDLeftSlidingAnimation.m in Sources */,
 				EF58F1FB20AC8A180009DE08 /* SDNearbyCollectionView.m in Sources */,
 				EF26D03920A99510004573D5 /* MJExtensionConfig.m in Sources */,
-				EF231CDC20BC605F006DA519 /* HJTabViewController.m in Sources */,
 				EF2106A820ADD9740061B38B /* SDNewsHeadView.m in Sources */,
 				EF26CFCA20A992BF004573D5 /* AppDelegate.m in Sources */,
 				EF26CF9C20A98F75004573D5 /* main.m in Sources */,

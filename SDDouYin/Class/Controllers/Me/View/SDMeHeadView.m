@@ -97,14 +97,6 @@
 @end
 @implementation SDMeHeadTagsView
 
--(NSMutableArray *)colorArr{
-    if(!_colorArr){
-        NSArray *colors  = @[@[UIColorFromRGB0X(0x5D7BE9),UIColorFromRGB0X(0x43A6E3)],@[UIColorFromRGB0X(0xBC67ED),UIColorFromRGB0X(0x8575FE)],@[UIColorFromRGB0X(0xED67A9),UIColorFromRGB0X(0xFE7579)]];
-        _colorArr = [NSMutableArray arrayWithArray:colors];
-    }
-    return _colorArr;
-}
-
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -154,8 +146,8 @@
         btn.titleLabel.font = SDFont(12);
         [btn setTitleColor:UIColorFromRGB0X(0xFFFFFF) forState:UIControlStateNormal];
         
-        [btn setBackgroundImage:[UIImage sd_createImageWithSize:CGSizeMake(btnW, btnH) gradientColors:self.colorArr[i] percentage:@[@(0),@(1)] gradientType:GradientFromLeftToRight] forState:UIControlStateNormal];
-        btn.layer.cornerRadius = 4;
+        [btn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGBAlpha(0xFFFFFF, 0.3)] forState:UIControlStateNormal];
+        btn.layer.cornerRadius = btnH/2;
         btn.layer.masksToBounds = YES;
         [self addSubview:btn];
         ///布局
@@ -205,7 +197,7 @@
     [headImageView addGestureRecognizer:tap];
     [headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(kWidth(15)));
-        make.top.equalTo(@(kWidth(5)+kNavBarHeight));
+        make.top.equalTo(@(kWidth(5)));
         make.width.height.equalTo(@(kWidth(75)));
     }];
     
@@ -379,16 +371,6 @@
     }
     self.tagsView.titleArr = [NSMutableArray arrayWithArray:@[age,address,constellation]] ;
     */
-}
-
-
-///返回具体月份或日
-- (NSInteger )dataTransform:(NSString *)dataStr dataFormat:(NSString *)dataFormat{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:dataFormat];
-    NSDate *date = [dateFormatter dateFromString:dataStr];
-    NSString * comfromTimeStr = [dateFormatter stringFromDate:date];
-    return [comfromTimeStr intValue];
 }
 
 @end
