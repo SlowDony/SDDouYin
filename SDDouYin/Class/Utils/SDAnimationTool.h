@@ -10,4 +10,23 @@
 
 @interface SDAnimationTool : NSObject
 
++(instancetype)shareAnimationTool;
+
+
+/**
+ 点击屏幕点赞动画
+
+ @param touches 触摸点
+ @param event 事件
+ */
+- (void)showLargeLikeAnimationWithTouch:(NSSet<UITouch *>*)touches withEvent:(UIEvent *)event;
+
+
+/**
+ 点击先变大在缩回原来尺寸
+
+ @param view view
+ */
+- (void)showMakeScaleAnimationWithView:(UIView *)view;
+
 @end

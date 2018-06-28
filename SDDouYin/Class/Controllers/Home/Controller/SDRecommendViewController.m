@@ -64,15 +64,25 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handlePlayerNotify:) name:MPMoviePlayerFirstVideoFrameRenderedNotification object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handlePlayerPreparedToPlayNotify:) name:MPMediaPlaybackIsPreparedToPlayDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handlePlaybackDidFinishNotify:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+    
 }
 - (void)removeNotification{
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerFirstVideoFrameRenderedNotification object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMediaPlaybackIsPreparedToPlayDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+    
 }
 
 
 #pragma mark - NSNotification
+
+- (void)handlePlaybackDidFinishNotify:(NSNotification *)notify{
+    if(![self.playerScrollView.middlePlayer isPlaying]){
+        [self.playerScrollView.middlePlayer play];
+    }
+}
 
 - (void)handlePlayerNotify:(NSNotification *)notify{
  if(self.playerScrollView.middlePlayer.view.frame.origin.y==SCREEN_HEIGHT) {

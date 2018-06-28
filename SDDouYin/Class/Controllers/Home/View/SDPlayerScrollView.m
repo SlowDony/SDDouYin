@@ -9,6 +9,7 @@
 #import "SDPlayerScrollView.h"
 #import "SDShortVideoModel.h"
 #import "SDHomeBtnView.h"
+#import "SDAnimationTool.h"
 @interface SDPlayerScrollView()
 <UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
@@ -17,6 +18,7 @@
 @property (nonatomic,strong)  SDShortVideoModel  *topVideoModel,*middleVideoModel,*bottomVideoModel;
 @property (nonatomic,strong)  SDHomeBtnView
     *topBtnView,*middleBtnView,*bottomBtnView;
+@property (nonatomic,assign) NSTimeInterval timestamp;
 @end
 @implementation SDPlayerScrollView
 
@@ -88,11 +90,8 @@
     middleBtnView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
     middleBtnView.backgroundColor = [UIColor clearColor];
     self.middleBtnView = middleBtnView;
-//    middleBtnView.userInteractionEnabled = YES;
-//    middleBtnView.headItem.userInteractionEnabled = YES;
-    middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
+middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(headImagePanClick:)];
-    pan.delegate = self;
     [middleBtnView.headItem.headImageView addGestureRecognizer:pan];
     [middleBtnView.headItem.focusBtn  addTarget:self action:@selector(focusBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:middleBtnView];
@@ -106,9 +105,44 @@
     
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+        
+    if ((event.timestamp - self.timestamp <= 0.40) &&(event.timestamp - self.timestamp != 0)){
+         [[SDAnimationTool shareAnimationTool] showLargeLikeAnimationWithTouch:touches withEvent:event];
+        ///取消单击手势
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(playerSingleClick:) object:nil];
+        ///添加双击手势
+        [self performSelector:@selector(playerDoubleClick:) withObject:nil afterDelay:0.3];
+    }else {
+        ///取消双击手势
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(playerDoubleClick:) object:nil];
+        [self performSelector:@selector(playerSingleClick:) withObject:nil afterDelay:0.3];
+    }
+    self.timestamp = event.timestamp;
+}
+
 #pragma mark - clicks
+
+
+///播放视频(单机)
+- (void)playerSingleClick:(id )sender{
+    if ([self.middlePlayer isPlaying]) {
+        [self.middlePlayer pause];
+        self.middleBtnView.playImageView.hidden = NO;
+    }else{
+        [self.middlePlayer play];
+        self.middleBtnView.playImageView.hidden = YES;
+    }
+}
+
+///双击以上点赞
+- (void)playerDoubleClick:(id )sender{
+    
+}
+
+
 ///点击头像
-- (void)headImagePanClick:(UIGestureRecognizer *)recognizer{
+- (void)headImagePanClick:(UIGestureRecognizer *)gesture{
     
     if([self.playerDelegate respondsToSelector:@selector(playerScrollViewHeadBtnClick:)]){
         [self.playerDelegate playerScrollViewHeadBtnClick:self];
@@ -117,6 +151,7 @@
 - (void)focusBtnClick:(UIButton *)sender{
     DLog(@"关注按钮点击");
 }
+
 
 #pragma mark - funcs
 
@@ -163,28 +198,7 @@
 
     /** 设置视频数据 */
     [self prepareForVideo:self.middlePlayer shortVideoModel:self.middleVideoModel];
-//
-//    [self prepareForScrollItem:self.topItem shortVideoModel:self.topVideoModel];
-//    [self prepareForScrollItem:self.middleItem shortVideoModel:self.middleVideoModel];
-//    [self prepareForScrollItem:self.bottomItem shortVideoModel:self.bottomVideoModel];
 }
-
-
-
-/**
- 设置scrollItem
-
- @param scrollItem scrollItem
- @param shortVideoModel shortVideoModel
- */
-- (void)prepareForScrollItem:(SDPlayerScrollItem *)scrollItem shortVideoModel:(SDShortVideoModel *)shortVideoModel{
-    
-    [self prepareForImageView:scrollItem.bgImageView btnView:scrollItem.homeBtnView shortVideoModel:shortVideoModel];
-    [self prepareForVideo:scrollItem.videoPlayer shortVideoModel:shortVideoModel];
-    
-}
-
-
 
 /**
  设置图片
@@ -225,35 +239,6 @@
     [self changeCurrentPlayer:scrollView];
 }
 
-- (void)changeCurrentVideoPlayer:(UIScrollView *)scrollView{
-     CGFloat currentOffsetY = scrollView.contentOffset.y;
-    if (currentOffsetY>=2*SCREEN_HEIGHT) {
-        self.contentOffset = CGPointMake(0, SCREEN_HEIGHT);
-        if(self.topItem.frame.origin.y==0){
-            self.topItem.frame = CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT);
-        }else{
-            self.topItem.frame = CGRectMake(0, self.topItem.frame.origin.y-SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
-        }
-        
-        if(self.middleItem.frame.origin.y==0){
-            self.middleItem.frame = CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT);
-        }else{
-            self.middleItem.frame = CGRectMake(0, self.middleItem.frame.origin.y-SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
-        }
-        
-        if(self.bottomItem.frame.origin.y==0){
-            self.bottomItem.frame = CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT);
-        }else{
-            self.bottomItem.frame = CGRectMake(0, self.bottomItem.frame.origin.y-SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
-        }
-  
-    }else if (currentOffsetY<=0){
-        self.contentOffset = CGPointMake(0, SCREEN_HEIGHT);
-    }
-    
-}
-
-
 ///滚动滑动
 -(void)changeCurrentPlayer:(UIScrollView *)scrollView{
     CGFloat currentOffsetY = scrollView.contentOffset.y;
@@ -287,23 +272,5 @@
 }
 
 
-/*
- - (void)setupSubviews{
- SDPlayerScrollItem *topItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
- topItem.videoPlayer.view.tag =1001;
- [self addSubview:topItem];
- self.topItem = topItem;
- 
- SDPlayerScrollItem *middleItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
- middleItem.videoPlayer.view.tag =1002;
- [self addSubview:middleItem];
- self.middleItem = middleItem;
- 
- SDPlayerScrollItem *bottomItem = [[SDPlayerScrollItem alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT)];
- bottomItem.videoPlayer.view.tag =1003;
- [self addSubview:bottomItem];
- self.bottomItem = bottomItem;
- 
- }
- */
+
 @end

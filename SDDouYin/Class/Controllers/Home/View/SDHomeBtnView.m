@@ -90,6 +90,19 @@
         make.height.equalTo(@(HomeBtnItemWidth));
     }];
     
+    ///playImageView
+    UIImageView *playImageView = [[UIImageView alloc] init];
+    playImageView.image = [UIImage imageNamed:@"icPlayMiddle"];
+    playImageView.alpha = 0.3;
+    playImageView.hidden = YES;
+    [self addSubview:playImageView];
+    self.playImageView = playImageView;
+    [playImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self);
+        make.width.equalTo(@(80));
+        make.height.equalTo(@(80));
+    }];
+    
    
 }
 
