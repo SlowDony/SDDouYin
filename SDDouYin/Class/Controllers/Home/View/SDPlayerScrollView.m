@@ -69,6 +69,7 @@
     middleImageView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
     middleImageView.backgroundColor = UIColorFormRandom;
     self.middleImageView = middleImageView;
+    self.middleImageView.backgroundColor = [UIColor redColor];
     [self addSubview:middleImageView];
     
     //底部图片
@@ -155,6 +156,30 @@ middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
 
 #pragma mark - funcs
 
+- (void)playVideo{
+    
+    self.middleImageView.hidden = YES;
+    self.middleBtnView.playImageView.hidden = YES;
+    if (![self.middlePlayer isPlaying]){
+        [self.middlePlayer play];
+    }
+}
+- (void)pauseVideo{
+    self.middleImageView.hidden = YES;
+    self.middleBtnView.playImageView.hidden = NO;
+    if ([self.middlePlayer isPlaying]){
+        [self.middlePlayer pause];
+    }
+}
+- (void)stopVideo{
+    
+    self.middleImageView.hidden = YES;
+    self.middleBtnView.playImageView.hidden = YES;
+    
+    [self.middlePlayer reset:NO];
+    [self.middlePlayer stop];
+    self.middlePlayer = nil;
+}
 
 
 /**
@@ -243,6 +268,7 @@ middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
 -(void)changeCurrentPlayer:(UIScrollView *)scrollView{
     CGFloat currentOffsetY = scrollView.contentOffset.y;
     if(currentOffsetY>=2*SCREEN_HEIGHT){
+        self.middleBtnView.playImageView.hidden = YES;
         self.contentOffset = CGPointMake(0, SCREEN_HEIGHT);
         self.currentIndex++;
         if(self.currentIndex==self.dataArrs.count){
@@ -252,6 +278,7 @@ middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
         
     }
     else if(currentOffsetY<=0){
+        self.middleBtnView.playImageView.hidden = YES;
         self.contentOffset = CGPointMake(0, SCREEN_HEIGHT);
         self.currentIndex--;
         if(self.currentIndex==-1){

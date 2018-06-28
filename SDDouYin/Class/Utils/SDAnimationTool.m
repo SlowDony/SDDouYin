@@ -35,7 +35,7 @@
     likeImageView.frame = CGRectMake(0, 0, likeImage.size.width, likeImage.size.height);
     likeImageView.image = likeImage;
     likeImageView.center = point;
-   
+    likeImageView.contentMode = UIViewContentModeScaleAspectFill;
     
     int angle = arc4random()%2;
     angle = angle ? angle :-1;
@@ -47,7 +47,7 @@
         bgImageView.transform = CGAffineTransformScale(bgImageView.transform, 1.2, 1.2);
     } completion:^(BOOL finished) {
         bgImageView.transform = CGAffineTransformScale(bgImageView.transform, 0.8,0.8);
-        [self performSelector:@selector(animationFlyTop:) withObject:bgImageView afterDelay:1.1];
+        [self animationFlyTop:bgImageView];
     }];
 }
 

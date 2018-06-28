@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    [self addNotification];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -46,18 +46,27 @@
     [self.playerScrollView updateCurrentPlayerDatas:self.dataArr currentIndex:index];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.playerScrollView playVideo];
+}
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    if(![self.playerScrollView.middlePlayer isPlaying]){
-        [self.playerScrollView.middlePlayer play];
-    }
+    DLog("viewWillAppear");
+    [self addNotification];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
-    if([self.playerScrollView.middlePlayer isPlaying]){
-        [self.playerScrollView.middlePlayer stop];
-    }
+    
+    [self.playerScrollView pauseVideo];
+    [self removeNotification];
+}
+
+-(void)dealloc{
+    DLog(@"delloc");
+    [self.playerScrollView stopVideo];
 }
 
 - (BOOL)pushPersonalInfoViewController {
@@ -88,22 +97,16 @@
      [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
 }
 
-- (void)dealloc{
-    [self removeNotification];
-}
+
 
 #pragma mark - NSNotification
 
 - (void)handlePlaybackDidFinishNotify:(NSNotification *)notify{
-    
-    if(![self.playerScrollView.middlePlayer isPlaying]){
-        [self.playerScrollView.middlePlayer play];
-    }
+    [self.playerScrollView playVideo];
 }
 - (void)handlePlayerNotify:(NSNotification *)notify{
-    if(self.playerScrollView.middlePlayer.view.frame.origin.y==SCREEN_HEIGHT) {
-        self.playerScrollView.middleImageView.hidden = YES;
-        [self.playerScrollView.middlePlayer play];
+ if(self.playerScrollView.middlePlayer.view.frame.origin.y==SCREEN_HEIGHT) {
+     [self.playerScrollView playVideo];
     }
 }
 

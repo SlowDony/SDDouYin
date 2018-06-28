@@ -34,4 +34,7 @@
 
 @property (nonatomic,weak) id<SDPlayerScrollViewDelegate>playerDelegate;
 
+- (void)playVideo;
+- (void)pauseVideo;
+- (void)stopVideo;
 @end
