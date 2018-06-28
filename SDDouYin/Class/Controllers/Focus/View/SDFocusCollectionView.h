@@ -17,4 +17,6 @@
 
 @interface SDFocusCollectionView : UICollectionView
 @property (nonatomic,weak)  id <SDFocusCollectionViewDelegate> collectionDelegate;
+
+@property (nonatomic,strong) NSMutableArray *dataArrs;
 @end

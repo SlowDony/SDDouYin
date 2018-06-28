@@ -41,11 +41,12 @@ UIGestureRecognizerDelegate
         progress = MIN(1.0,(MAX(0.0, fabs(progress))));
         if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
             [self.interactiveTransition updateInteractiveTransition:0];
-            if ([self pushPersonalInfoViewController]) {
-                //                if (![self.navigationController.delegate isEqual:self]) {
-                //                    self.navigationController.delegate = self;
-                //                }
-            }
+//            if ([self pushPersonalInfoViewController]) {
+//                //                if (![self.navigationController.delegate isEqual:self]) {
+//                //                    self.navigationController.delegate = self;
+//                //                }
+//            }
+            [self pushPersonalInfoViewController];
         } else if (gestureRecognizer.state == UIGestureRecognizerStateChanged){
             [self.interactiveTransition updateInteractiveTransition:progress];
         } else if (gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled){

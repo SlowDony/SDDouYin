@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class SDShortVideoModel;
 @interface SDFocusCollectionViewCell : UICollectionViewCell
 @property (nonatomic,strong)  UIImageView *bgImageView;//背景图片
 @property (nonatomic,strong)  UIImageView *headImageView;//头像
 @property (nonatomic,strong)  UILabel *nameLabel; //姓名
 @property (nonatomic,strong)  UILabel *timeLabel; //时间
 @property (nonatomic,strong)  UILabel *contentLabel; //内容
+
+- (void)setValueWithModel:(SDShortVideoModel *)shortVideoModel;
 @end

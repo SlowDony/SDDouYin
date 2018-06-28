@@ -52,7 +52,7 @@
     
     BOOL isPush = YES;
         SDMeViewController *meVC = [[SDMeViewController alloc]init];
-         meVC.hidesBottomBarWhenPushed = YES;
+        meVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:meVC animated:YES];
     return isPush;
 }
@@ -105,12 +105,6 @@
     if(!_playerScrollView){
         _playerScrollView = [[SDPlayerScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         _playerScrollView.playerDelegate = self;
-        if (@available(iOS 11.0, *)) {
-            _playerScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        } else {
-            // Fallback on earlier versions
-            self.automaticallyAdjustsScrollViewInsets = NO;
-        }
     }
     return _playerScrollView;
 }

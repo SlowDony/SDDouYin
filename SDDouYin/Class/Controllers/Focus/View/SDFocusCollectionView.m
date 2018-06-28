@@ -8,6 +8,7 @@
 
 #import "SDFocusCollectionView.h"
 #import "SDFocusCollectionViewCell.h"
+#import "SDShortVideoModel.h"
 #define focusCell @"focusCell"
 @interface SDFocusCollectionView()
 <UICollectionViewDelegate,
@@ -28,11 +29,8 @@ UICollectionViewDataSource>
         self.pagingEnabled = NO;
         //注册
         [self registerClass:[SDFocusCollectionViewCell class] forCellWithReuseIdentifier:focusCell];
-        
         if (@available(iOS 11.0, *)) {
-            self.contentInsetAdjustmentBehavior =UIScrollViewContentInsetAdjustmentNever;
-        } else {
-            // Fallback on earlier versions
+         self.contentInsetAdjustmentBehavior =UIScrollViewContentInsetAdjustmentNever;
         }
     }
     return self;
@@ -48,18 +46,19 @@ UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return self.dataArrs.count;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(SCREEN_WIDTH/2,SCREEN_WIDTH/2/187*298);
+    return CGSizeMake((SCREEN_WIDTH-1)/2,SCREEN_WIDTH/2/187*298);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SDFocusCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:focusCell forIndexPath:indexPath];
-    
+    SDShortVideoModel *shortVideoModel = self.dataArrs[indexPath.row];
+    [cell setValueWithModel:shortVideoModel];
     return cell;
 }
 

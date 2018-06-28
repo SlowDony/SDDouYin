@@ -9,6 +9,7 @@
 #import "SDVideoDetailViewController.h"
 #import "SDPlayerScrollView.h"
 #import "SDShortVideoModel.h"
+#import "SDMeViewController.h"
 @interface SDVideoDetailViewController ()
 @property (nonatomic,strong) SDPlayerScrollView *playerScrollView;
 @property (nonatomic,strong) NSMutableArray *dataArr;
@@ -59,6 +60,15 @@
     }
 }
 
+- (BOOL)pushPersonalInfoViewController {
+    
+    BOOL isPush = YES;
+    SDMeViewController *meVC = [[SDMeViewController alloc]init];
+    [self.navigationController pushViewController:meVC animated:YES];
+    return isPush;
+}
+
+
 #pragma mark - action
 - (void)popViewClick:(UIButton *)sender{
     [self.navigationController popViewControllerAnimated:YES];
@@ -106,12 +116,6 @@
 -(SDPlayerScrollView *)playerScrollView{
     if(!_playerScrollView){
         _playerScrollView = [[SDPlayerScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-        if (@available(iOS 11.0, *)) {
-            _playerScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        } else {
-            // Fallback on earlier versions
-            self.automaticallyAdjustsScrollViewInsets = NO;
-        }
     }
     return _playerScrollView;
 }

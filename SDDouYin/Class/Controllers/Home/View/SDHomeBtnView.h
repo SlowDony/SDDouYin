@@ -16,7 +16,7 @@
 @property (nonatomic,strong) SDHomeBtnItem *commentItem;
 @property (nonatomic,strong) SDHomeBtnItem *likeItem;
 @property (nonatomic,strong) SDHomeBtnItem *headItem;
-
+@property (nonatomic,strong) UIButton *playBtn;
 
 - (void)setValueWithModel:(SDShortVideoModel *)shortVideoModel;
 @end

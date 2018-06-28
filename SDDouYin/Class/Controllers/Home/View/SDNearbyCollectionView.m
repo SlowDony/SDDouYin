@@ -37,6 +37,9 @@ UICollectionViewDataSource>
         self.showsVerticalScrollIndicator = NO;
         self.showsHorizontalScrollIndicator = NO;
         self.pagingEnabled = NO;
+        if (@available(iOS 11.0, *)) {
+            self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        } 
         //注册
         [self registerClass:[SDNearbyCollectionViewCell class] forCellWithReuseIdentifier:nearbyCell];
     }

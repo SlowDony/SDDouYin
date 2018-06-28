@@ -6,9 +6,9 @@
 //  Copyright © 2018年 slowdony. All rights reserved.
 //
 
-#import "SDBaseHiddenViewController.h"
+#import "SDBaseLeftSlidingViewController.h"
 
-@interface SDVideoDetailViewController : SDBaseHiddenViewController
+@interface SDVideoDetailViewController : SDBaseLeftSlidingViewController
 
 - (void)updateVideoDetailDatas:(NSMutableArray *)datas currentIndex:(NSInteger )index;
 @end

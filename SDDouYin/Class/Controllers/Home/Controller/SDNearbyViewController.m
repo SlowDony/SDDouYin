@@ -21,6 +21,38 @@
 
 @implementation SDNearbyViewController
 
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setupUI];
+    // Do any additional setup after loading the view.
+}
+
+- (void)setupUI{
+    [self.view addSubview:self.nearbyCollectionView];
+    [self refreshCollectionView];
+}
+
+- (void)refreshCollectionView{
+    self.nearbyCollectionView.dataArrs = [NSMutableArray arrayWithArray:self.dataArr];
+    [self.nearbyCollectionView reloadData];
+}
+
+#pragma mark - SDNearbyCollectionViewDelegat
+-(void)SDNearbyCollectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    SDVideoDetailViewController *nearbyListVC = [[SDVideoDetailViewController alloc]init];
+    [nearbyListVC updateVideoDetailDatas:self.dataArr currentIndex:indexPath.row];
+    nearbyListVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:nearbyListVC animated:YES];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
 #pragma mark - lazy
 
 -(NSMutableArray *)dataArr{
@@ -47,47 +79,8 @@
         layout.minimumInteritemSpacing = 0;
         _nearbyCollectionView = [[SDNearbyCollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kTabBarHeight) collectionViewLayout:layout];
         _nearbyCollectionView.collectionDelegate = self;
-        if (@available(iOS 11.0, *)) {
-            _nearbyCollectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        } else {
-            // Fallback on earlier versions
-            self.automaticallyAdjustsScrollViewInsets = NO;
-        }
-        
     }
     return _nearbyCollectionView;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setupUI];
-    // Do any additional setup after loading the view.
-}
-
-- (void)setupUI{
-    [self.view addSubview:self.nearbyCollectionView];
-    
-    
-    [self refreshCollectionView];
-}
-
-- (void)refreshCollectionView{
-    self.nearbyCollectionView.dataArrs = [NSMutableArray arrayWithArray:self.dataArr];
-    [self.nearbyCollectionView reloadData];
-}
-
-#pragma mark - SDNearbyCollectionViewDelegat
--(void)SDNearbyCollectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    SDVideoDetailViewController *nearbyListVC = [[SDVideoDetailViewController alloc]init];
-    [nearbyListVC updateVideoDetailDatas:self.dataArr currentIndex:indexPath.row];
-    nearbyListVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:nearbyListVC animated:YES];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

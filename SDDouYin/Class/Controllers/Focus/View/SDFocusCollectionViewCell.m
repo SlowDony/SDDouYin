@@ -7,7 +7,7 @@
 //
 
 #import "SDFocusCollectionViewCell.h"
-
+#import "SDShortVideoModel.h"
 @implementation SDFocusCollectionViewCell
 
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -21,11 +21,6 @@
 - (void)setupUI{
     //背景图
     UIImageView *bgImageView = [[UIImageView alloc]init];
-    //    bgImageView.image = [UIImage imageNamed:@"<#string#>"];
-    int R = (arc4random() % 256) ;
-    int G = (arc4random() % 256) ;
-    int B = (arc4random() % 256) ;
-    [bgImageView setBackgroundColor:[UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1]];
     [self addSubview:bgImageView];
     self.bgImageView = bgImageView;
     [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -34,9 +29,6 @@
         make.width.equalTo(self.mas_width);
         make.height.equalTo(self.mas_height);
     }];
-    
-    [bgImageView sd_setImageWithURL:[NSURL URLWithString:@"https://p3.pstatp.com/large/3a2f000a606f678eefe1.jpeg"]];
-    
     //头像
     UIImageView *headImageView = [[UIImageView alloc] init];
     [self addSubview:headImageView];
@@ -46,15 +38,6 @@
         make.bottom.equalTo(bgImageView.mas_bottom).offset(kWidth(-10));
         make.width.equalTo(@(kWidth(20)));
         make.height.equalTo(@(kWidth(20)));
-    }];
-    
-    
-    //    @xWeakify
-    [headImageView sd_setImageWithURL:[NSURL URLWithString:@"https://p3.pstatp.com/aweme/100x100/3b5c0006d56892d3f78c.jpeg"] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        //        @xStrongify
-        dispatch_async(dispatch_get_main_queue(), ^{
-            headImageView.image = [UIImage sd_imageWithRoundCorner:image cornerRadius:kWidth(20)/2 size:CGSizeMake(kWidth(20), kWidth(20))];
-        });
     }];
     
     //时间
@@ -108,8 +91,15 @@
         make.right.equalTo(timeLabel.mas_right);
         make.height.equalTo(@(50));
     }];
-    
-   
-    
+}
+
+- (void)setValueWithModel:(SDShortVideoModel *)shortVideoModel{
+    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:shortVideoModel.imageUrl]];
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:@"https://p3.pstatp.com/aweme/100x100/3b5c0006d56892d3f78c.jpeg"] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.headImageView.image = [UIImage sd_imageWithRoundCorner:image cornerRadius:kWidth(20)/2 size:CGSizeMake(kWidth(20), kWidth(20))];
+        });
+    }];
 }
 @end
