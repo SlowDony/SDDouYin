@@ -88,7 +88,7 @@
 /**
  根据生日日期返回星座
  
- @param birthday 生日日期(1998-06-26 00:00:00)
+ @param birthday 生日日期(1998-06-26)
  @return 返回星座
  */
 +(NSString *)sd_gerAstroWithBirthday:(NSString *)birthday{
@@ -99,14 +99,14 @@
 /**
  具体返回月或日
  
- @param dataStr 时间日期(2018-06-26 00:00:00)
+ @param dataStr 时间日期(2018-06-26)
  @param dataFormat (月或日的对应日期格式)
  @return 返回值
  */
 + (NSInteger )sd_dataTransform:(NSString *)dataStr dataFormat:(NSString *)dataFormat{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     ///dataStr需要此日期格式对应
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     NSDate *mydate=[dateFormatter dateFromString:dataStr];
     [dateFormatter setDateFormat:dataFormat];
     NSString * comfromTimeStr = [dateFormatter stringFromDate:mydate];
@@ -143,13 +143,12 @@
 /**
  生日返回年龄
  
- @param birthdayStr 生日 (2018-06-26 00:00:00)
+ @param birthdayStr 生日 (2018-06-26)
  */
 + (NSString *)sd_getAgeWithBirthday:(NSString *)birthdayStr{
     
-    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     
     NSDate *birthday = [dateFormatter dateFromString:birthdayStr];
     
@@ -163,4 +162,23 @@
     return [NSString stringWithFormat:@"%ld岁",[components year]];
 }
 
+
+/**
+ 判断字符转是否为空
+
+ @param string 字符串
+ @return yes 空 no 不空
+ */
++ (BOOL)sd_isBlankString:(NSString *)string{
+    if (string == nil || string == NULL) {
+        return YES;
+    }
+    if ([string isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
+        return YES;
+    }
+    return NO;
+}
 @end

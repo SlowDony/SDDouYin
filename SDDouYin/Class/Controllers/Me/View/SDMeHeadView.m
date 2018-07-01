@@ -92,36 +92,21 @@
 ///年龄星座地址view
 @interface SDMeHeadTagsView()
 
-@property (nonatomic,strong) NSMutableArray *colorArr; //渐变颜色数组
+@property (nonatomic,strong) NSMutableArray *titleViewArr;
 
 @end
 @implementation SDMeHeadTagsView
 
-
+-(NSMutableArray *)titleViewArr{
+    if(!_titleViewArr){
+        _titleViewArr = [NSMutableArray array];
+    }
+    return _titleViewArr;
+}
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        UIView *topline = [[UIView alloc] init];
-        topline.backgroundColor = UIColorFromRGB0X(0x35324E);
-        [self addSubview:topline];
-        [topline mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.mas_left).offset(kWidth(15));
-            make.top.equalTo(self.mas_top).offset(-1);
-            make.right.equalTo(self.mas_right).offset(kWidth(-15));
-            make.height.equalTo(@(0.5));
-        }];
-        
-        UIView *bottomline = [[UIView alloc] init];
-        bottomline.backgroundColor = UIColorFromRGB0X(0x35324E);
-        [self addSubview:bottomline];
-        [bottomline mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.mas_left).offset(kWidth(15));
-            make.bottom.equalTo(self.mas_bottom).offset(-1);
-            make.right.equalTo(self.mas_right).offset(kWidth(-15));
-            make.height.equalTo(@(0.5));
-        }];
         
     }
     return self;
@@ -131,35 +116,54 @@
 -(void)setTitleArr:(NSMutableArray *)titleArr{
     
     _titleArr = titleArr;
+    NSInteger count = titleArr.count;
+    NSInteger currentBtns = self.titleViewArr.count;
+    for (int i=0;i<count;i++)
+    {
+        UIButton *btn = nil;
+        if (i>=currentBtns){
+            btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            btn.titleLabel.font = SDFont(12);
+            [btn setTitleColor:UIColorFromRGB0X(0xFFFFFF) forState:UIControlStateNormal];
+            [btn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGBAlpha(0xFFFFFF, 0.3)] forState:UIControlStateNormal];
+            btn.layer.cornerRadius = 25/2;
+            btn.layer.masksToBounds = YES;
+            [self addSubview:btn];
+            [self.titleViewArr addObject:btn];
+        }else {
+            btn = self.titleViewArr[i];
+        }
+        [btn setTitle:titleArr[i] forState:UIControlStateNormal];
+        btn.hidden = NO;
+    }
+    
+    for (int i= (int)count ;i<self.titleViewArr.count;i++){
+        UIButton *btn = self.titleViewArr[i];
+        btn.hidden = YES;
+    }
+    //重新布局子控件
+    [self setNeedsLayout];
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
     CGFloat margin = kWidth(15);
     CGFloat btnW = 0 ;
     CGFloat btnH = 25;
     CGFloat btnX = 0;
-    
-    for (int i=0;i<titleArr.count;i++){
-        
+    CGFloat btnY = (50-25)/2;
+    for (int i=0;i<self.titleViewArr.count;i++){
         CGFloat width = [NSString sd_getFloatForTextWithFontSize:12 text:self.titleArr[i]]+20;
+        UIButton *btn = self.titleViewArr[i];
         btnW = width;
-        btnX = kWidth(10)*i+margin;
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setTitle:titleArr[i] forState:UIControlStateNormal];
-        btn.titleLabel.font = SDFont(12);
-        [btn setTitleColor:UIColorFromRGB0X(0xFFFFFF) forState:UIControlStateNormal];
         
-        [btn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGBAlpha(0xFFFFFF, 0.3)] forState:UIControlStateNormal];
-        btn.layer.cornerRadius = btnH/2;
-        btn.layer.masksToBounds = YES;
-        [self addSubview:btn];
-        ///布局
-        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.mas_left).offset(btnX);
-            make.centerY.equalTo(self.mas_centerY);
-            make.width.equalTo(@(btnW));
-            make.height.equalTo(@(btnH));
-        }];
+        btnX = kWidth(10)*i+margin;
+        btn.frame = CGRectMake(btnX,btnY, btnW, btnH);
         margin = margin+btnW;
     }
+    
 }
+
 
 @end
 @implementation SDMeHeadView
@@ -182,9 +186,11 @@
 }
 - (void)setupUI{
     
+    
+    
     ///头部view
     UIImageView *headImageView = [[UIImageView alloc] init];
-    headImageView.image = [UIImage imageNamed:@"logo"];
+    headImageView.image = [UIImage imageNamed:@"imgXiaozhushou80"];
     headImageView.layer.borderWidth = 2;
     headImageView.layer.cornerRadius = kWidth(77)/2;
     headImageView.layer.masksToBounds = YES;
@@ -235,6 +241,17 @@
         make.height.equalTo(@(20));
     }];
     
+    ///下划线
+    UIView *topline = [[UIView alloc] init];
+    topline.backgroundColor = UIColorFromRGB0X(0x35324E);
+    [self addSubview:topline];
+    [topline mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.numLabel.mas_left);
+        make.top.equalTo(self.numLabel.mas_bottom).offset(10);
+        make.right.equalTo(self.mas_right).offset(kWidth(-15));
+        make.height.equalTo(@(0.5));
+    }];
+    
     ///个人签名
     UILabel *signatureLabel = [[UILabel alloc] init];
     signatureLabel.backgroundColor = [UIColor clearColor];
@@ -246,7 +263,7 @@
     [self addSubview:signatureLabel];
     self.signatureLabel = signatureLabel;
     [signatureLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(numLabel.mas_bottom).offset(kWidth(15));
+        make.top.equalTo(topline.mas_bottom).offset(kWidth(15));
         make.left.equalTo(headImageView.mas_left);;
         make.right.equalTo(self.mas_right).offset(kWidth(-20));
         make.height.equalTo(@(20));
@@ -338,39 +355,36 @@
 }
 
 - (void)setHeadValueModel:(SDUser *)model{
-    /*
-    self.nameLabel.text = model.userName;
-    self.numLabel.text = [NSString stringWithFormat:@"%@号:%@",kYomoTitle,model.yomoNumber];
-    self.signatureLabel.text = [NSString stringWithFormat:@"%@",[NSString isBlankString:model.phrases]?@"该用户很高冷什么都不想说":model.phrases];
+    
+    self.nameLabel.text = model.nickname;
+    self.numLabel.text = [NSString stringWithFormat:@"%@号:%@",KDouYinTitle,model.shortId];
+    self.signatureLabel.text = [NSString stringWithFormat:@"%@",[NSString sd_isBlankString:model.signature]?@"该用户很高冷什么都不想说":model.signature];
     ///获赞
-    [self.bottomView setBtnValue:model.totalPraiseNum withTag:100];
+    [self.bottomView setBtnValue:model.totalFavorited withTag:100];
     ///粉丝
-    [self.bottomView setBtnValue:model.totalFansNum withTag:101];
+    [self.bottomView setBtnValue:model.followingCount withTag:101];
     ///关注
-    [self.bottomView setBtnValue:model.totalAttentionNum withTag:102];
+    [self.bottomView setBtnValue:model.mplatformFollowersCount withTag:102];
     
     ///头像
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[NSString appendImageServiceDomain:model.avatarOssUrl imageType:nil]] placeholderImage:kGainUserDefaultAvatar(kCurrentUser.gender)];
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[model.avatarMedium.urlList firstObject]] placeholderImage:[UIImage imageNamed:@"imgXiaozhushou80"]];
     
     ///地址
-    NSString *address = @"地址未填写";
+    NSString *address = model.location;
     
     ///星座
     NSString *constellation = @"星座未填写";
     
     ///年龄
     NSString *age = @"年龄未填写";
-    if (![NSString isBlankString:model.userProfile.birthday]){
-        constellation = [NSString getAstroWithMonth:[self dataTransform:model.userProfile.birthday dataFormat:@"M"] day:[self dataTransform:model.userProfile.birthday dataFormat:@"d"]];
-        NSString *birthdayStr = model.userProfile.birthday;
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-        [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];//解决8小时时间差问题
-        NSDate *birthdayDate = [dateFormatter dateFromString:birthdayStr];
-        age = [NSString stringWithFormat:@"%@%@",model.gender==0?@"♀":@"♂",[NSString getAgeWith:birthdayDate]] ;
+    if (![NSString sd_isBlankString:model.birthday]){
+        
+        constellation = [NSString sd_gerAstroWithBirthday:model.birthday];
+        
+        age = [NSString stringWithFormat:@"%@%@",model.gender==0?@"♂":@"♀",[NSString sd_getAgeWithBirthday:model.birthday]];
     }
     self.tagsView.titleArr = [NSMutableArray arrayWithArray:@[age,address,constellation]] ;
-    */
+    
 }
 
 @end

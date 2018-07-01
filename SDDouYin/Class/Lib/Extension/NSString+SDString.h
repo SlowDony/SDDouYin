@@ -81,8 +81,15 @@
 /**
  生日返回年龄
  
- @param birthday 生日
+ @param birthdayStr 生日
  */
-+ (NSString *)sd_getAgeWithBirthday:(NSDate*)birthday;
++ (NSString *)sd_getAgeWithBirthday:(NSString *)birthdayStr;
 
+/**
+ 判断字符转是否为空
+ 
+ @param string 字符串
+ @return yes 空 no 不空
+ */
++ (BOOL)sd_isBlankString:(NSString *)string;
 @end

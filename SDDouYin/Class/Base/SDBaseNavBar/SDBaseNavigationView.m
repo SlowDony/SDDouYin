@@ -99,6 +99,9 @@
 }
 
 
+- (void)setTitleName:(NSString *)name{
+    self.titleLabel.text = name;
+}
 
 
 @end

@@ -13,10 +13,9 @@
 #import "SDBaseNavigationView.h"
 #import "SDMeWorksViewController.h"
 #import "SDMeLikeViewController.h"
-
-
-
-#define headViewHeight (kWidth(130)+160)
+#import "SDUser.h"
+#import "SDUserTool.h"
+#define headViewHeight (kWidth(130)+170)
 @interface SDMeViewController ()
 <
 SDMeHeadViewDelegate,
@@ -35,6 +34,7 @@ UIScrollViewDelegate
     [super viewDidLoad];
     [self setupUI];
     [self addNotification];
+    [self network];
 }
 
 - (void)setupUI{
@@ -59,6 +59,7 @@ UIScrollViewDelegate
 - (void)sdMeHeadViewHeadBtnClick {
     DLog(@"头部点击");
     SDMeEditViewController *editMeVC = [[SDMeEditViewController alloc]init];
+    editMeVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:editMeVC animated:YES];
 }
 
@@ -98,8 +99,18 @@ UIScrollViewDelegate
     self.navigationView.titleLabel.alpha = scrollViewOffY/headViewHeight;
     self.headView.alpha = 1-scrollViewOffY/headViewHeight;
     
+}
+
+- (void)network{
     
-    
+    [SDUserTool getUserInfoTaskSuccess:^(id obj) {
+        SDUser *user = (SDUser *)obj;
+        DLog(@"user:%@",user.nickname);
+        [self.headView setHeadValueModel:user];
+        self.navigationView.titleLabel.text = user.nickname;
+    } failed:^(id obj) {
+        
+    }];
 }
 
 
@@ -147,7 +158,6 @@ UIScrollViewDelegate
 - (SDBaseNavigationView *)navigationView{
     if (!_navigationView) {
         _navigationView = [[SDBaseNavigationView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kNavBarHeight)];
-        _navigationView.titleLabel.text = @"昵称";
         _navigationView.backgroundColor = KNavigationBarBackgroundColor;
         _navigationView.leftBtn.alpha = 1;
         _navigationView.backgroundColor = [UIColorFromRGB0X(0x242137)colorWithAlphaComponent:0.0f];

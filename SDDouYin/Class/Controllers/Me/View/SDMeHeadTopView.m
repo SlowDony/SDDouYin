@@ -35,7 +35,7 @@
     UIButton *pointBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [pointBtn setTitle:@"..." forState:UIControlStateNormal];
     //    [pointBtn setImage:[UIImage imageNamed:@"<#string#>"] forState:UIControlStateNormal];
-    [pointBtn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGB0X(0x3D3958)] forState:UIControlStateNormal];
+    [pointBtn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGBAlpha(0xFFFFFF, 0.3)] forState:UIControlStateNormal];
     pointBtn.layer.cornerRadius = 4;
     pointBtn.layer.masksToBounds = YES;
     pointBtn.titleLabel.font = SDFont(14);
@@ -54,8 +54,7 @@
     ///add
     UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [addBtn setTitle:@"添加" forState:UIControlStateNormal];
-    //    [pointBtn setImage:[UIImage imageNamed:@"<#string#>"] forState:UIControlStateNormal];
-    [addBtn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGB0X(0x3D3958)] forState:UIControlStateNormal];
+    [addBtn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGBAlpha(0xFFFFFF, 0.3)] forState:UIControlStateNormal];
     addBtn.titleLabel.font = SDFont(14);
     [addBtn setTitleColor:UIColorFromRGB0X(0xFFFFFF) forState:UIControlStateNormal];
     addBtn.layer.cornerRadius = 4;
@@ -74,8 +73,7 @@
     ///add
     UIButton *followBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [followBtn setTitle:@"已关注" forState:UIControlStateNormal];
-    //    [pointBtn setImage:[UIImage imageNamed:@"<#string#>"] forState:UIControlStateNormal];
-    [followBtn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGB0X(0xFE5C9D)] forState:UIControlStateNormal];
+    [followBtn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGBAlpha(0xFFFFFF, 0.3)] forState:UIControlStateNormal];
     [followBtn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGB0X(0x2B2841)] forState:UIControlStateSelected];
     followBtn.titleLabel.font = SDFont(14);
     [followBtn setTitleColor:UIColorFromRGB0X(0xFFFFFF) forState:UIControlStateNormal];
@@ -98,7 +96,6 @@
     if (topViewType==TopViewTypeMe){
         [self.followBtn setTitle:@"+邀请好友" forState:UIControlStateNormal];
         [self.addBtn setTitle:@"钱包" forState:UIControlStateNormal];
-        [self.addBtn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGB0X(0xFE5C9D)] forState:UIControlStateNormal];
         [self.followBtn mas_updateConstraints:^(MASConstraintMaker *make) {
             make.width.equalTo(@(92));
         }];
@@ -111,7 +108,6 @@
             make.width.equalTo(@(80));
         }];
         [self.addBtn setTitle:@"添加" forState:UIControlStateNormal];
-        [self.addBtn setBackgroundImage:[UIImage sd_imageWithColor:UIColorFromRGB0X(0x3D3958)] forState:UIControlStateNormal];
     }
 }
 

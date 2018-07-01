@@ -8,33 +8,26 @@
 
 #import "MJExtensionConfig.h"
 #import "MJExtension.h"
-
-
+#import "SDUser.h"
+#import "SDObject.h"
 
 @implementation MJExtensionConfig
 
 + (void)load {
     
-    [NSObject mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
-        return @{
-                 @"ID" : @"id"
-                 };
-    }];
-    
-//    [SDCreatorModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+//    [NSObject mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
 //        return @{
-//                 @"desc" : @"desciption"
+//                 @"ID" : @"id"
 //                 };
 //    }];
-//
-//    //下滑线
-//    [SDLiveModel mj_setupReplacedKeyFromPropertyName121:^NSString *(NSString *propertyName) {
-//        return [propertyName mj_underlineFromCamel];
-//    }];
-//
-//    [SDCreatorModel mj_setupReplacedKeyFromPropertyName121:^NSString *(NSString *propertyName) {
-//        return [propertyName mj_underlineFromCamel];
-//    }];
+    
+    //下滑线转驼峰
+    [SDObject mj_setupReplacedKeyFromPropertyName121:^NSString *(NSString *propertyName) {
+        return [propertyName mj_underlineFromCamel];
+    }];
+    
+    
+    
 }
 
 @end

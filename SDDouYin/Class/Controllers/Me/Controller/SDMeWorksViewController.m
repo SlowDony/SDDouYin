@@ -41,7 +41,7 @@
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         layout.minimumLineSpacing = 1;
         layout.minimumInteritemSpacing = 1;
-        layout.headerReferenceSize = CGSizeMake(0, (kWidth(130)+160)+44);
+        layout.headerReferenceSize = CGSizeMake(0, (kWidth(130)+170)+44);
         _collectionView = [[SDMeCollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
     }
     return _collectionView;

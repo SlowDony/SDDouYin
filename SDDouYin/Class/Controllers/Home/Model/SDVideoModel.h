@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface SDUrl :NSObject
+
 @property (nonatomic,strong) NSArray *urlList;
 @property (nonatomic,copy) NSString *uri;
 @end
