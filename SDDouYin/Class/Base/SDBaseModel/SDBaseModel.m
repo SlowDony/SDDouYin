@@ -7,7 +7,10 @@
 //
 
 #import "SDBaseModel.h"
+@implementation SDExtra
 
+
+@end
 @implementation SDBaseModel
 
 @end

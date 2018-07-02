@@ -18,4 +18,13 @@
  @param failed 失败
  */
 + (void)getUserInfoTaskSuccess:(SuccessBlock )success failed:(FailedBlock )failed;
+
+/**
+ 获取个人作品
+ 
+ @param success 成功
+ @param failed 失败
+ */
++ (void)getAwemeListTaskSuccess:(SuccessBlock )success failed:(FailedBlock )failed;
+
 @end

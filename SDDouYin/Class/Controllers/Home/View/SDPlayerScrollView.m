@@ -14,10 +14,13 @@
 <UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
 @property (nonatomic,strong)  NSMutableArray *dataArrs;
-@property (nonatomic,strong)  SDShortVideoModel  *currentVideoModel;
+
 @property (nonatomic,strong)  SDShortVideoModel  *topVideoModel,*middleVideoModel,*bottomVideoModel;
+@property (nonatomic,strong)  SDAweme  *topAweme ,*middleAweme ,*bottomAweme;
+
 @property (nonatomic,strong)  SDHomeBtnView
     *topBtnView,*middleBtnView,*bottomBtnView;
+
 @property (nonatomic,assign) NSTimeInterval timestamp;
 @end
 @implementation SDPlayerScrollView
@@ -61,22 +64,22 @@
     //顶部图片
     UIImageView *topImageView = [[UIImageView alloc] init];
     topImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    topImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.topImageView = topImageView;
     [self addSubview:topImageView];
     
     //播放当前图片
     UIImageView *middleImageView = [[UIImageView alloc] init];
     middleImageView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
-    middleImageView.backgroundColor = UIColorFormRandom;
     self.middleImageView = middleImageView;
-    self.middleImageView.backgroundColor = [UIColor redColor];
+    self.middleImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:middleImageView];
     
     //底部图片
     UIImageView *bottomImageView = [[UIImageView alloc] init];
     bottomImageView.frame = CGRectMake(0, SCREEN_HEIGHT*2, SCREEN_WIDTH, SCREEN_HEIGHT);
-    bottomImageView.backgroundColor = UIColorFormRandom;
     self.bottomImageView = bottomImageView;
+    self.bottomImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:bottomImageView];
     
     //顶部图片
@@ -200,6 +203,47 @@ middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
     }
 }
 
+///不循环播放
+- (void)updateVideoNotCyclePlayer:(NSMutableArray <SDAweme *>*)lists currentIndex:(NSInteger )index{
+    if (lists.count && [lists firstObject]){
+        
+        [self.dataArrs removeAllObjects];
+        [self.dataArrs addObjectsFromArray:lists];
+        //当前播放
+        self.currentIndex = index;
+        //之前播放
+        self.previousIndex = index;
+        [self updateVideoNotCycle:index];
+    }
+}
+
+- (void)updateVideoNotCycle:(NSInteger )index{
+    
+    self.topAweme = [[SDAweme alloc]init];
+    self.middleAweme = (SDAweme *)self.dataArrs[index];
+    self.bottomAweme = [[SDAweme alloc]init];
+    if (index==0) {
+        self.topAweme = (SDAweme *)[self.dataArrs lastObject];
+    }else{
+        self.topAweme = (SDAweme *) self.dataArrs[index-1];
+    }
+    if (index == self.dataArrs.count-1) {
+        self.bottomAweme = (SDAweme *)[self.dataArrs firstObject];
+    }else{
+        self.bottomAweme = (SDAweme *)self.dataArrs[index+1];
+    }
+    
+    /** 设置封面 */
+    [self prepareForImageView:self.topImageView btnView:self.topBtnView shortAweme:self.topAweme];
+    [self prepareForImageView:self.middleImageView btnView:self.middleBtnView shortAweme:self.middleAweme];
+    [self prepareForImageView:self.bottomImageView btnView:self.bottomBtnView shortAweme:self.bottomAweme];
+    
+    /** 设置视频数据 */
+    [self prepareForVideo:self.middlePlayer shortAweme:self.middleAweme];
+    
+}
+
+
 - (void)updateVideo:(NSInteger )index{
     
     self.topVideoModel = [[SDShortVideoModel alloc]init];
@@ -225,6 +269,22 @@ middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
     [self prepareForVideo:self.middlePlayer shortVideoModel:self.middleVideoModel];
 }
 
+
+
+/**
+ 设置图片
+ 
+ @param imageView 图片
+ @param btnView 按钮
+ @param shortAweme shortVideoModel
+ */
+- (void)prepareForImageView:(UIImageView *)imageView btnView:(SDHomeBtnView *)btnView shortAweme:(SDAweme *)shortAweme{
+    
+    [imageView sd_setImageWithURL:[NSURL URLWithString:[shortAweme.video.originCover.urlList firstObject]]];
+    [btnView setValueWithAwemeModel:shortAweme];
+}
+
+
 /**
  设置图片
 
@@ -241,6 +301,22 @@ middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
 
 /**
  设置视频资源
+ 
+ @param player 播放器
+ @param shortAweme 视频资源
+ */
+- (void)prepareForVideo:(KSYMoviePlayerController *)player shortAweme:(SDAweme *)shortAweme
+{
+    [self.middlePlayer reset:NO];
+    [self.middlePlayer setUrl:[NSURL URLWithString:[shortAweme.video.playAddr.urlList firstObject]]];
+    self.middlePlayer.view.backgroundColor = [UIColor clearColor];
+    [self.middlePlayer prepareToPlay];
+    self.middleImageView.hidden = NO;
+}
+
+
+/**
+ 设置视频资源
 
  @param player 播放器
  @param shortVideoModel 视频资源
@@ -249,9 +325,6 @@ middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
 {
     [self.middlePlayer reset:NO];
     [self.middlePlayer setUrl:[NSURL URLWithString:shortVideoModel.videoUrl]];
-//    [player setShouldAutoplay:YES];
-//    [player setBufferSizeMax:1];
-//    [player setShouldLoop:YES];
     self.middlePlayer.view.backgroundColor = [UIColor clearColor];
     [self.middlePlayer prepareToPlay];
     self.middleImageView.hidden = NO;
@@ -274,7 +347,7 @@ middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
         if(self.currentIndex==self.dataArrs.count){
             self.currentIndex = 0;
         }
-        [self updateVideo:self.currentIndex];
+        [self updateVideoNotCycle:self.currentIndex];
         
     }
     else if(currentOffsetY<=0){
@@ -284,7 +357,7 @@ middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
         if(self.currentIndex==-1){
             self.currentIndex = self.dataArrs.count-1;
         }
-        [self updateVideo:self.currentIndex];
+        [self updateVideoNotCycle:self.currentIndex];
     }
 }
 

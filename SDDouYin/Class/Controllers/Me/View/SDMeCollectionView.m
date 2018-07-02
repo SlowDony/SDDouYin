@@ -78,7 +78,7 @@ UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return self.dataArr.count;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -89,7 +89,8 @@ UICollectionViewDataSource>
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SDMeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SDMeCollectionCell forIndexPath:indexPath];
-    cell.likeNumView.numLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    SDAweme *aweme = self.dataArr[indexPath.row];
+    [cell setValueWithModel:aweme];
     return cell;
 }
 

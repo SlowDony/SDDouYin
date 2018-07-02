@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "SDObject.h"
 @interface SDExtra : NSObject
 @property (nonatomic, copy) NSString * logid;
 @property (nonatomic, assign) NSInteger now;
@@ -18,5 +18,7 @@
 
 @property (nonatomic, strong) SDExtra * extra;
 @property (nonatomic, assign) NSInteger statusCode;
-
+@property (nonatomic, assign) NSInteger hasMore;
+@property (nonatomic, assign) NSInteger maxCursor;
+@property (nonatomic, assign) NSInteger minCursor;
 @end

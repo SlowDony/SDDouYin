@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
+#import "SDAweme.h"
 
 @interface SDNumView :UIView
 
@@ -24,5 +23,6 @@
 @property (nonatomic,strong) UIImageView *bgImageView;///背景图片
 @property (nonatomic,strong) SDNumView *likeNumView; ///点赞数
 
+- (void)setValueWithModel:(SDAweme *)aweme;
 
 @end

@@ -26,6 +26,7 @@ UIScrollViewDelegate
 @property (nonatomic,strong)  UIScrollView *childVCScrollView;
 @property (nonatomic,strong)  SDBaseNavigationView *navigationView;
 @property (nonatomic,strong)  SDMeWorksViewController * worksVC;
+@property (nonatomic,strong)  SDMeLikeViewController *likeVC;
 @end
 
 @implementation SDMeViewController
@@ -116,8 +117,6 @@ UIScrollViewDelegate
 
 
 #pragma mark - lazy
-
-
 -(UIScrollView *)childVCScrollView{
     if (!_childVCScrollView) {
         _childVCScrollView = [[UIScrollView alloc] init];

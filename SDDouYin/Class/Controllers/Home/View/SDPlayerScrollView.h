@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <KSYMediaPlayer/KSYMediaPlayer.h>
-
+#import "SDAweme.h"
 @class SDShortVideoModel ,SDPlayerScrollView;
 
 @protocol  SDPlayerScrollViewDelegate<NSObject>
@@ -31,6 +31,8 @@
  */
 - (void)updateCurrentPlayerDatas:(NSMutableArray <SDShortVideoModel *>*)videoDataArrs currentIndex:(NSInteger )index;
 
+///不循环播放
+- (void)updateVideoNotCyclePlayer:(NSMutableArray <SDAweme *>*)lists currentIndex:(NSInteger )index;
 
 @property (nonatomic,weak) id<SDPlayerScrollViewDelegate>playerDelegate;
 

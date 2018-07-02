@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SDAweme.h"
 
 @class SDMeCollectionView;
 @protocol SDMeCollectionViewDelegate<NSObject>

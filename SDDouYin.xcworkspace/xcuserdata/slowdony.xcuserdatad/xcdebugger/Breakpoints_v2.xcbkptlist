@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
-            timestampString = "551895610.876477"
+            timestampString = "552228952.937168"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-handlePlaybackDidFinishNotify:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
-            timestampString = "551895610.876525"
+            timestampString = "552228952.937274"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "-handlePlayerPreparedToPlayNotify:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,28 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
-            timestampString = "551895610.876569"
+            timestampString = "552228952.93734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-handlePlayerPreparedToPlayNotify:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
-            timestampString = "551895610.876615"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-viewDidAppear:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,13 +73,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDDouYin/Class/Controllers/Focus/View/SDFocusCollectionViewCell.m"
-            timestampString = "552148571.747836"
+            filePath = "SDDouYin/Class/Controllers/Me/Tool/SDUserTool.m"
+            timestampString = "552228952.937458"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "-setValueWithModel:"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "+getAwemeListTaskSuccess:failed:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,110 +89,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDDouYin/Class/Controllers/Focus/View/SDFocusCollectionViewCell.m"
-            timestampString = "552148571.748253"
+            filePath = "SDDouYin/Class/Controllers/Me/Tool/SDUserTool.m"
+            timestampString = "552228952.937525"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-setValueWithModel:"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "+getAwemeListTaskSuccess:failed:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SDFocusCollectionViewCell setValueWithModel:]"
-                  moduleName = "SDDouYin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/slowdony/Desktop/github/SDDouYin/SDDouYin/Class/Controllers/Focus/View/SDFocusCollectionViewCell.m"
-                  timestampString = "552149002.005805"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "240">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__47-[SDFocusCollectionViewCell setValueWithModel:]_block_invoke"
-                  moduleName = "SDDouYin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/slowdony/Desktop/github/SDDouYin/SDDouYin/Class/Controllers/Focus/View/SDFocusCollectionViewCell.m"
-                  timestampString = "552149002.008935"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDDouYin/Class/Controllers/Home/Controller/SDRecommendViewController.m"
-            timestampString = "552149406.4853981"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-dataArr"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDDouYin/Class/Other/MJExtensionConfig.m"
-            timestampString = "552149406.4854569"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "+load"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[MJExtensionConfig load]"
-                  moduleName = "SDDouYin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/slowdony/Desktop/github/SDDouYin/SDDouYin/Class/Other/MJExtensionConfig.m"
-                  timestampString = "552149002.020155"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__25+[MJExtensionConfig load]_block_invoke"
-                  moduleName = "SDDouYin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/slowdony/Desktop/github/SDDouYin/SDDouYin/Class/Other/MJExtensionConfig.m"
-                  timestampString = "552149002.023936"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

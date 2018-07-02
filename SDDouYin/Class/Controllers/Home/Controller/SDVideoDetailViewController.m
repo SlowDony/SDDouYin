@@ -46,6 +46,14 @@
     [self.playerScrollView updateCurrentPlayerDatas:self.dataArr currentIndex:index];
 }
 
+///不循环播放
+- (void)updateVideoNotCyclePlayer:(NSMutableArray *)lists currentIndex:(NSInteger )index{
+    self.dataArr = lists;
+
+    [self.playerScrollView updateVideoNotCyclePlayer:lists currentIndex:index];
+}
+
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.playerScrollView playVideo];

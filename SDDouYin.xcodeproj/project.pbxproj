@@ -85,6 +85,12 @@
 		EFE64EC920B473BD006C3D86 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC820B473BD006C3D86 /* libbz2.tbd */; };
 		EFE64ECB20B473C7006C3D86 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64ECA20B473C7006C3D86 /* libz.tbd */; };
 		EFE64ECC20B473D3006C3D86 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC520B473A0006C3D86 /* VideoToolbox.framework */; };
+		EFF4A59020E9DB2100ACDC7F /* SDAwemeList.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF4A58F20E9DB2100ACDC7F /* SDAwemeList.m */; };
+		EFF4A59320E9DB3E00ACDC7F /* SDAweme.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF4A59220E9DB3E00ACDC7F /* SDAweme.m */; };
+		EFF4A59920E9ECE400ACDC7F /* SDAvatarLarger.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF4A59820E9ECE400ACDC7F /* SDAvatarLarger.m */; };
+		EFF4A59C20E9ED9500ACDC7F /* SDVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF4A59B20E9ED9500ACDC7F /* SDVideo.m */; };
+		EFF4A59F20E9F1FA00ACDC7F /* SDMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF4A59E20E9F1FA00ACDC7F /* SDMusic.m */; };
+		EFF4A5A120E9FCE500ACDC7F /* SDAweme.json in Resources */ = {isa = PBXBuildFile; fileRef = EFF4A5A020E9FCE500ACDC7F /* SDAweme.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +265,17 @@
 		EFE64EC620B473B0006C3D86 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		EFE64EC820B473BD006C3D86 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		EFE64ECA20B473C7006C3D86 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EFF4A58E20E9DB2100ACDC7F /* SDAwemeList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAwemeList.h; sourceTree = "<group>"; };
+		EFF4A58F20E9DB2100ACDC7F /* SDAwemeList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAwemeList.m; sourceTree = "<group>"; };
+		EFF4A59120E9DB3E00ACDC7F /* SDAweme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAweme.h; sourceTree = "<group>"; };
+		EFF4A59220E9DB3E00ACDC7F /* SDAweme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAweme.m; sourceTree = "<group>"; };
+		EFF4A59720E9ECE400ACDC7F /* SDAvatarLarger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAvatarLarger.h; sourceTree = "<group>"; };
+		EFF4A59820E9ECE400ACDC7F /* SDAvatarLarger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAvatarLarger.m; sourceTree = "<group>"; };
+		EFF4A59A20E9ED9500ACDC7F /* SDVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDVideo.h; sourceTree = "<group>"; };
+		EFF4A59B20E9ED9500ACDC7F /* SDVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDVideo.m; sourceTree = "<group>"; };
+		EFF4A59D20E9F1FA00ACDC7F /* SDMusic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDMusic.h; sourceTree = "<group>"; };
+		EFF4A59E20E9F1FA00ACDC7F /* SDMusic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMusic.m; sourceTree = "<group>"; };
+		EFF4A5A020E9FCE500ACDC7F /* SDAweme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SDAweme.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -510,10 +527,15 @@
 		EF26D04620A99651004573D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFF4A5A020E9FCE500ACDC7F /* SDAweme.json */,
 				EFCC623C20B940B300C8FA7A /* SDUser.h */,
 				EFCC623D20B940B300C8FA7A /* SDUser.m */,
 				EF94FF5020E8DC4F003532E7 /* SDUserModel.h */,
 				EF94FF5120E8DC4F003532E7 /* SDUserModel.m */,
+				EFF4A58E20E9DB2100ACDC7F /* SDAwemeList.h */,
+				EFF4A58F20E9DB2100ACDC7F /* SDAwemeList.m */,
+				EFF4A59120E9DB3E00ACDC7F /* SDAweme.h */,
+				EFF4A59220E9DB3E00ACDC7F /* SDAweme.m */,
 				EF5999F120E3552B003D0392 /* SDHeadViewConfig.h */,
 				EF5999F220E3552B003D0392 /* SDHeadViewConfig.m */,
 			);
@@ -716,6 +738,12 @@
 				EF31732C20DA3D92004BEA6F /* SDShortVideoModel.m */,
 				EF31732E20DA5340004BEA6F /* SDVideoModel.h */,
 				EF31732F20DA5340004BEA6F /* SDVideoModel.m */,
+				EFF4A59720E9ECE400ACDC7F /* SDAvatarLarger.h */,
+				EFF4A59820E9ECE400ACDC7F /* SDAvatarLarger.m */,
+				EFF4A59A20E9ED9500ACDC7F /* SDVideo.h */,
+				EFF4A59B20E9ED9500ACDC7F /* SDVideo.m */,
+				EFF4A59D20E9F1FA00ACDC7F /* SDMusic.h */,
+				EFF4A59E20E9F1FA00ACDC7F /* SDMusic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -985,6 +1013,7 @@
 			files = (
 				EF94FF5B20E8E817003532E7 /* SDUserData.json in Resources */,
 				EF94FF5920E8E4A7003532E7 /* user.json in Resources */,
+				EFF4A5A120E9FCE500ACDC7F /* SDAweme.json in Resources */,
 				EF26CF9920A98F75004573D5 /* LaunchScreen.storyboard in Resources */,
 				EF26CF9620A98F75004573D5 /* Assets.xcassets in Resources */,
 				EF26CF9420A98F74004573D5 /* Main.storyboard in Resources */,
@@ -1051,6 +1080,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF4A59020E9DB2100ACDC7F /* SDAwemeList.m in Sources */,
 				EF26D08320AA8C7C004573D5 /* SDShowTopView.m in Sources */,
 				EF7370C120E4C2DC003971D8 /* SDAnimationTool.m in Sources */,
 				EF26D05120A99652004573D5 /* SDMeViewController.m in Sources */,
@@ -1094,13 +1124,17 @@
 				EF31732720DA3C87004BEA6F /* SDBaseNavigationView.m in Sources */,
 				EF42987220DCD4C9008174EA /* BaseViewController.m in Sources */,
 				EFCC624420B951F400C8FA7A /* SDMeEditViewController.m in Sources */,
+				EFF4A59C20E9ED9500ACDC7F /* SDVideo.m in Sources */,
 				EF5999F920E377DB003D0392 /* UIViewController+SDScrollView.m in Sources */,
 				EF26D07720AA704B004573D5 /* SDHomeViewController.m in Sources */,
+				EFF4A59320E9DB3E00ACDC7F /* SDAweme.m in Sources */,
+				EFF4A59920E9ECE400ACDC7F /* SDAvatarLarger.m in Sources */,
 				EF31732320DA3C87004BEA6F /* SDTabBar.m in Sources */,
 				EFCC625320B9C42B00C8FA7A /* SDMeCollectionView.m in Sources */,
 				EF1EC7FF20C99060006C0BE5 /* SDHomeBtnView.m in Sources */,
 				EF26D06E20AA7024004573D5 /* SDLoginViewController.m in Sources */,
 				EFCC623B20B93FA400C8FA7A /* NSString+SDString.m in Sources */,
+				EFF4A59F20E9F1FA00ACDC7F /* SDMusic.m in Sources */,
 				EFCC624A20B954C900C8FA7A /* SDMeLikeViewController.m in Sources */,
 				EF7370BD20E47269003971D8 /* SDBaseAnimationTransition.m in Sources */,
 				EF31731E20DA3C87004BEA6F /* SDBaseTableView.m in Sources */,

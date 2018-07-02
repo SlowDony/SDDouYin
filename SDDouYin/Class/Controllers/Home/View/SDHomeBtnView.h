@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SDHomeBtnItem.h"
+#import "SDAweme.h"
 @class SDHomeMusicView,SDShortVideoModel;
 @interface SDHomeBtnView : UIView
 
@@ -19,4 +20,6 @@
 @property (nonatomic,strong) UIImageView *playImageView;
 
 - (void)setValueWithModel:(SDShortVideoModel *)shortVideoModel;
+
+- (void)setValueWithAwemeModel:(SDAweme *)aweme;
 @end

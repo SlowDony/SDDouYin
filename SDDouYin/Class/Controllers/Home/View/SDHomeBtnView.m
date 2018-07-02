@@ -103,9 +103,17 @@
         make.height.equalTo(@(80));
     }];
     
-   
 }
 
+
+- (void)setValueWithAwemeModel:(SDAweme *)aweme
+{
+    self.shareItem.numLabel.text = [NSString stringWithFormat:@"%ld",aweme.statistics.shareCount];
+    self.likeItem.numLabel.text = [NSString stringWithFormat:@"%ld",aweme.statistics.diggCount];
+    self.commentItem.numLabel.text = [NSString stringWithFormat:@"%ld",aweme.statistics.commentCount];
+    [self.headItem.headImageView sd_setImageWithURL:[NSURL URLWithString:[aweme.author.avatarThumb.urlList firstObject]]];
+    
+}
 
 - (void)setValueWithModel:(SDShortVideoModel *)shortVideoModel
 {

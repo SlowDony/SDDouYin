@@ -93,4 +93,9 @@
 //
 //
 //}
+
+- (void)setValueWithModel:(SDAweme *)aweme{
+  [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:aweme.video.originCover.urlList.firstObject]];
+  self.likeNumView.numLabel.text =[NSString stringWithFormat:@"%ld",aweme.statistics.diggCount];
+}
 @end

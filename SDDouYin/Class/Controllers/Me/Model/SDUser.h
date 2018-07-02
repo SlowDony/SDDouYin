@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SDObject.h"
+#import "SDAvatarLarger.h"
 #pragma mark - SDFollowersDetail
 @interface SDFollowersDetail : SDObject
 @property (nonatomic, copy) NSString * appName;
@@ -29,12 +30,6 @@
 #pragma mark - SDVideoIcon
 @interface SDVideoIcon : SDObject
 @property (nonatomic, copy) NSString  * uri;
-@end
-
-#pragma mark - SDAvatarLarger
-@interface SDAvatarLarger : SDObject
-@property (nonatomic, copy) NSString  * uri;
-@property (nonatomic, strong) NSArray <NSString *>* urlList;
 @end
 
 #pragma mark - SDShareInfo

@@ -8,9 +8,8 @@
 
 #import "MJExtensionConfig.h"
 #import "MJExtension.h"
-#import "SDUser.h"
 #import "SDObject.h"
-
+#import "SDBaseModel.h"
 @implementation MJExtensionConfig
 
 + (void)load {
@@ -25,6 +24,14 @@
     [SDObject mj_setupReplacedKeyFromPropertyName121:^NSString *(NSString *propertyName) {
         return [propertyName mj_underlineFromCamel];
     }];
+    [SDBaseModel mj_setupReplacedKeyFromPropertyName121:^NSString *(NSString *propertyName) {
+        return [propertyName mj_underlineFromCamel];
+    }];
+    
+    [SDExtra mj_setupReplacedKeyFromPropertyName121:^NSString *(NSString *propertyName) {
+        return [propertyName mj_underlineFromCamel];
+    }];
+    
     
     
     

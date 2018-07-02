@@ -17,13 +17,7 @@
 @implementation SDVideoIcon
 
 @end
-@implementation SDAvatarLarger
 
-+ (NSDictionary *)mj_objectClassInArray{
-    return @{@"urlList":[NSString class]};
-}
-
-@end
 @implementation SDShareInfo
 
 @end

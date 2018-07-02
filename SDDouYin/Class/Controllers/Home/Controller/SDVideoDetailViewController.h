@@ -10,5 +10,9 @@
 
 @interface SDVideoDetailViewController : SDBaseLeftSlidingViewController
 
+///循环播放
 - (void)updateVideoDetailDatas:(NSMutableArray *)datas currentIndex:(NSInteger )index;
+
+///不循环播放
+- (void)updateVideoNotCyclePlayer:(NSMutableArray *)lists currentIndex:(NSInteger )index;
 @end
