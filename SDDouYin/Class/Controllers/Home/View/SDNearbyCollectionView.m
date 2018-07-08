@@ -9,7 +9,7 @@
 #import "SDNearbyCollectionView.h"
 #import "SDNearbyCollectionViewCell.h"
 #import "SDShortVideoModel.h"
-
+#import "SDAwemeNearbyFeedModel.h"
 #define nearbyCell @"nearbyCell"
 
 @interface SDNearbyCollectionView()
@@ -37,6 +37,7 @@ UICollectionViewDataSource>
         self.showsVerticalScrollIndicator = NO;
         self.showsHorizontalScrollIndicator = NO;
         self.pagingEnabled = NO;
+        self.alwaysBounceVertical = YES;
         if (@available(iOS 11.0, *)) {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         } 
@@ -67,8 +68,8 @@ UICollectionViewDataSource>
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SDNearbyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:nearbyCell forIndexPath:indexPath];
-    SDShortVideoModel *videoModel = self.dataArrs[indexPath.row];
-    [cell setValueWithModel:videoModel];
+    SDAweme *aweme = self.dataArrs[indexPath.row];
+    [cell setValueWithModel:aweme];
     return cell;
 }
 

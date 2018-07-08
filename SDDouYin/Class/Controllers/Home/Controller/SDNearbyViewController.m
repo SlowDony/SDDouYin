@@ -10,6 +10,7 @@
 #import "SDNearbyCollectionView.h"
 #import "SDVideoDetailViewController.h"
 #import "SDShortVideoModel.h"
+#import "SDHomeTool.h"
 /**
  附近
  */
@@ -31,6 +32,7 @@
 - (void)setupUI{
     [self.view addSubview:self.nearbyCollectionView];
     [self refreshCollectionView];
+    [self setNetWork];
 }
 
 - (void)refreshCollectionView{
@@ -42,9 +44,20 @@
 -(void)SDNearbyCollectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     SDVideoDetailViewController *nearbyListVC = [[SDVideoDetailViewController alloc]init];
-    [nearbyListVC updateVideoDetailDatas:self.dataArr currentIndex:indexPath.row];
+    [nearbyListVC updateVideoNotCyclePlayer:self.dataArr currentIndex:indexPath.row];
     nearbyListVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:nearbyListVC animated:YES];
+}
+
+- (void)setNetWork{
+    [SDHomeTool getAwemeNearbyFeedTaskSuccess:^(id obj) {
+        SDAwemeNearbyFeedModel *nearbyFeed = (SDAwemeNearbyFeedModel *)obj;
+        self.dataArr = [NSMutableArray arrayWithArray:nearbyFeed.awemeList];
+        [self refreshCollectionView];
+        
+    } failed:^(id obj) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,7 +77,7 @@
                          @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f660000bcfu1ot1mikeotn5i7ng&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p3.pstatp.com/large/8d0f0006f571436ea78d.jpeg",@"likeNum":@3,@"commentNum":@40,@"shareNum":@21},
                          @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v02001560000bckaiup75rdmqh4q9sug&line=0&ratio=default&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p1.pstatp.com/large/8d41000f687968170788.jpeg",@"likeNum":@4,@"commentNum":@21,@"shareNum":@333},
                          ];
-        _dataArr = [SDShortVideoModel mj_objectArrayWithKeyValuesArray:arr];
+        _dataArr = [NSArray array];
     }
     return _dataArr;
 }

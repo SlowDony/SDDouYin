@@ -7,7 +7,7 @@
 //
 
 #import "SDNearbyCollectionViewCell.h"
-#import "SDShortVideoModel.h"
+#import "SDAweme.h"
 @implementation SDNearbyCollectionViewCell
 
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -22,6 +22,8 @@
     
     //背景图
     UIImageView *bgImageView = [[UIImageView alloc]init];
+    bgImageView.contentMode = UIViewContentModeScaleAspectFill;
+    bgImageView.clipsToBounds = YES;
     [self addSubview:bgImageView];
     self.bgImageView = bgImageView;
     [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -77,16 +79,16 @@
     }];
     
 }
-
-- (void)setValueWithModel:(SDShortVideoModel *)shortVideoModel{
-    
-    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:shortVideoModel.imageUrl]];
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:@"https://p3.pstatp.com/aweme/100x100/3b5c0006d56892d3f78c.jpeg"] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+- (void)setValueWithModel:(SDAweme *)aweme{
+    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:aweme.video.originCover.urlList.firstObject]];
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:aweme.author.avatarThumb.urlList.firstObject] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             self.headImageView.image = [UIImage sd_imageWithRoundCorner:image cornerRadius:kWidth(20)/2 size:CGSizeMake(kWidth(20), kWidth(20))];
         });
     }];
-    
+    self.nameLabel.text = aweme.author.nickname;
+    self.distanceLabel.text = aweme.distance;
 }
+
 @end

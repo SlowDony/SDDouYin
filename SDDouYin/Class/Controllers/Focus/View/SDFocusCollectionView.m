@@ -27,6 +27,7 @@ UICollectionViewDataSource>
         self.showsVerticalScrollIndicator = NO;
         self.showsHorizontalScrollIndicator = NO;
         self.pagingEnabled = NO;
+        self.alwaysBounceVertical = YES;
         //注册
         [self registerClass:[SDFocusCollectionViewCell class] forCellWithReuseIdentifier:focusCell];
         if (@available(iOS 11.0, *)) {

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
-            timestampString = "552228952.937168"
+            timestampString = "552740048.617566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
-            timestampString = "552228952.937274"
+            timestampString = "552740048.617669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
-            timestampString = "552228952.93734"
+            timestampString = "552740048.6177911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "121"
@@ -64,38 +64,6 @@
             startingLineNumber = "108"
             endingLineNumber = "108"
             landmarkName = "-network"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDDouYin/Class/Controllers/Me/Tool/SDUserTool.m"
-            timestampString = "552228952.937458"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "+getAwemeListTaskSuccess:failed:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDDouYin/Class/Controllers/Me/Tool/SDUserTool.m"
-            timestampString = "552228952.937525"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "+getAwemeListTaskSuccess:failed:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

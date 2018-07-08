@@ -8,6 +8,20 @@
 
 #import "SDAweme.h"
 
+@implementation SDStreamUrl
+
+@end
+
+@implementation SDRoom 
+
+@end
+@implementation SDAddressInfo
+
+@end
+@implementation SDPoiInfo
+
+@end
+
 @implementation SDVideoLabels
 
 @end

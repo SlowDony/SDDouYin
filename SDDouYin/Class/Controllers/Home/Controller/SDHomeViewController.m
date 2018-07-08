@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 #import "SDTabBarViewController.h"
 #import "SDSearchViewController.h"
+#import "SDHomeTool.h"
 /**
  首页
  */
@@ -33,8 +34,8 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     DLog(@"viewWillAppear");
-    [self.recommendVC addNotification];
     if (self.mainScrollView.contentOffset.x==0){
+        [self.recommendVC addNotification];
         [self.recommendVC videoPlay];
     }else {
         [self.recommendVC videoPause];
@@ -61,7 +62,15 @@
     [self.view addSubview:self.mainScrollView];
     [self.view addSubview:self.showTopView];
     [self.mainScrollView addSubview:self.recommendVC.view];
-    
+    [self setNetwork];
+}
+
+- (void)setNetwork{
+    [SDHomeTool getAwemeAppLogTaskSuccess:^(id obj) {
+        
+    } failed:^(id obj) {
+        
+    }];
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -150,6 +159,7 @@
             CGFloat index = (selectBtn.tag-1000)*SCREEN_WIDTH;
             if (index==0){
                 [KAppDelegate.tabBarVC  setTabbarAlpha:YES];
+                [weakSelf.recommendVC addNotification];
                 [weakSelf.recommendVC videoPlay];
             }else if (index ==SCREEN_WIDTH){
                 [KAppDelegate.tabBarVC  setTabbarAlpha:NO];

@@ -30,6 +30,9 @@ static NSString * kBaseUrl = SERVER_HOST;
         client = [[AFHttpClient alloc] initWithBaseURL:[NSURL URLWithString:kBaseUrl] sessionConfiguration:configuration];
         //接收参数类型
         client.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", @"text/json", @"text/javascript",@"text/plain",@"image/gif", nil];
+        NSString *cookieStr = @"install_id=37483797410; odin_tt=574341695552484879795a584b494f505aa4d6694c678d5f8c33d8b8c645d64e219fcbe75950a4fef6c16da118866926; qh[360]=1; ttreq=1$59202fd7adc0c41532f0196e8a0140697dd28977";
+
+        [client.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
         //设置超时时间
         client.requestSerializer.timeoutInterval = 15;
         //安全策略
@@ -49,13 +52,16 @@ static NSString * kBaseUrl = SERVER_HOST;
     NSString * url = [kBaseUrl stringByAppendingPathComponent:path];
     
     [[AFHttpClient sharedClient] GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        DLog(@"\n /* ---------------------------------------------------------- \
+              \n -- request Selector Name: %@ \n -- request URL:%@ \n -- request Type: Get \n -- request Params: %@ \n -- request Success:\n -- %@ \n ",
+              path,url,[params mj_JSONString],[responseObject mj_JSONString]);
         success(responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        DLog(@"\n /* ---------------------------------------------------------- \
+             \n -- request Path Name: %@ \n -- request URL:%@ \n -- request Type: Get \n -- request Params: %@ \n -- request Error:\n -- %@ \n ",
+             path,url,[params mj_JSONString],error);
         failure(error);
-        
     }];
     
 }
@@ -65,7 +71,7 @@ static NSString * kBaseUrl = SERVER_HOST;
              success:(HttpSuccessBlock)success
              failure:(HttpFailureBlock)failure {
     //获取完整的url路径
-    NSString * url = [kBaseUrl stringByAppendingPathComponent:path];
+    NSString * url = [@"https://log.snssdk.com/" stringByAppendingPathComponent:path];
     
     [[AFHttpClient sharedClient] POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         

@@ -85,6 +85,9 @@
 		EFE64EC920B473BD006C3D86 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC820B473BD006C3D86 /* libbz2.tbd */; };
 		EFE64ECB20B473C7006C3D86 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64ECA20B473C7006C3D86 /* libz.tbd */; };
 		EFE64ECC20B473D3006C3D86 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC520B473A0006C3D86 /* VideoToolbox.framework */; };
+		EFF0590F20F1F7A500792DBF /* SDHomeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0590E20F1F7A500792DBF /* SDHomeTool.m */; };
+		EFF0591220F2063700792DBF /* SDAwemeFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0591120F2063700792DBF /* SDAwemeFeedModel.m */; };
+		EFF0591520F2150900792DBF /* SDAwemeNearbyFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0591420F2150900792DBF /* SDAwemeNearbyFeedModel.m */; };
 		EFF4A59020E9DB2100ACDC7F /* SDAwemeList.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF4A58F20E9DB2100ACDC7F /* SDAwemeList.m */; };
 		EFF4A59320E9DB3E00ACDC7F /* SDAweme.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF4A59220E9DB3E00ACDC7F /* SDAweme.m */; };
 		EFF4A59920E9ECE400ACDC7F /* SDAvatarLarger.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF4A59820E9ECE400ACDC7F /* SDAvatarLarger.m */; };
@@ -265,6 +268,12 @@
 		EFE64EC620B473B0006C3D86 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		EFE64EC820B473BD006C3D86 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		EFE64ECA20B473C7006C3D86 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EFF0590D20F1F7A500792DBF /* SDHomeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHomeTool.h; sourceTree = "<group>"; };
+		EFF0590E20F1F7A500792DBF /* SDHomeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHomeTool.m; sourceTree = "<group>"; };
+		EFF0591020F2063700792DBF /* SDAwemeFeedModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAwemeFeedModel.h; sourceTree = "<group>"; };
+		EFF0591120F2063700792DBF /* SDAwemeFeedModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAwemeFeedModel.m; sourceTree = "<group>"; };
+		EFF0591320F2150900792DBF /* SDAwemeNearbyFeedModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAwemeNearbyFeedModel.h; sourceTree = "<group>"; };
+		EFF0591420F2150900792DBF /* SDAwemeNearbyFeedModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAwemeNearbyFeedModel.m; sourceTree = "<group>"; };
 		EFF4A58E20E9DB2100ACDC7F /* SDAwemeList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAwemeList.h; sourceTree = "<group>"; };
 		EFF4A58F20E9DB2100ACDC7F /* SDAwemeList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAwemeList.m; sourceTree = "<group>"; };
 		EFF4A59120E9DB3E00ACDC7F /* SDAweme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAweme.h; sourceTree = "<group>"; };
@@ -734,6 +743,10 @@
 		EF26D06420A99739004573D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFF0591020F2063700792DBF /* SDAwemeFeedModel.h */,
+				EFF0591120F2063700792DBF /* SDAwemeFeedModel.m */,
+				EFF0591320F2150900792DBF /* SDAwemeNearbyFeedModel.h */,
+				EFF0591420F2150900792DBF /* SDAwemeNearbyFeedModel.m */,
 				EF31732B20DA3D92004BEA6F /* SDShortVideoModel.h */,
 				EF31732C20DA3D92004BEA6F /* SDShortVideoModel.m */,
 				EF31732E20DA5340004BEA6F /* SDVideoModel.h */,
@@ -751,6 +764,8 @@
 		EF26D06520A99739004573D5 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				EFF0590D20F1F7A500792DBF /* SDHomeTool.h */,
+				EFF0590E20F1F7A500792DBF /* SDHomeTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1099,6 +1114,7 @@
 				EF94FF5220E8DC4F003532E7 /* SDUserModel.m in Sources */,
 				EF5999F320E3552B003D0392 /* SDHeadViewConfig.m in Sources */,
 				EF31732A20DA3CC0004BEA6F /* SDBaseModel.m in Sources */,
+				EFF0591520F2150900792DBF /* SDAwemeNearbyFeedModel.m in Sources */,
 				EF2106A520ADD95A0061B38B /* SDNewsTableViewCell.m in Sources */,
 				EF70BD7320E28F240090FC3F /* SDBaseLeftSlidingViewController.m in Sources */,
 				EF21069920ADD1540061B38B /* SDFocusCollectionView.m in Sources */,
@@ -1117,6 +1133,7 @@
 				EF7370BA20E4722E003971D8 /* SDLeftSlidingAnimation.m in Sources */,
 				EF94FF5520E8DF2A003532E7 /* SDUserTool.m in Sources */,
 				EF599A0020E38AF5003D0392 /* UIView+SDView.m in Sources */,
+				EFF0590F20F1F7A500792DBF /* SDHomeTool.m in Sources */,
 				EF21069C20ADD1650061B38B /* SDFocusCollectionViewCell.m in Sources */,
 				EF041C9A20DCE5960041794B /* SDMeStoryViewController.m in Sources */,
 				EF42987320DCD4C9008174EA /* SDBaseHiddenViewController.m in Sources */,
@@ -1138,6 +1155,7 @@
 				EFCC624A20B954C900C8FA7A /* SDMeLikeViewController.m in Sources */,
 				EF7370BD20E47269003971D8 /* SDBaseAnimationTransition.m in Sources */,
 				EF31731E20DA3C87004BEA6F /* SDBaseTableView.m in Sources */,
+				EFF0591220F2063700792DBF /* SDAwemeFeedModel.m in Sources */,
 				EF31732520DA3C87004BEA6F /* SDBaseHandler.m in Sources */,
 				EF3F07DA20C930F2001F9DC5 /* SDHomeBtnItem.m in Sources */,
 				EF041C9720DCD5480041794B /* SDVideoDetailViewController.m in Sources */,

@@ -12,6 +12,8 @@
 #import "SDShortVideoModel.h"
 #import <KSYMediaPlayer/KSYMediaPlayer.h>
 #import "SDMeViewController.h"
+#import "SDHomeTool.h"
+#import "SDAwemeFeedModel.h"
 /**
  推荐
  */
@@ -33,7 +35,12 @@
 - (void)setupUI{
     [self.view addSubview:self.playerScrollView];
     [self.playerScrollView addSubview:self.homeBtnView];
-    [self.playerScrollView updateCurrentPlayerDatas:self.dataArr currentIndex:0];
+//    [self.playerScrollView updateCurrentPlayerDatas:self.dataArr currentIndex:0];
+    [self setNetWork];
+}
+
+- (void)refreshCollectionView{
+    [self.playerScrollView updateVideoNotCyclePlayer:self.dataArr currentIndex:0];
 }
 
 - (void)videoPlay{
@@ -101,6 +108,18 @@
     [self.navigationController pushViewController:meVC animated:YES];
 }
 
+- (void)setNetWork{
+    [SDHomeTool getAwemeFeedTaskSuccess:^(id obj) {
+        SDAwemeFeedModel *feedModel = (SDAwemeFeedModel *)obj;
+        self.dataArr = [NSMutableArray arrayWithArray:feedModel.awemeList];
+        [self refreshCollectionView];
+        
+    } failed:^(id obj) {
+        DLog(@"obj%@",obj);
+    }];
+}
+
+
 #pragma mark - lazy
 -(SDPlayerScrollView *)playerScrollView{
     if(!_playerScrollView){
@@ -126,7 +145,8 @@
                          @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200f660000bcfu1ot1mikeotn5i7ng&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p3.pstatp.com/large/8d0f0006f571436ea78d.jpeg",@"likeNum":@3,@"commentNum":@40,@"shareNum":@21},
                          @{@"videoUrl":@"https://aweme.snssdk.com/aweme/v1/play/?video_id=v02001560000bckaiup75rdmqh4q9sug&line=0&ratio=default&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0",@"imageUrl":@"http://p1.pstatp.com/large/8d41000f687968170788.jpeg",@"likeNum":@4,@"commentNum":@21,@"shareNum":@333},
                          ];
-        _dataArr = [SDShortVideoModel mj_objectArrayWithKeyValuesArray:arr];
+//        _dataArr = [SDShortVideoModel mj_objectArrayWithKeyValuesArray:arr];
+        _dataArr = [NSMutableArray array];
     }
     return _dataArr;
 }

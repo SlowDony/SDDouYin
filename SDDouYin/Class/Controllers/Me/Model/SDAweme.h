@@ -12,6 +12,61 @@
 #import "SDMusic.h"
 #import "SDUser.h"
 
+@interface SDStreamUrl : NSObject
+@property (nonatomic, strong) NSString * idField;
+@property (nonatomic, strong) NSString * rtmpPullUrl;
+@end
+
+@interface SDRoom : NSObject
+@property (nonatomic, strong) NSString * citycode;
+@property (nonatomic, assign) CGFloat latitude;
+@property (nonatomic, assign) CGFloat longitude;
+@property (nonatomic, assign) NSInteger userCount;
+@end
+
+
+@interface ShareInfo : SDObject
+
+@property (nonatomic, assign) NSInteger boolPersist;
+@property (nonatomic, strong) NSString * goodsRecUrl;
+@property (nonatomic, strong) NSString * manageGoodsUrl;
+@property (nonatomic, strong) NSString * shareDesc;
+@property (nonatomic, strong) NSString * shareQuote;
+@property (nonatomic, strong) NSString * shareSignatureDesc;
+@property (nonatomic, strong) NSString * shareSignatureUrl;
+@property (nonatomic, strong) NSString * shareTitle;
+@property (nonatomic, strong) NSString * shareUrl;
+@property (nonatomic, strong) NSString * shareWeiboDesc;
+@end
+
+@interface SDAddressInfo : NSObject
+
+@property (nonatomic, strong) NSString * address;
+@property (nonatomic, strong) NSString * city;
+@property (nonatomic, strong) NSString * district;
+@property (nonatomic, strong) NSString * province;
+@property (nonatomic, strong) NSString * simpleAddr;
+@end
+
+@interface SDPoiInfo : NSObject
+
+@property (nonatomic, strong) SDAddressInfo * addressInfo;
+@property (nonatomic, strong) SDAvatarLarger * coverHd;
+@property (nonatomic, strong) SDAvatarLarger * coverLarge;
+@property (nonatomic, strong) SDAvatarLarger * coverMedium;
+@property (nonatomic, strong) SDAvatarLarger * coverThumb;
+@property (nonatomic, strong) NSString * distance;
+@property (nonatomic, assign) NSInteger iconType;
+@property (nonatomic, assign) NSInteger itemCount;
+@property (nonatomic, strong) NSString * poiId;
+@property (nonatomic, assign) CGFloat poiLatitude;
+@property (nonatomic, assign) CGFloat poiLongitude;
+@property (nonatomic, strong) NSString * poiName;
+@property (nonatomic, strong) ShareInfo * shareInfo;
+@property (nonatomic, strong) NSString * typeCode;
+@property (nonatomic, assign) NSInteger userCount;
+@end
+
 
 @interface SDVideoLabels :SDObject
 @property (nonatomic, assign) NSInteger labelType;
@@ -60,20 +115,6 @@
 @property (nonatomic, assign) NSInteger shareCount;
 @end
 
-@interface ShareInfo : SDObject
-
-@property (nonatomic, assign) NSInteger boolPersist;
-@property (nonatomic, strong) NSString * goodsRecUrl;
-@property (nonatomic, strong) NSString * manageGoodsUrl;
-@property (nonatomic, strong) NSString * shareDesc;
-@property (nonatomic, strong) NSString * shareQuote;
-@property (nonatomic, strong) NSString * shareSignatureDesc;
-@property (nonatomic, strong) NSString * shareSignatureUrl;
-@property (nonatomic, strong) NSString * shareTitle;
-@property (nonatomic, strong) NSString * shareUrl;
-@property (nonatomic, strong) NSString * shareWeiboDesc;
-@end
-
 @interface SDDescendant : SDObject
 
 @property (nonatomic, strong) NSString * notifyMsg;
@@ -93,7 +134,7 @@
 @property (nonatomic, strong) SDUser * author;
 @property (nonatomic, assign) NSInteger authorUserId;
 @property (nonatomic, strong) NSString * awemeId;
-@property (nonatomic, assign) NSInteger awemeType;
+@property (nonatomic, assign) NSInteger awemeType;///0视频.51合拍.101直播
 @property (nonatomic, assign) NSInteger bodydanceScore;
 @property (nonatomic, strong) NSArray <SDChaList *>* chaList;
 @property (nonatomic, assign) BOOL cmtSwt;
@@ -113,10 +154,15 @@
 @property (nonatomic, strong) SDAvatarLarger * labelPrivate;
 @property (nonatomic, strong) SDAvatarLarger * labelTop;
 @property (nonatomic, strong) SDMusic * music;
+@property (nonatomic, strong) SDPoiInfo * poiInfo;
 @property (nonatomic, assign) NSInteger rate;
 @property (nonatomic, strong) NSString * region;
 @property (nonatomic, strong) SDRiskInfo * riskInfos;
 @property (nonatomic, strong) ShareInfo * shareInfo;
+@property (nonatomic, strong) SDRoom * room;
+@property (nonatomic, strong) SDStreamUrl * streamUrl;
+@property (nonatomic, strong) NSString * distance;
+@property (nonatomic, strong) NSString * title;
 @property (nonatomic, strong) NSString * shareUrl;
 @property (nonatomic, strong) NSString * sortLabel;
 @property (nonatomic, strong) SDStatistic * statistics;

@@ -8,8 +8,10 @@
 
 #ifndef APIConfig_h
 #define APIConfig_h
-//信息类服务器地址
-#define SERVER_HOST @"http://service.ingkee.com"
+
+//服务器地址
+#define SERVER_HOST @"https://aweme.snssdk.com/"
+
 
 //图片服务器地址
 #define IMAGE_HOST @"http://img.meelive.cn"
