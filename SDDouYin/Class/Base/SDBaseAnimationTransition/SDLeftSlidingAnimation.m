@@ -32,7 +32,7 @@
     else {
         [self displayTabbarWithAnimateTransition];
     }
-    
+
 }
 
 
@@ -40,7 +40,7 @@
     
     UIImage *fromImage = [self.fromViewController.view.window sd_captureCurrentView];
     self.fromAnimationImageView.image = fromImage;
-    self.fromAnimationImageView.backgroundColor = [UIColor redColor];
+    
     self.fromAnimationImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     [self.containerView addSubview:self.fromAnimationImageView];
     

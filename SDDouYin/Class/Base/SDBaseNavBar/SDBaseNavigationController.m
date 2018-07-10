@@ -48,7 +48,7 @@
     if(self.viewControllers.count>0){
         
         viewController.navigationItem.leftBarButtonItem= [UIBarButtonItem itemTarget:self WithAction:@selector(backItem) andImage:@"alimember_navbar_left" andSelectImage:@""];
-        //        viewController.hidesBottomBarWhenPushed=YES;
+        viewController.hidesBottomBarWhenPushed=YES;
         
     }
     

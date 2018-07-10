@@ -15,6 +15,7 @@
 #import "SDTabBarViewController.h"
 #import "SDSearchViewController.h"
 #import "SDHomeTool.h"
+#import "SDTabBarViewController.h"
 /**
  首页
  */
@@ -27,6 +28,7 @@
 ///附近
 @property (nonatomic,strong) SDNearbyViewController *nearbyVC;
 @property (nonatomic,strong) UIScrollView * mainScrollView;
+
 @end
 
 @implementation SDHomeViewController
@@ -37,8 +39,10 @@
     if (self.mainScrollView.contentOffset.x==0){
         [self.recommendVC addNotification];
         [self.recommendVC videoPlay];
-    }else {
+        [KAppDelegate.tabBarVC  setTabbarAlpha:YES];
+    }else if(self.mainScrollView.contentOffset.x==SCREEN_WIDTH){
         [self.recommendVC videoPause];
+        [KAppDelegate.tabBarVC  setTabbarAlpha:NO];
     }
 }
 
@@ -77,7 +81,11 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.x ==SCREEN_WIDTH){
         [self.mainScrollView addSubview:self.nearbyVC.view];
+        [KAppDelegate.tabBarVC  setTabbarAlpha:NO];
+    }else if(scrollView.contentOffset.x == 0){
+        [KAppDelegate.tabBarVC  setTabbarAlpha:YES];
     }
+    
 }
 //scrollview 减速停止时
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
@@ -158,11 +166,11 @@
         _showTopView.selectBtnBlock = ^(UIButton *selectBtn) {
             CGFloat index = (selectBtn.tag-1000)*SCREEN_WIDTH;
             if (index==0){
-                [KAppDelegate.tabBarVC  setTabbarAlpha:YES];
+                
                 [weakSelf.recommendVC addNotification];
                 [weakSelf.recommendVC videoPlay];
             }else if (index ==SCREEN_WIDTH){
-                [KAppDelegate.tabBarVC  setTabbarAlpha:NO];
+                
                 [weakSelf.recommendVC videoPause];
             }
             CGPoint point = CGPointMake(index, 0);

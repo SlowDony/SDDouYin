@@ -12,7 +12,16 @@
 @implementation SDHomeTool
 
 + (void)getAwemeFeedTaskSuccess:(SuccessBlock )success failed:(FailedBlock )failed{
-
+    //模拟真实数据
+    NSDictionary * json = [SDHomeTool getJsonFile:@"SDAwemeFeed"];
+    if ([json[@"status_code"] integerValue]==0){
+        SDAwemeFeedModel *feedmodel = [SDAwemeFeedModel mj_objectWithKeyValues:json];
+        success(feedmodel);
+    }else{
+        failed(@"错误");
+    }
+    
+/* 获取网络数据
     NSDictionary *params = @{
         @"iid":@(37483797410),
         @"device_id":@(35180927264),
@@ -39,7 +48,7 @@
         @"pull_type":@(0),
         @"type":@(0),
         @"volume":@"0.79",
-   /* 下面三个会变*/ @"mas":@"00552b44c02a03fa9dd1fdc7d6553d57019d034e1b09098b234cf8",
+   //下面三个会变 @"mas":@"00552b44c02a03fa9dd1fdc7d6553d57019d034e1b09098b234cf8",
         @"as":@"a155aeb400cabb88012741",
         @"ts":@"1531046048",
         };
@@ -54,6 +63,7 @@
     } failure:^(NSError *error) {
         failed(error);
     }];
+*/
 }
 /**
  获取附近的人
@@ -62,6 +72,16 @@
  @param failed 失败
  */
 + (void)getAwemeNearbyFeedTaskSuccess:(SuccessBlock )success failed:(FailedBlock )failed{
+    
+    ///模拟真实数据
+    NSDictionary * json = [SDHomeTool getJsonFile:@"SDAwemeNearbyFeed"];
+    if ([json[@"status_code"] integerValue]==0){
+        SDAwemeFeedModel *feedmodel = [SDAwemeFeedModel mj_objectWithKeyValues:json];
+        success(feedmodel);
+    }else{
+        failed(@"错误");
+    }
+    /* 真实网络请求
     NSDictionary *params = @{
         @"iid":@(37483797410),
         @"device_id":@(35180927264),
@@ -103,6 +123,7 @@
     } failure:^(NSError *error) {
         failed(error);
     }];
+     */
 }
 
 /**

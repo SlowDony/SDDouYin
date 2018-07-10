@@ -24,4 +24,13 @@ typedef void (^SuccessBlock)(id obj);
  *  Handler处理失败时调用的Block
  */
 typedef void (^FailedBlock)(id obj);
+
+
+/**
+ 假装请求网络数据
+
+ @param jsonName json
+ @return 返回json字典
+ */
++ (NSDictionary *)getJsonFile:(NSString *)jsonName;
 @end

@@ -14,7 +14,7 @@
 #import "SDFocusViewController.h" //关注
 #import "SDNewsViewController.h"  //消息
 #import "SDAddViewController.h"   //上传
-
+#import "AppDelegate.h"
 @interface SDTabBarViewController ()
 <SDTabBarDelegate>
 
@@ -23,6 +23,17 @@
 @end
 
 @implementation SDTabBarViewController
+
++ (instancetype )shareTabBarVC{
+    AppDelegate *delegete = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    SDTabBarViewController *rootViewController = (SDTabBarViewController *)delegete.window.rootViewController;
+    if ([rootViewController isKindOfClass:[self class]]) {
+        return rootViewController;
+    }else{
+        return nil;
+    }
+}
+
 
 #pragma mark - lazy
 - (SDTabBar *)tabbar{

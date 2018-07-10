@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SDTabBarViewController : UITabBarController
++ (instancetype )shareTabBarVC;
+
 /**
  设置tabbar是否透明
  */

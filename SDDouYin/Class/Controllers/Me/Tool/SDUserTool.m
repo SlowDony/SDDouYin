@@ -57,15 +57,5 @@
     }
 }
 
-+ (NSDictionary *)getJsonFile:(NSString *)jsonName{
-    
-    NSString *configPath = [[NSBundle mainBundle] pathForResource:jsonName ofType:@"json"];
-    NSData *configData = [NSData dataWithContentsOfFile:configPath];
-    NSError *error;
-    NSDictionary *responseObject = [NSJSONSerialization JSONObjectWithData:configData options:NSJSONReadingMutableContainers error:&error];
-    if(error){
-        DLog(@"json解析失败:%@",error);
-    }
-    return responseObject;
-}
+
 @end

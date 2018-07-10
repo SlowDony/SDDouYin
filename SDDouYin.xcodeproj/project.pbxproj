@@ -60,6 +60,8 @@
 		EF5999F620E37738003D0392 /* UIViewController+SDTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5999F520E37738003D0392 /* UIViewController+SDTransitionAnimation.m */; };
 		EF5999F920E377DB003D0392 /* UIViewController+SDScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5999F820E377DB003D0392 /* UIViewController+SDScrollView.m */; };
 		EF599A0020E38AF5003D0392 /* UIView+SDView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5999FF20E38AF5003D0392 /* UIView+SDView.m */; };
+		EF70B5A620F4E34500C14323 /* SDAwemeFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = EF70B5A520F4E34500C14323 /* SDAwemeFeed.json */; };
+		EF70B5A820F4E76300C14323 /* SDAwemeNearbyFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = EF70B5A720F4E76300C14323 /* SDAwemeNearbyFeed.json */; };
 		EF70BD7320E28F240090FC3F /* SDBaseLeftSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF70BD7220E28F240090FC3F /* SDBaseLeftSlidingViewController.m */; };
 		EF7370BA20E4722E003971D8 /* SDLeftSlidingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7370B920E4722E003971D8 /* SDLeftSlidingAnimation.m */; };
 		EF7370BD20E47269003971D8 /* SDBaseAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7370BC20E47269003971D8 /* SDBaseAnimationTransition.m */; };
@@ -224,6 +226,8 @@
 		EF5999F820E377DB003D0392 /* UIViewController+SDScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SDScrollView.m"; sourceTree = "<group>"; };
 		EF5999FE20E38AF5003D0392 /* UIView+SDView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SDView.h"; sourceTree = "<group>"; };
 		EF5999FF20E38AF5003D0392 /* UIView+SDView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDView.m"; sourceTree = "<group>"; };
+		EF70B5A520F4E34500C14323 /* SDAwemeFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SDAwemeFeed.json; sourceTree = "<group>"; };
+		EF70B5A720F4E76300C14323 /* SDAwemeNearbyFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SDAwemeNearbyFeed.json; sourceTree = "<group>"; };
 		EF70BD7120E28F240090FC3F /* SDBaseLeftSlidingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDBaseLeftSlidingViewController.h; sourceTree = "<group>"; };
 		EF70BD7220E28F240090FC3F /* SDBaseLeftSlidingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBaseLeftSlidingViewController.m; sourceTree = "<group>"; };
 		EF7370B820E4722E003971D8 /* SDLeftSlidingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLeftSlidingAnimation.h; sourceTree = "<group>"; };
@@ -764,6 +768,8 @@
 		EF26D06520A99739004573D5 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				EF70B5A720F4E76300C14323 /* SDAwemeNearbyFeed.json */,
+				EF70B5A520F4E34500C14323 /* SDAwemeFeed.json */,
 				EFF0590D20F1F7A500792DBF /* SDHomeTool.h */,
 				EFF0590E20F1F7A500792DBF /* SDHomeTool.m */,
 			);
@@ -1027,6 +1033,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF94FF5B20E8E817003532E7 /* SDUserData.json in Resources */,
+				EF70B5A820F4E76300C14323 /* SDAwemeNearbyFeed.json in Resources */,
+				EF70B5A620F4E34500C14323 /* SDAwemeFeed.json in Resources */,
 				EF94FF5920E8E4A7003532E7 /* user.json in Resources */,
 				EFF4A5A120E9FCE500ACDC7F /* SDAweme.json in Resources */,
 				EF26CF9920A98F75004573D5 /* LaunchScreen.storyboard in Resources */,
