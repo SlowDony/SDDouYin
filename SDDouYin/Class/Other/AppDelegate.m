@@ -19,9 +19,10 @@
     // Override point for customization after application launch.
     self.tabBarVC = [[SDTabBarViewController alloc]init];
     self.window.rootViewController = self.tabBarVC;
-    /** 每个页面的圆角处理 */
+//    /** 每个页面的圆角处理 */
     self.window.layer.cornerRadius = 5;
     self.window.layer.masksToBounds = YES;
+    
     return YES;
 }
 

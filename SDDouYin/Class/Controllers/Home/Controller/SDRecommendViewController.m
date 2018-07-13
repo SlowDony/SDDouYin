@@ -27,9 +27,16 @@
 
 @implementation SDRecommendViewController
 
+- (BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
+    
 }
 
 - (void)setupUI{

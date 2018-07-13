@@ -45,6 +45,10 @@
     self.dataArr = datas;
     [self.playerScrollView updateCurrentPlayerDatas:self.dataArr currentIndex:index];
 }
+///指定视频播放
+- (void)updateVideoDetailAweme:(SDAweme *)aweme{
+    [self.playerScrollView updateCurrentPlayerAweme:aweme];
+}
 
 ///不循环播放
 - (void)updateVideoNotCyclePlayer:(NSMutableArray *)lists currentIndex:(NSInteger )index{

@@ -9,6 +9,8 @@
 #import "SDFocusCollectionView.h"
 #import "SDFocusCollectionViewCell.h"
 #import "SDShortVideoModel.h"
+#import "SDFollowFeedModel.h"
+
 #define focusCell @"focusCell"
 @interface SDFocusCollectionView()
 <UICollectionViewDelegate,
@@ -58,8 +60,10 @@ UICollectionViewDataSource>
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SDFocusCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:focusCell forIndexPath:indexPath];
-    SDShortVideoModel *shortVideoModel = self.dataArrs[indexPath.row];
-    [cell setValueWithModel:shortVideoModel];
+    
+    SDData *dataModel = self.dataArrs[indexPath.row];
+    [cell setValueWithModel:dataModel];
+    
     return cell;
 }
 

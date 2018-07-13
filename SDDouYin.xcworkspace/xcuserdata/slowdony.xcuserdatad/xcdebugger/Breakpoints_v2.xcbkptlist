@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
-            timestampString = "552740048.617566"
+            timestampString = "553166946.675455"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "-handlePlaybackDidFinishNotify:"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "SDVideoDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
+            timestampString = "553166946.67553"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "-handlePlayerNotify:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,44 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
-            timestampString = "552740048.617669"
+            timestampString = "553166946.6755871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "-handlePlayerPreparedToPlayNotify:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDDouYin/Class/Controllers/Home/Controller/SDVideoDetailViewController.m"
-            timestampString = "552740048.6177911"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "-handlePlayerPreparedToPlayNotify:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDDouYin/Class/Controllers/Me/Controller/SDMeViewController.m"
-            timestampString = "552149406.485254"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-network"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-handlePlayerNotify:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

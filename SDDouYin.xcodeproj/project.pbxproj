@@ -66,6 +66,10 @@
 		EF7370BA20E4722E003971D8 /* SDLeftSlidingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7370B920E4722E003971D8 /* SDLeftSlidingAnimation.m */; };
 		EF7370BD20E47269003971D8 /* SDBaseAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7370BC20E47269003971D8 /* SDBaseAnimationTransition.m */; };
 		EF7370C120E4C2DC003971D8 /* SDAnimationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7370C020E4C2DC003971D8 /* SDAnimationTool.m */; };
+		EF77B11820F8985F005BB591 /* SDFocusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF77B11620F8985F005BB591 /* SDFocusTool.m */; };
+		EF77B11A20F898AE005BB591 /* SDFollowFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = EF77B11920F898AE005BB591 /* SDFollowFeed.json */; };
+		EF77B11D20F89961005BB591 /* SDFollowFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF77B11C20F89961005BB591 /* SDFollowFeedModel.m */; };
+		EF77B12020F89E55005BB591 /* SDComment.m in Sources */ = {isa = PBXBuildFile; fileRef = EF77B11F20F89E55005BB591 /* SDComment.m */; };
 		EF7C654B20CE169E009E7915 /* SDPlayerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7C654A20CE169E009E7915 /* SDPlayerScrollView.m */; };
 		EF94FF5220E8DC4F003532E7 /* SDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF94FF5120E8DC4F003532E7 /* SDUserModel.m */; };
 		EF94FF5520E8DF2A003532E7 /* SDUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF94FF5420E8DF2A003532E7 /* SDUserTool.m */; };
@@ -236,6 +240,13 @@
 		EF7370BC20E47269003971D8 /* SDBaseAnimationTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBaseAnimationTransition.m; sourceTree = "<group>"; };
 		EF7370BF20E4C2DC003971D8 /* SDAnimationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAnimationTool.h; sourceTree = "<group>"; };
 		EF7370C020E4C2DC003971D8 /* SDAnimationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAnimationTool.m; sourceTree = "<group>"; };
+		EF77B11620F8985F005BB591 /* SDFocusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDFocusTool.m; sourceTree = "<group>"; };
+		EF77B11720F8985F005BB591 /* SDFocusTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDFocusTool.h; sourceTree = "<group>"; };
+		EF77B11920F898AE005BB591 /* SDFollowFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SDFollowFeed.json; sourceTree = "<group>"; };
+		EF77B11B20F89961005BB591 /* SDFollowFeedModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDFollowFeedModel.h; sourceTree = "<group>"; };
+		EF77B11C20F89961005BB591 /* SDFollowFeedModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDFollowFeedModel.m; sourceTree = "<group>"; };
+		EF77B11E20F89E55005BB591 /* SDComment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDComment.h; sourceTree = "<group>"; };
+		EF77B11F20F89E55005BB591 /* SDComment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDComment.m; sourceTree = "<group>"; };
 		EF7C654920CE169E009E7915 /* SDPlayerScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPlayerScrollView.h; sourceTree = "<group>"; };
 		EF7C654A20CE169E009E7915 /* SDPlayerScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPlayerScrollView.m; sourceTree = "<group>"; };
 		EF94FF5020E8DC4F003532E7 /* SDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDUserModel.h; sourceTree = "<group>"; };
@@ -692,6 +703,8 @@
 		EF26D05F20A99739004573D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF77B11B20F89961005BB591 /* SDFollowFeedModel.h */,
+				EF77B11C20F89961005BB591 /* SDFollowFeedModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -699,6 +712,9 @@
 		EF26D06020A99739004573D5 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				EF77B11920F898AE005BB591 /* SDFollowFeed.json */,
+				EF77B11720F8985F005BB591 /* SDFocusTool.h */,
+				EF77B11620F8985F005BB591 /* SDFocusTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -761,6 +777,8 @@
 				EFF4A59B20E9ED9500ACDC7F /* SDVideo.m */,
 				EFF4A59D20E9F1FA00ACDC7F /* SDMusic.h */,
 				EFF4A59E20E9F1FA00ACDC7F /* SDMusic.m */,
+				EF77B11E20F89E55005BB591 /* SDComment.h */,
+				EF77B11F20F89E55005BB591 /* SDComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1040,6 +1058,7 @@
 				EF26CF9920A98F75004573D5 /* LaunchScreen.storyboard in Resources */,
 				EF26CF9620A98F75004573D5 /* Assets.xcassets in Resources */,
 				EF26CF9420A98F74004573D5 /* Main.storyboard in Resources */,
+				EF77B11A20F898AE005BB591 /* SDFollowFeed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1109,6 +1128,7 @@
 				EF26D05120A99652004573D5 /* SDMeViewController.m in Sources */,
 				EF2106A220ADD93A0061B38B /* SDNewsTableView.m in Sources */,
 				EF26D02A20A992E0004573D5 /* UIImage+SDImage.m in Sources */,
+				EF77B11820F8985F005BB591 /* SDFocusTool.m in Sources */,
 				EF21069F20ADD7620061B38B /* SDNearbyListViewController.m in Sources */,
 				EFCC625920BAF23C00C8FA7A /* SDNotificationConst.m in Sources */,
 				EF5999F620E37738003D0392 /* UIViewController+SDTransitionAnimation.m in Sources */,
@@ -1131,6 +1151,7 @@
 				EFCC623820B93CE500C8FA7A /* SDMeHeadView.m in Sources */,
 				EF26D01A20A992E0004573D5 /* SDHttpTool.m in Sources */,
 				EF31732D20DA3D92004BEA6F /* SDShortVideoModel.m in Sources */,
+				EF77B12020F89E55005BB591 /* SDComment.m in Sources */,
 				EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */,
 				EFCC624720B954B300C8FA7A /* SDMeWorksViewController.m in Sources */,
 				EF26D07D20AA8BB4004573D5 /* SDRecommendViewController.m in Sources */,
@@ -1175,6 +1196,7 @@
 				EF58F1FB20AC8A180009DE08 /* SDNearbyCollectionView.m in Sources */,
 				EF26D03920A99510004573D5 /* MJExtensionConfig.m in Sources */,
 				EF2106A820ADD9740061B38B /* SDNewsHeadView.m in Sources */,
+				EF77B11D20F89961005BB591 /* SDFollowFeedModel.m in Sources */,
 				EF26CFCA20A992BF004573D5 /* AppDelegate.m in Sources */,
 				EF26CF9C20A98F75004573D5 /* main.m in Sources */,
 			);

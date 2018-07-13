@@ -23,6 +23,8 @@
 @property (nonatomic,retain) UIButton * rightNavButton;
 @property (nonatomic,retain) UILabel * titleLabel;
 
+- (UIStatusBarStyle)preferredStatusBarStyle;
+
 - (id)initWithRootViewController:(UIViewController *)rootViewController;
 - (void )setupTitle:(NSString *)title;
 - (void )setupTitle:(NSString *)title action:(SEL)selector target:(id) target;

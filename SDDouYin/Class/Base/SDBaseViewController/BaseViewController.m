@@ -25,6 +25,15 @@
     }
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
+-(UIStatusBarAnimation)preferredStatusBarUpdateAnimation{
+    return UIStatusBarAnimationSlide;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -34,6 +34,10 @@
 ///不循环播放
 - (void)updateVideoNotCyclePlayer:(NSMutableArray <SDAweme *>*)lists currentIndex:(NSInteger )index;
 
+///指定某一个视频播放
+- (void)updateCurrentPlayerAweme:(SDAweme *)aweme;
+
+
 @property (nonatomic,weak) id<SDPlayerScrollViewDelegate>playerDelegate;
 
 - (void)playVideo;

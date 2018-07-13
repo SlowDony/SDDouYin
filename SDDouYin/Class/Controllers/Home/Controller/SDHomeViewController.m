@@ -33,9 +33,9 @@
 
 @implementation SDHomeViewController
 
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    DLog(@"viewWillAppear");
     if (self.mainScrollView.contentOffset.x==0){
         [self.recommendVC addNotification];
         [self.recommendVC videoPlay];
@@ -55,11 +55,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setupUI];
-    
     // Do any additional setup after loading the view.
 }
+
+//实现隐藏方法
+- (BOOL)prefersStatusBarHidden{
+    return NO;
+}
+
+- (UIViewController *)childViewControllerForStatusBarHidden{
+    if (self.mainScrollView.contentOffset.x ==0){
+      return self.recommendVC;
+    }else{
+      return self.nearbyVC;
+    }
+}
+
 
 - (void)setupUI{
     
@@ -164,6 +176,7 @@
         [_showTopView setTopTitleArr:arr];
         KWeakself
         _showTopView.selectBtnBlock = ^(UIButton *selectBtn) {
+          
             CGFloat index = (selectBtn.tag-1000)*SCREEN_WIDTH;
             if (index==0){
                 
@@ -175,6 +188,10 @@
             }
             CGPoint point = CGPointMake(index, 0);
             [weakSelf.mainScrollView setContentOffset:point animated:NO];
+            [UIView animateWithDuration:0.5 animations:^{
+                 [weakSelf setNeedsStatusBarAppearanceUpdate];
+            }];
+           
         };
         _showTopView.searchBtnBlock = ^(UIButton *searchBtn) {
             [weakSelf rightBtnClick:searchBtn];

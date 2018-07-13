@@ -184,6 +184,13 @@ middleBtnView.headItem.headImageView.userInteractionEnabled = YES;
     self.middlePlayer = nil;
 }
 
+///指定某一个视频播放
+- (void)updateCurrentPlayerAweme:(SDAweme *)aweme {
+    self.scrollEnabled = NO;
+    [self prepareForImageView:self.middleImageView btnView:self.middleBtnView shortAweme:aweme];
+    /** 设置视频数据 */
+    [self prepareForVideo:self.middlePlayer shortAweme:aweme];
+}
 
 /**
  更新数据

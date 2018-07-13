@@ -21,6 +21,8 @@
 - (void)setupUI{
     //背景图
     UIImageView *bgImageView = [[UIImageView alloc]init];
+    bgImageView.contentMode = UIViewContentModeScaleAspectFill;
+    bgImageView.clipsToBounds = YES;
     [self addSubview:bgImageView];
     self.bgImageView = bgImageView;
     [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -29,6 +31,7 @@
         make.width.equalTo(self.mas_width);
         make.height.equalTo(self.mas_height);
     }];
+    
     //头像
     UIImageView *headImageView = [[UIImageView alloc] init];
     [self addSubview:headImageView];
@@ -82,7 +85,7 @@
     contentLabel.text = @"内容内容内容内容";
     contentLabel.textAlignment = NSTextAlignmentLeft;
     contentLabel.font = SDFont(13);
-    contentLabel.numberOfLines = 1;
+    contentLabel.numberOfLines = 0;
     self.contentLabel = contentLabel;
     [self addSubview:contentLabel];
     [contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -93,13 +96,17 @@
     }];
 }
 
-- (void)setValueWithModel:(SDShortVideoModel *)shortVideoModel{
-    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:shortVideoModel.imageUrl]];
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:@"https://p3.pstatp.com/aweme/100x100/3b5c0006d56892d3f78c.jpeg"] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+- (void)setValueWithModel:(SDData *)dataModel{
+    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:dataModel.aweme.video.cover.urlList.lastObject]];
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:dataModel.aweme.author.avatarThumb.urlList.lastObject] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             self.headImageView.image = [UIImage sd_imageWithRoundCorner:image cornerRadius:kWidth(20)/2 size:CGSizeMake(kWidth(20), kWidth(20))];
         });
     }];
+    self.nameLabel.text =dataModel.aweme.author.nickname;
+    self.contentLabel.text = dataModel.aweme.desc;
+    
 }
+
 @end

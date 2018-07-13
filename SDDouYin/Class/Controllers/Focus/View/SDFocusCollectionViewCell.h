@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SDFollowFeedModel.h"
 @class SDShortVideoModel;
 @interface SDFocusCollectionViewCell : UICollectionViewCell
 @property (nonatomic,strong)  UIImageView *bgImageView;//背景图片
@@ -16,5 +16,5 @@
 @property (nonatomic,strong)  UILabel *timeLabel; //时间
 @property (nonatomic,strong)  UILabel *contentLabel; //内容
 
-- (void)setValueWithModel:(SDShortVideoModel *)shortVideoModel;
+- (void)setValueWithModel:(SDData *)dataModel;
 @end

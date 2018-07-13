@@ -14,6 +14,16 @@
 
 @implementation SDBaseNavigationController
 
+//- (UIViewController *)childViewControllerForStatusBarStyle{
+//    return self.topViewController;
+//}
+//- (UIViewController *)childViewControllerForStatusBarHidden{
+//    return self.topViewController;
+//}
+
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return [self topViewController].preferredStatusBarStyle;
+}
 
 - (id)initWithRootViewController:(UIViewController *)rootViewController
 {

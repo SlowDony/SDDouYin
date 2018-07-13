@@ -29,6 +29,7 @@
     // Do any additional setup after loading the view.
 }
 
+
 - (void)setupUI{
     [self.view addSubview:self.nearbyCollectionView];
     [self refreshCollectionView];

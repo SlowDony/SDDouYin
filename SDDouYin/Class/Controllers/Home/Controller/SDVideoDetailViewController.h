@@ -7,12 +7,14 @@
 //
 
 #import "SDBaseLeftSlidingViewController.h"
-
+#import "SDAweme.h"
 @interface SDVideoDetailViewController : SDBaseLeftSlidingViewController
 
-///循环播放
-- (void)updateVideoDetailDatas:(NSMutableArray *)datas currentIndex:(NSInteger )index;
+///指定视频播放
+- (void)updateVideoDetailAweme:(SDAweme *)aweme;
 
 ///不循环播放
 - (void)updateVideoNotCyclePlayer:(NSMutableArray *)lists currentIndex:(NSInteger )index;
+
+
 @end
