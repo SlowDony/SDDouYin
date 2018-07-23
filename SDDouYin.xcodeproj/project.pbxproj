@@ -76,6 +76,7 @@
 		EF94FF5920E8E4A7003532E7 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = EF94FF5820E8E4A7003532E7 /* user.json */; };
 		EF94FF5B20E8E817003532E7 /* SDUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = EF94FF5A20E8E817003532E7 /* SDUserData.json */; };
 		EF94FF5E20E8EB01003532E7 /* SDObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EF94FF5D20E8EB01003532E7 /* SDObject.m */; };
+		EFBA6EB12106095C0094E0E5 /* douyin.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFBA6EB02106095C0094E0E5 /* douyin.gif */; };
 		EFCC623820B93CE500C8FA7A /* SDMeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623720B93CE500C8FA7A /* SDMeHeadView.m */; };
 		EFCC623B20B93FA400C8FA7A /* NSString+SDString.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623A20B93FA400C8FA7A /* NSString+SDString.m */; };
 		EFCC623E20B940B300C8FA7A /* SDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC623D20B940B300C8FA7A /* SDUser.m */; };
@@ -257,6 +258,7 @@
 		EF94FF5A20E8E817003532E7 /* SDUserData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SDUserData.json; sourceTree = "<group>"; };
 		EF94FF5C20E8EB01003532E7 /* SDObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDObject.h; sourceTree = "<group>"; };
 		EF94FF5D20E8EB01003532E7 /* SDObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDObject.m; sourceTree = "<group>"; };
+		EFBA6EB02106095C0094E0E5 /* douyin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = douyin.gif; sourceTree = "<group>"; };
 		EFCC623620B93CE500C8FA7A /* SDMeHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDMeHeadView.h; sourceTree = "<group>"; };
 		EFCC623720B93CE500C8FA7A /* SDMeHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMeHeadView.m; sourceTree = "<group>"; };
 		EFCC623920B93FA400C8FA7A /* NSString+SDString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SDString.h"; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				EF26CF9B20A98F75004573D5 /* main.m */,
 				EF94FF5A20E8E817003532E7 /* SDUserData.json */,
 				EF94FF5820E8E4A7003532E7 /* user.json */,
+				EFBA6EB02106095C0094E0E5 /* douyin.gif */,
 			);
 			path = SDDouYin;
 			sourceTree = "<group>";
@@ -1054,6 +1057,7 @@
 				EF70B5A820F4E76300C14323 /* SDAwemeNearbyFeed.json in Resources */,
 				EF70B5A620F4E34500C14323 /* SDAwemeFeed.json in Resources */,
 				EF94FF5920E8E4A7003532E7 /* user.json in Resources */,
+				EFBA6EB12106095C0094E0E5 /* douyin.gif in Resources */,
 				EFF4A5A120E9FCE500ACDC7F /* SDAweme.json in Resources */,
 				EF26CF9920A98F75004573D5 /* LaunchScreen.storyboard in Resources */,
 				EF26CF9620A98F75004573D5 /* Assets.xcassets in Resources */,
