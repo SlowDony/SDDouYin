@@ -44,6 +44,7 @@
         [self.recommendVC videoPause];
         [KAppDelegate.tabBarVC  setTabbarAlpha:NO];
     }
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -59,10 +60,10 @@
     // Do any additional setup after loading the view.
 }
 
-//实现隐藏方法
-- (BOOL)prefersStatusBarHidden{
-    return NO;
-}
+////实现隐藏方法
+//- (BOOL)prefersStatusBarHidden{
+//    return NO;
+//}
 
 - (UIViewController *)childViewControllerForStatusBarHidden{
     if (self.mainScrollView.contentOffset.x ==0){

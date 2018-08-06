@@ -11,6 +11,7 @@
 		EF041C9720DCD5480041794B /* SDVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF041C9620DCD5480041794B /* SDVideoDetailViewController.m */; };
 		EF041C9A20DCE5960041794B /* SDMeStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF041C9920DCE5960041794B /* SDMeStoryViewController.m */; };
 		EF15CD0020DFA662001FD70F /* SDSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF15CCFF20DFA662001FD70F /* SDSearchViewController.m */; };
+		EF1872F9210B2353000EBB28 /* SDAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1872F8210B2353000EBB28 /* SDAlertViewController.m */; };
 		EF1EC7FF20C99060006C0BE5 /* SDHomeBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1EC7FE20C99060006C0BE5 /* SDHomeBtnView.m */; };
 		EF21069920ADD1540061B38B /* SDFocusCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21069820ADD1540061B38B /* SDFocusCollectionView.m */; };
 		EF21069C20ADD1650061B38B /* SDFocusCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21069B20ADD1650061B38B /* SDFocusCollectionViewCell.m */; };
@@ -130,6 +131,8 @@
 		EF041C9920DCE5960041794B /* SDMeStoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMeStoryViewController.m; sourceTree = "<group>"; };
 		EF15CCFE20DFA662001FD70F /* SDSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDSearchViewController.h; sourceTree = "<group>"; };
 		EF15CCFF20DFA662001FD70F /* SDSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDSearchViewController.m; sourceTree = "<group>"; };
+		EF1872F7210B2353000EBB28 /* SDAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAlertViewController.h; sourceTree = "<group>"; };
+		EF1872F8210B2353000EBB28 /* SDAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAlertViewController.m; sourceTree = "<group>"; };
 		EF1EC7FD20C99060006C0BE5 /* SDHomeBtnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHomeBtnView.h; sourceTree = "<group>"; };
 		EF1EC7FE20C99060006C0BE5 /* SDHomeBtnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHomeBtnView.m; sourceTree = "<group>"; };
 		EF21069720ADD1540061B38B /* SDFocusCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDFocusCollectionView.h; sourceTree = "<group>"; };
@@ -941,6 +944,8 @@
 			children = (
 				EF7370BF20E4C2DC003971D8 /* SDAnimationTool.h */,
 				EF7370C020E4C2DC003971D8 /* SDAnimationTool.m */,
+				EF1872F7210B2353000EBB28 /* SDAlertViewController.h */,
+				EF1872F8210B2353000EBB28 /* SDAlertViewController.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1138,6 +1143,7 @@
 				EF5999F620E37738003D0392 /* UIViewController+SDTransitionAnimation.m in Sources */,
 				EF7C654B20CE169E009E7915 /* SDPlayerScrollView.m in Sources */,
 				EF26D08020AA8BE9004573D5 /* SDNearbyViewController.m in Sources */,
+				EF1872F9210B2353000EBB28 /* SDAlertViewController.m in Sources */,
 				EFCC623E20B940B300C8FA7A /* SDUser.m in Sources */,
 				EF42987420DCD4C9008174EA /* SDBaseViewController.m in Sources */,
 				EFCC624120B9412000C8FA7A /* SDMeHeadTopView.m in Sources */,
