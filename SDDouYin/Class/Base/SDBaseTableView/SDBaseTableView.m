@@ -26,6 +26,7 @@
         self.delegate       = self;
         self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.separatorColor = KMainBackgroundColor;
+        self.backgroundColor = [UIColor clearColor];
 #ifdef __IPHONE_11_0
         if ([self respondsToSelector:@selector(setContentInsetAdjustmentBehavior:)]) {
             if (@available(iOS 11.0, *)) {

@@ -89,6 +89,9 @@
 		EFCC625320B9C42B00C8FA7A /* SDMeCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC625220B9C42B00C8FA7A /* SDMeCollectionView.m */; };
 		EFCC625620B9C43900C8FA7A /* SDMeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC625520B9C43900C8FA7A /* SDMeCollectionViewCell.m */; };
 		EFCC625920BAF23C00C8FA7A /* SDNotificationConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC625820BAF23C00C8FA7A /* SDNotificationConst.m */; };
+		EFE5175521342A750078DA1E /* SDHomeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE5175421342A750078DA1E /* SDHomeListViewController.m */; };
+		EFE5175821342AC20078DA1E /* SDHomeListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE5175721342AC20078DA1E /* SDHomeListTableView.m */; };
+		EFE5175B21342B490078DA1E /* SDHomeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE5175A21342B490078DA1E /* SDHomeListTableViewCell.m */; };
 		EFE64EC720B473B0006C3D86 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC620B473B0006C3D86 /* libstdc++.6.tbd */; };
 		EFE64EC920B473BD006C3D86 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64EC820B473BD006C3D86 /* libbz2.tbd */; };
 		EFE64ECB20B473C7006C3D86 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64ECA20B473C7006C3D86 /* libz.tbd */; };
@@ -284,6 +287,12 @@
 		EFCC625520B9C43900C8FA7A /* SDMeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMeCollectionViewCell.m; sourceTree = "<group>"; };
 		EFCC625720BAF23C00C8FA7A /* SDNotificationConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNotificationConst.h; sourceTree = "<group>"; };
 		EFCC625820BAF23C00C8FA7A /* SDNotificationConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNotificationConst.m; sourceTree = "<group>"; };
+		EFE5175321342A750078DA1E /* SDHomeListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHomeListViewController.h; sourceTree = "<group>"; };
+		EFE5175421342A750078DA1E /* SDHomeListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHomeListViewController.m; sourceTree = "<group>"; };
+		EFE5175621342AC20078DA1E /* SDHomeListTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHomeListTableView.h; sourceTree = "<group>"; };
+		EFE5175721342AC20078DA1E /* SDHomeListTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHomeListTableView.m; sourceTree = "<group>"; };
+		EFE5175921342B490078DA1E /* SDHomeListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHomeListTableViewCell.h; sourceTree = "<group>"; };
+		EFE5175A21342B490078DA1E /* SDHomeListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHomeListTableViewCell.m; sourceTree = "<group>"; };
 		EFE64EC520B473A0006C3D86 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		EFE64EC620B473B0006C3D86 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		EFE64EC820B473BD006C3D86 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
@@ -762,6 +771,8 @@
 				EF041C9620DCD5480041794B /* SDVideoDetailViewController.m */,
 				EF15CCFE20DFA662001FD70F /* SDSearchViewController.h */,
 				EF15CCFF20DFA662001FD70F /* SDSearchViewController.m */,
+				EFE5175321342A750078DA1E /* SDHomeListViewController.h */,
+				EFE5175421342A750078DA1E /* SDHomeListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -815,6 +826,10 @@
 				EF1EC7FE20C99060006C0BE5 /* SDHomeBtnView.m */,
 				EF7C654920CE169E009E7915 /* SDPlayerScrollView.h */,
 				EF7C654A20CE169E009E7915 /* SDPlayerScrollView.m */,
+				EFE5175621342AC20078DA1E /* SDHomeListTableView.h */,
+				EFE5175721342AC20078DA1E /* SDHomeListTableView.m */,
+				EFE5175921342B490078DA1E /* SDHomeListTableViewCell.h */,
+				EFE5175A21342B490078DA1E /* SDHomeListTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1114,10 +1129,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SDDouYin/Pods-SDDouYin-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/ZFPlayer/ZFPlayer/Classes/ControlView/ZFPlayer.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZFPlayer.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1140,6 +1157,7 @@
 				EF77B11820F8985F005BB591 /* SDFocusTool.m in Sources */,
 				EF21069F20ADD7620061B38B /* SDNearbyListViewController.m in Sources */,
 				EFCC625920BAF23C00C8FA7A /* SDNotificationConst.m in Sources */,
+				EFE5175B21342B490078DA1E /* SDHomeListTableViewCell.m in Sources */,
 				EF5999F620E37738003D0392 /* UIViewController+SDTransitionAnimation.m in Sources */,
 				EF7C654B20CE169E009E7915 /* SDPlayerScrollView.m in Sources */,
 				EF26D08020AA8BE9004573D5 /* SDNearbyViewController.m in Sources */,
@@ -1163,6 +1181,7 @@
 				EF31732D20DA3D92004BEA6F /* SDShortVideoModel.m in Sources */,
 				EF77B12020F89E55005BB591 /* SDComment.m in Sources */,
 				EF58F1FE20AC8A2F0009DE08 /* SDNearbyCollectionViewCell.m in Sources */,
+				EFE5175521342A750078DA1E /* SDHomeListViewController.m in Sources */,
 				EFCC624720B954B300C8FA7A /* SDMeWorksViewController.m in Sources */,
 				EF26D07D20AA8BB4004573D5 /* SDRecommendViewController.m in Sources */,
 				EF31732620DA3C87004BEA6F /* SDBaseNavigationController.m in Sources */,
@@ -1177,6 +1196,7 @@
 				EF041C9A20DCE5960041794B /* SDMeStoryViewController.m in Sources */,
 				EF42987320DCD4C9008174EA /* SDBaseHiddenViewController.m in Sources */,
 				EF26D01920A992E0004573D5 /* SDHelper.m in Sources */,
+				EFE5175821342AC20078DA1E /* SDHomeListTableView.m in Sources */,
 				EF31732720DA3C87004BEA6F /* SDBaseNavigationView.m in Sources */,
 				EF42987220DCD4C9008174EA /* BaseViewController.m in Sources */,
 				EFCC624420B951F400C8FA7A /* SDMeEditViewController.m in Sources */,

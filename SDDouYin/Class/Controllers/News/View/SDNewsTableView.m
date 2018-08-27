@@ -20,7 +20,7 @@
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
     self = [super initWithFrame:frame style:style];
     if(self){
-        self.backgroundColor = [UIColor clearColor];
+       
     }
     return self;
 }

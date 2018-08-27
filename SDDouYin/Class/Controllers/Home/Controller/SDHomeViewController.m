@@ -16,6 +16,7 @@
 #import "SDSearchViewController.h"
 #import "SDHomeTool.h"
 #import "SDTabBarViewController.h"
+#import "SDHomeListViewController.h"
 /**
  首页
  */
@@ -27,6 +28,8 @@
 @property (nonatomic,strong) SDRecommendViewController *recommendVC;
 ///附近
 @property (nonatomic,strong) SDNearbyViewController *nearbyVC;
+
+@property (nonatomic,strong) SDHomeListViewController *homelistVC;
 @property (nonatomic,strong) UIScrollView * mainScrollView;
 
 @end
@@ -37,20 +40,20 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     if (self.mainScrollView.contentOffset.x==0){
-        [self.recommendVC addNotification];
-        [self.recommendVC videoPlay];
+//        [self.recommendVC addNotification];
+//        [self.recommendVC videoPlay];
         [KAppDelegate.tabBarVC  setTabbarAlpha:YES];
     }else if(self.mainScrollView.contentOffset.x==SCREEN_WIDTH){
-        [self.recommendVC videoPause];
+//        [self.recommendVC videoPause];
         [KAppDelegate.tabBarVC  setTabbarAlpha:NO];
     }
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [self.recommendVC videoPause];
-    [self.recommendVC removeNotification];
+//    [self.recommendVC videoPause];
+//    [self.recommendVC removeNotification];
 }
 
 
@@ -67,7 +70,7 @@
 
 - (UIViewController *)childViewControllerForStatusBarHidden{
     if (self.mainScrollView.contentOffset.x ==0){
-      return self.recommendVC;
+      return self.homelistVC;
     }else{
       return self.nearbyVC;
     }
@@ -78,7 +81,7 @@
     
     [self.view addSubview:self.mainScrollView];
     [self.view addSubview:self.showTopView];
-    [self.mainScrollView addSubview:self.recommendVC.view];
+    [self.mainScrollView addSubview:self.homelistVC.view];
     [self setNetwork];
 }
 
@@ -156,6 +159,16 @@
     }
     return _nearbyVC;
 }
+
+- (SDHomeListViewController *)homelistVC{
+    if (!_homelistVC) {
+        _homelistVC = [[SDHomeListViewController alloc]init];
+        [self addChildViewController:_homelistVC];
+        _homelistVC.view.frame =CGRectMake(0,0 , SCREEN_WIDTH, SCREEN_HEIGHT);
+    }
+    return _homelistVC;
+}
+
 /**
  推荐
  */
@@ -181,11 +194,11 @@
             CGFloat index = (selectBtn.tag-1000)*SCREEN_WIDTH;
             if (index==0){
                 
-                [weakSelf.recommendVC addNotification];
-                [weakSelf.recommendVC videoPlay];
+//                [weakSelf.recommendVC addNotification];
+//                [weakSelf.recommendVC videoPlay];
             }else if (index ==SCREEN_WIDTH){
                 
-                [weakSelf.recommendVC videoPause];
+//                [weakSelf.recommendVC videoPause];
             }
             CGPoint point = CGPointMake(index, 0);
             [weakSelf.mainScrollView setContentOffset:point animated:NO];

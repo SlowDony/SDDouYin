@@ -26,9 +26,7 @@
     SDNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (cell == nil) {
         cell =[[SDNewsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        cell.backgroundColor = KNavigationBarBackgroundColor;
-        cell.selectedBackgroundView = [[UIView alloc]initWithFrame:cell.bounds];
-        cell.selectedBackgroundView.backgroundColor = KMainBackgroundColor;
+       
     }
     
     return cell;
