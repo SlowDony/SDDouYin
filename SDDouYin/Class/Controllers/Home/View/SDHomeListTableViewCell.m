@@ -41,11 +41,7 @@
 -(void)setupUI{
     
     //顶部图片
-    UIImageView *topImageView = [[UIImageView alloc] init];
-    topImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-    topImageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.topImageView = topImageView;
-    [self.contentView addSubview:topImageView];
+    [self.contentView addSubview:self.topImageView];
     
     [self.contentView addSubview:self.btnView];
     [self.btnView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -57,6 +53,16 @@
     [self.topImageView sd_setImageWithURL:[NSURL URLWithString:[aweme.video.originCover.urlList firstObject]]];
     [self.btnView setValueWithAwemeModel:aweme];
     
+}
+
+- (UIImageView *)topImageView{
+    if(!_topImageView){
+        _topImageView = [[UIImageView alloc] init];
+        _topImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        _topImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _topImageView.tag = 100;
+    }
+    return _topImageView;
 }
 
 -(SDHomeBtnView *)btnView{
