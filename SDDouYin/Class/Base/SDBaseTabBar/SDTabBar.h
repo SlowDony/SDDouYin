@@ -10,7 +10,7 @@
 
 typedef NS_ENUM(NSInteger ,TabBarType){
     
-    TabBarTypeHome , //首页
+    TabBarTypeHome = 100, //首页
     TabBarTypeFocus , //关注
     TabBarTypeNews , //消息
     TabBarTypeMe , //我的
@@ -27,5 +27,6 @@ typedef NS_ENUM(NSInteger ,TabBarType){
  */
 @property (nonatomic,strong)  UIImageView *tabBarBJView;
 - (instancetype)initWithFrame:(CGRect)frame;
+@property (nonatomic,assign) NSInteger selectIndex;
 @property (nonatomic,weak) id<SDTabBarDelegate>delegate;
 @end

@@ -26,6 +26,9 @@
  线条
  */
 @property (nonatomic,strong)  UIView *line;
+
+
+@property (nonatomic,strong)  NSMutableArray *btnArrs;
 @end
 @implementation SDTabBar
 
@@ -41,6 +44,7 @@
 }
 
 - (void) setupUI{
+     [self.btnArrs removeAllObjects];
     for (int i = 0; i < self.itemArr.count; i++) {
         //
         UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -56,6 +60,7 @@
             self.tabBarBJView.alpha = 0;
         }
         [self addSubview: itemBtn];
+        [self.btnArrs addObject:itemBtn];
     }
     [self addSubview:self.cameraBtn];
     [self addSubview:self.line];
@@ -67,9 +72,10 @@
         [self.delegate tabbar:self withBtn:sender.tag];
     }
     if (sender.tag != TabBarTypeAdd) {
-        self.lastSeletcBtn.selected = NO;
-        sender.selected = YES;
-        self.lastSeletcBtn = sender;
+//        self.lastSeletcBtn.selected = NO;
+//        sender.selected = YES;
+//        self.lastSeletcBtn = sender;
+        self.selectIndex = sender.tag -100;
         
         [UIView animateWithDuration:0.2 animations:^{
             sender.transform = CGAffineTransformMakeScale(1.2, 1.2);
@@ -79,10 +85,20 @@
             }];
         }];
     }
-   
     
 }
 
+- (void)setSelectIndex:(NSInteger)selectIndex{
+    _selectIndex = selectIndex;
+    for (UIButton *btn in self.btnArrs){
+        if(btn.tag == selectIndex+TabBarTypeHome){
+            btn.selected = YES;
+        }else{
+            btn.selected = NO;
+        }
+    }
+    [self setNeedsLayout];
+}
 - (void)layoutSubviews{
     [super layoutSubviews];
     
@@ -93,14 +109,17 @@
     CGFloat btnW = self.bounds.size.width/(self.itemArr.count+1);
     CGFloat btnH = 49;
     
-    for (int i = 0; i<[self subviews].count; i++) {
-        UIView *btn = [self subviews][i];
+    for (int i = 0; i<self.btnArrs.count; i++) {
+        UIButton *btn = self.btnArrs[i];
         btnX = (btn.tag-TabBarTypeHome<2?(btn.tag-TabBarTypeHome):(btn.tag-TabBarTypeHome+1))*btnW;
-        if ([btn isKindOfClass:[UIButton class]]) {
-            btn.frame = CGRectMake(btnX, btnY, btnW,btnH);
-        }
+        btn.frame = CGRectMake(btnX, btnY, btnW,btnH);
+        
     }
     self.cameraBtn.frame = CGRectMake(2*btnW, btnY, btnW,btnH);
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.line.frame = CGRectMake(btnW/4+btnW*(self.selectIndex<2?self.selectIndex:self.selectIndex+1),btnH-4, btnW/2, 2);
+    }];
 }
 
 #pragma mark - lazy
@@ -131,9 +150,15 @@
 }
 - (UIView *)line{
     if (!_line){
-        _line = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.5)];
-        _line.backgroundColor = [UIColor grayColor];
+        _line = [[UIView alloc]initWithFrame: CGRectMake(SCREEN_WIDTH/16 , 49-4, SCREEN_WIDTH/8, 2)];
+        _line.backgroundColor = [UIColor whiteColor];
     }
     return _line;
+}
+- (NSMutableArray *)btnArrs{
+    if(!_btnArrs){
+        _btnArrs = [NSMutableArray array];
+    }
+    return _btnArrs;
 }
 @end
