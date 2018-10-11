@@ -1,2 +1,13 @@
-# SDDouYin
+# SDDouYin 1.0
 仿抖音
+
+<img src="https://github.com/SlowDony/SDDouYin/blob/master/SDDouYin/douyin.gif" width="50%" height="50%">
+ 
+
+
+我的邮箱：devslowdony@gmail.com 
+
+我的微博: [slowdony](https://weibo.com/u/2428779285)
+
+如果有好的建议或者意见 ,欢迎指出 , 您的支持是对我最大的鼓励,谢谢. 求STAR ..😆
+
