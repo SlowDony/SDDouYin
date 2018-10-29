@@ -15,6 +15,7 @@
 #import "SDMeLikeViewController.h"
 #import "SDUser.h"
 #import "SDUserTool.h"
+#import "SDTableViewController.h"
 #define headViewHeight (kWidth(130)+170)
 @interface SDMeViewController ()
 <
@@ -27,6 +28,7 @@ UIScrollViewDelegate
 @property (nonatomic,strong)  SDBaseNavigationView *navigationView;
 @property (nonatomic,strong)  SDMeWorksViewController * worksVC;
 @property (nonatomic,strong)  SDMeLikeViewController *likeVC;
+@property (nonatomic,strong)  SDTableViewController *tableVC;
 @end
 
 @implementation SDMeViewController
@@ -44,9 +46,21 @@ UIScrollViewDelegate
     [self.view addSubview:self.headView];
     [self.view addSubview:self.titleView];
     [self.view addSubview:self.navigationView];
-    
+    [self.view addGestureRecognizer:self.worksVC.collectionView.panGestureRecognizer];
 }
 
+/**
+ 重置Frame
+ */
+- (void)resettingFrame{
+    
+    self.titleView.frame = CGRectMake(0, CGRectGetHeight(self.headView.frame)+kNavBarHeight, SCREEN_WIDTH, 44);
+    self.worksVC.collectionView.contentOffset = CGPointMake(0, 0);
+    self.tableVC.tableView.contentOffset = CGPointMake(0, 0);
+    self.navigationView.backgroundColor = [UIColorFromRGB0X(0x242137)colorWithAlphaComponent:0.0f];
+    self.headView.frame = CGRectMake(0, kNavBarHeight, SCREEN_WIDTH, headViewHeight);
+    self.navigationView.titleLabel.alpha = 0;
+}
 
 #pragma mark - SDMeHeadViewDelegate
 - (void)sdMeHeadView:(SDMeHeadView *)headView bottomViewBtnClick:(UIButton *)sender {
@@ -66,7 +80,20 @@ UIScrollViewDelegate
 
 #pragma mark - scrollViewDelegate
 
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if(scrollView.contentOffset.x==SCREEN_WIDTH){
+        [self.childVCScrollView addSubview:self.tableVC.view];
+    }
+    
+    if (scrollView.contentOffset.x ==SCREEN_WIDTH){
+        
+        [self.view removeGestureRecognizer:self.worksVC.collectionView.panGestureRecognizer];
+        [self.view addGestureRecognizer:self.tableVC.tableView.panGestureRecognizer];
+    }else{
+        [self.view removeGestureRecognizer:self.tableVC.tableView.panGestureRecognizer];
+        [self.view addGestureRecognizer:self.worksVC.collectionView.panGestureRecognizer];
+    }
+}
 
 
 
@@ -91,6 +118,7 @@ UIScrollViewDelegate
     CGFloat scrollViewOffY = [userInfo[SDScrollViewOffSetKey] floatValue];
     
     self.headView.frame = CGRectMake(0, kNavBarHeight- scrollViewOffY, SCREEN_WIDTH,headViewHeight);
+//    self.childVCScrollView.frame = CGRectMake(0,  kNavBarHeight+(kWidth(130)+170)+44-scrollViewOffY, SCREEN_WIDTH, SCREEN_HEIGHT-kNavBarHeight);
     if (CGRectGetHeight(self.headView.frame)-scrollViewOffY >=0){
         self.titleView.frame = CGRectMake(0, kNavBarHeight+CGRectGetHeight(self.headView.frame)- scrollViewOffY, SCREEN_WIDTH, 44);
     }else {
@@ -128,6 +156,7 @@ UIScrollViewDelegate
         _childVCScrollView.pagingEnabled = NO;
         _childVCScrollView.bounces = YES;
         _childVCScrollView.scrollEnabled = NO;
+        _childVCScrollView.delegate = self;
         if (@available(iOS 11.0, *)) {
             _childVCScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }else {
@@ -140,6 +169,13 @@ UIScrollViewDelegate
 -(SDMeHeadTitleView *)titleView{
     if (!_titleView) {
         _titleView = [[SDMeHeadTitleView alloc]initWithFrame:CGRectMake(0,kNavBarHeight+headViewHeight, SCREEN_WIDTH, 44)];
+        @xWeakify
+        _titleView.titleBtnClickBlock = ^(UIButton *sender) {
+            @xStrongify
+            NSInteger index =  sender.tag-10;
+            [self resettingFrame];
+            [self.childVCScrollView setContentOffset:CGPointMake(index*SCREEN_WIDTH, 0)];
+        };
     }
     return _titleView;
 }
@@ -161,7 +197,6 @@ UIScrollViewDelegate
         _navigationView.leftBtn.alpha = 1;
         _navigationView.backgroundColor = [UIColorFromRGB0X(0x242137)colorWithAlphaComponent:0.0f];
         _navigationView.titleLabel.alpha = 0;
-        
     }
     return _navigationView;
 }
@@ -176,6 +211,19 @@ UIScrollViewDelegate
         _worksVC.view.frame =CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     }
     return _worksVC;
+}
+
+
+/**
+ 测试
+ */
+- (SDTableViewController *)tableVC{
+    if (!_tableVC) {
+        _tableVC = [[SDTableViewController alloc]init];
+        [self addChildViewController:_tableVC];
+        _tableVC.view.frame =CGRectMake(SCREEN_WIDTH , 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    }
+    return _tableVC;
 }
 
 - (void)didReceiveMemoryWarning {
