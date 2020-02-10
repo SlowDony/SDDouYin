@@ -21,16 +21,16 @@
     // Configure the view for the selected state
 }
 
-+(instancetype)cellWithTableView:(UITableView *)tableView{
-    static NSString *cellId = @"SDHomeListTableViewCell";
-    SDHomeListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        
-        cell =[[SDHomeListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-    }
-    
-    return cell;
-}
+//+(instancetype)cellWithTableView:(UITableView *)tableView{
+//    static NSString *cellId = @"SDHomeListTableViewCell";
+//    SDHomeListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+//    if (cell == nil) {
+//        
+//        cell =[[SDHomeListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+//    }
+//    
+//    return cell;
+//}
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self =[super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if ( self) {

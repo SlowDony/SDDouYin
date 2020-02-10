@@ -11,14 +11,17 @@
 @implementation SDBaseTableViewCell
 
 +(instancetype)cellWithTableView:(UITableView *)tableView{
-   static NSString *cellId = @"SDBaseTableViewCell";
-   SDBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        
-        cell =[[SDBaseTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        
+    if (tableView == nil) {
+        return [[self alloc] init];
     }
+    NSString *classname = NSStringFromClass([self class]);
+    NSString *identifier = [classname stringByAppendingString:@"CellID"];
+    [tableView registerClass:[self class] forCellReuseIdentifier:identifier];
     
+    SDBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell==nil) {
+        cell =[[SDBaseTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
     return cell;
 }
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{

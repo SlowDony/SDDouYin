@@ -12,7 +12,7 @@
 @interface SDHomeListTableViewCell : SDBaseTableViewCell
 @property (nonatomic,strong) SDHomeBtnView *btnView;
 @property (nonatomic,strong) UIImageView *topImageView;
-+(instancetype)cellWithTableView:(UITableView *)tableView;
+//+(instancetype)cellWithTableView:(UITableView *)tableView;
 - (void)setValueAweme:(SDAweme *)aweme;
 
 @end

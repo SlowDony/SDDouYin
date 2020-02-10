@@ -9,6 +9,16 @@
 #ifndef SDMacros_h
 #define SDMacros_h
 
+
+#pragma mark ---------- app信息 ---------
+// 名字
+#define APP_NAME ([[[NSBundle mainBundle] infoDictionary]objectForKey:@"CFBundleDisplayName"])
+// 版本号
+#define APP_VERSION ([[[NSBundle mainBundle] infoDictionary]objectForKey:@"CFBundleShortVersionString"])
+// build
+#define APP_BUILD ([[[NSBundle mainBundle] infoDictionary]objectForKey:@"CFBundleVersion"])
+
+
 #pragma mark ---------- 尺寸 ---------
 
 ///屏幕宽高
@@ -54,13 +64,12 @@
 ///子标题
 #define KDetailTitleColor (UIColorFromRGB0X(0x979698))
 
+
 #pragma mark ---------- 字体 ---------
 ///字体
 #define SDFont(size) ([UIFont systemFontOfSize:size])
 #define SDBoldFont(size) ([UIFont boldSystemFontOfSize:size])
 #define SDFontCustomName(name,fontSize) ([UIFont fontWithName:name  size:fontSize])
-///标题
-#define KDouYinTitle @"抖音"
 
 /// AppDelegate
 #define KAppDelegate ((AppDelegate *)([UIApplication sharedApplication].delegate))

@@ -228,7 +228,7 @@
     UILabel *numLabel = [[UILabel alloc] init];
     numLabel.backgroundColor = [UIColor clearColor];
     numLabel.textColor = UIColorFromRGB0X(0xFFFFFF);
-    numLabel.text = [NSString stringWithFormat:@"%@号:",KDouYinTitle];
+    numLabel.text = [NSString stringWithFormat:@"%@号:",APP_NAME];
     numLabel.textAlignment = NSTextAlignmentLeft;
     numLabel.font = SDFont(12);
     numLabel.numberOfLines = 1;
@@ -357,7 +357,7 @@
 - (void)setHeadValueModel:(SDUser *)model{
     
     self.nameLabel.text = model.nickname;
-    self.numLabel.text = [NSString stringWithFormat:@"%@号:%@",KDouYinTitle,model.shortId];
+    self.numLabel.text = [NSString stringWithFormat:@"%@号:%@",APP_NAME,model.shortId];
     self.signatureLabel.text = [NSString stringWithFormat:@"%@",[NSString sd_isBlankString:model.signature]?@"该用户很高冷什么都不想说":model.signature];
     ///获赞
     [self.bottomView setBtnValue:model.totalFavorited withTag:100];
